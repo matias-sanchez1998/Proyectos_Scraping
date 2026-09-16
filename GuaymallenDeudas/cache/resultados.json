@@ -1,0 +1,3363 @@
+{
+  "4618": {
+    "padron": "4618",
+    "estado": "CON DEUDA",
+    "titular": "MARTINEZ ROCIO GABRIELA",
+    "cuil": 27229581428,
+    "nomenclatura": "Nomenclatura 040101003900000100000",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8138029,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 4618"
+      }
+    ],
+    "cantidadCuotas": 1,
+    "total": 29250
+  },
+  "9411": {
+    "padron": "9411",
+    "estado": "CON DEUDA",
+    "titular": "CICCONI JOSE AGUSTIN",
+    "cuil": 20068283028,
+    "nomenclatura": "Nomenclatura 04070100350000040000-",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 2,
+        "referencia": 412174,
+        "capital": 50310,
+        "interes": 5282.55,
+        "total": 55592.55,
+        "vencimiento": "2026-05-29",
+        "descripcion": "Tributo nro: 9411"
+      },
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8140765,
+        "capital": 50310,
+        "interes": 0,
+        "total": 50310,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 9411"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8225849,
+        "capital": 50310,
+        "interes": 0,
+        "total": 50310,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 9411"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8310934,
+        "capital": 50310,
+        "interes": 0,
+        "total": 50310,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 9411"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8396020,
+        "capital": 50310,
+        "interes": 0,
+        "total": 50310,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 9411"
+      }
+    ],
+    "cantidadCuotas": 5,
+    "total": 256832.55
+  },
+  "13224": {
+    "padron": "13224",
+    "estado": "CON DEUDA",
+    "titular": "CICCONI MARIO NAZAR",
+    "cuil": null,
+    "nomenclatura": "Nomenclatura 04030200190000410000-",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8143072,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 13224"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8228156,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 13224"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8313241,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 13224"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8398327,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 13224"
+      }
+    ],
+    "cantidadCuotas": 4,
+    "total": 117000
+  },
+  "14635": {
+    "padron": "14635",
+    "estado": "SIN DEUDA",
+    "titular": "GARCIA DE PEREYRA ELVIRA",
+    "cuil": null,
+    "nomenclatura": "Nomenclatura 04050100200000250000-",
+    "cuotas": [],
+    "cantidadCuotas": 0,
+    "total": 0
+  },
+  "19573": {
+    "padron": "19573",
+    "estado": "SIN DEUDA",
+    "titular": "GANCIA HUGO AUGUSTO",
+    "cuil": 20049424710,
+    "nomenclatura": "Nomenclatura 04080100180000280000-",
+    "cuotas": [],
+    "cantidadCuotas": 0,
+    "total": 0
+  },
+  "19624": {
+    "padron": "19624",
+    "estado": "SIN DEUDA",
+    "titular": "GIORDANO ORLANDO OMAR",
+    "cuil": 20931702425,
+    "nomenclatura": "Nomenclatura 040801001700005100007",
+    "cuotas": [],
+    "cantidadCuotas": 0,
+    "total": 0
+  },
+  "20082": {
+    "padron": "20082",
+    "estado": "CON DEUDA",
+    "titular": "AGUERO ALBERTO FABIAN",
+    "cuil": 20255407040,
+    "nomenclatura": "Nomenclatura 040505002000002000007",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 1,
+        "referencia": 921910,
+        "capital": 45240,
+        "interes": 8867.04,
+        "total": 54107.04,
+        "vencimiento": "2026-02-27",
+        "descripcion": "Tributo nro: 20082"
+      },
+      {
+        "anio": 2026,
+        "numero": 2,
+        "referencia": 921911,
+        "capital": 45240,
+        "interes": 4750.2,
+        "total": 49990.2,
+        "vencimiento": "2026-05-29",
+        "descripcion": "Tributo nro: 20082"
+      },
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8147568,
+        "capital": 45240,
+        "interes": 0,
+        "total": 45240,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 20082"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8232652,
+        "capital": 45240,
+        "interes": 0,
+        "total": 45240,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 20082"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8317737,
+        "capital": 45240,
+        "interes": 0,
+        "total": 45240,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 20082"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8402823,
+        "capital": 45240,
+        "interes": 0,
+        "total": 45240,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 20082"
+      }
+    ],
+    "cantidadCuotas": 6,
+    "total": 285057.24
+  },
+  "20573": {
+    "padron": "20573",
+    "estado": "SIN DEUDA",
+    "titular": "GIORDANO ORLANDO OMAR",
+    "cuil": 20931702425,
+    "nomenclatura": "Nomenclatura 040503005400001700005",
+    "cuotas": [],
+    "cantidadCuotas": 0,
+    "total": 0
+  },
+  "20602": {
+    "padron": "20602",
+    "estado": "SIN DEUDA",
+    "titular": "GIORDANO ORLANDO OMAR",
+    "cuil": 20931702425,
+    "nomenclatura": "Nomenclatura 040503006100001800001",
+    "cuotas": [],
+    "cantidadCuotas": 0,
+    "total": 0
+  },
+  "21152": {
+    "padron": "21152",
+    "estado": "CON DEUDA",
+    "titular": "ORTOLAN ROBERTO JORGE",
+    "cuil": 20120531221,
+    "nomenclatura": "Nomenclatura 040503003900000100003",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 1,
+        "referencia": 975172,
+        "capital": 40300,
+        "interes": 7898.8,
+        "total": 48198.8,
+        "vencimiento": "2026-02-27",
+        "descripcion": "Tributo nro: 21152"
+      },
+      {
+        "anio": 2026,
+        "numero": 2,
+        "referencia": 975173,
+        "capital": 40300,
+        "interes": 4231.5,
+        "total": 44531.5,
+        "vencimiento": "2026-05-29",
+        "descripcion": "Tributo nro: 21152"
+      },
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8148315,
+        "capital": 40300,
+        "interes": 0,
+        "total": 40300,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 21152"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8233399,
+        "capital": 40300,
+        "interes": 0,
+        "total": 40300,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 21152"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8318484,
+        "capital": 40300,
+        "interes": 0,
+        "total": 40300,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 21152"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8403570,
+        "capital": 40300,
+        "interes": 0,
+        "total": 40300,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 21152"
+      }
+    ],
+    "cantidadCuotas": 6,
+    "total": 253930.3
+  },
+  "21389": {
+    "padron": "21389",
+    "estado": "CON DEUDA",
+    "titular": "LORIA JONATAN LUCAS",
+    "cuil": 20338903813,
+    "nomenclatura": "Nomenclatura 040602000700002800000",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 2,
+        "referencia": 986867,
+        "capital": 50310,
+        "interes": 5282.55,
+        "total": 55592.55,
+        "vencimiento": "2026-05-29",
+        "descripcion": "Tributo nro: 21389"
+      },
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8148486,
+        "capital": 50310,
+        "interes": 0,
+        "total": 50310,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 21389"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8233570,
+        "capital": 50310,
+        "interes": 0,
+        "total": 50310,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 21389"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8318655,
+        "capital": 50310,
+        "interes": 0,
+        "total": 50310,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 21389"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8403741,
+        "capital": 50310,
+        "interes": 0,
+        "total": 50310,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 21389"
+      }
+    ],
+    "cantidadCuotas": 5,
+    "total": 256832.55
+  },
+  "22951": {
+    "padron": "22951",
+    "estado": "CON DEUDA",
+    "titular": "CICCONI MARIO NAZARENO",
+    "cuil": 20135333264,
+    "nomenclatura": "Nomenclatura 04040200090000350000-",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 1,
+        "referencia": 1062547,
+        "capital": 29250,
+        "interes": 5733,
+        "total": 34983,
+        "vencimiento": "2026-02-27",
+        "descripcion": "Tributo nro: 22951"
+      },
+      {
+        "anio": 2026,
+        "numero": 2,
+        "referencia": 1062548,
+        "capital": 29250,
+        "interes": 3071.25,
+        "total": 32321.25,
+        "vencimiento": "2026-05-29",
+        "descripcion": "Tributo nro: 22951"
+      },
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8149567,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 22951"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8234651,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 22951"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8319736,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 22951"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8404822,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 22951"
+      }
+    ],
+    "cantidadCuotas": 6,
+    "total": 184304.25
+  },
+  "23786": {
+    "padron": "23786",
+    "estado": "SIN DEUDA",
+    "titular": null,
+    "cuotas": [],
+    "total": 0,
+    "mensaje": "No se encontraron deudas para el código ingresado."
+  },
+  "24116": {
+    "padron": "24116",
+    "estado": "SIN DEUDA",
+    "titular": "AMANECER SOCIEDAD CIVIL",
+    "cuil": 30715047469,
+    "nomenclatura": "Nomenclatura 040803004000000400004",
+    "cuotas": [],
+    "cantidadCuotas": 0,
+    "total": 0
+  },
+  "24572": {
+    "padron": "24572",
+    "estado": "SIN DEUDA",
+    "titular": "GIORDANO ORLANDO OMAR",
+    "cuil": 20931702425,
+    "nomenclatura": "Nomenclatura 040803004300000400001",
+    "cuotas": [],
+    "cantidadCuotas": 0,
+    "total": 0
+  },
+  "24574": {
+    "padron": "24574",
+    "estado": "SIN DEUDA",
+    "titular": "GIORDANO VERONICA JESSICA",
+    "cuil": 27931702438,
+    "nomenclatura": "Nomenclatura 04080300430000070000-",
+    "cuotas": [],
+    "cantidadCuotas": 0,
+    "total": 0
+  },
+  "24688": {
+    "padron": "24688",
+    "estado": "SIN DEUDA",
+    "titular": "GIORDANO ORLANDO OMAR",
+    "cuil": 20931702425,
+    "nomenclatura": "Nomenclatura 040803004400001200005",
+    "cuotas": [],
+    "cantidadCuotas": 0,
+    "total": 0
+  },
+  "24796": {
+    "padron": "24796",
+    "estado": "CON DEUDA",
+    "titular": "FABRA VICENTE ENRIQUE",
+    "cuil": 20107633244,
+    "nomenclatura": "Nomenclatura 040803001500000900008",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8320861,
+        "capital": 45240,
+        "interes": 0,
+        "total": 45240,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 24796"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8405947,
+        "capital": 45240,
+        "interes": 0,
+        "total": 45240,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 24796"
+      }
+    ],
+    "cantidadCuotas": 2,
+    "total": 90480
+  },
+  "24862": {
+    "padron": "24862",
+    "estado": "SIN DEUDA",
+    "titular": "GIORDANO ORLANDO OMAR",
+    "cuil": 20931702425,
+    "nomenclatura": "Nomenclatura 040803002500002700004",
+    "cuotas": [],
+    "cantidadCuotas": 0,
+    "total": 0
+  },
+  "25440": {
+    "padron": "25440",
+    "estado": "CON DEUDA",
+    "titular": "FACELLO BEATRIZ VIVIANA",
+    "cuil": 27213750459,
+    "nomenclatura": "Nomenclatura 04080300660000200000-",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 2,
+        "referencia": 1182784,
+        "capital": 45240,
+        "interes": 4750.2,
+        "total": 49990.2,
+        "vencimiento": "2026-05-29",
+        "descripcion": "Tributo nro: 25440"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8236195,
+        "capital": 45240,
+        "interes": 0,
+        "total": 45240,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 25440"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8321280,
+        "capital": 45240,
+        "interes": 0,
+        "total": 45240,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 25440"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8406366,
+        "capital": 45240,
+        "interes": 0,
+        "total": 45240,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 25440"
+      }
+    ],
+    "cantidadCuotas": 4,
+    "total": 185710.2
+  },
+  "25446": {
+    "padron": "25446",
+    "estado": "CON DEUDA",
+    "titular": "TORINO SOCIEDAD CIVIL",
+    "cuil": 30715047337,
+    "nomenclatura": "Nomenclatura 04080300660000140000-",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 2,
+        "referencia": 1183149,
+        "capital": 37310,
+        "interes": 3917.55,
+        "total": 41227.55,
+        "vencimiento": "2026-05-29",
+        "descripcion": "Tributo nro: 25446"
+      },
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8151115,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 25446"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8236199,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 25446"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8321284,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 25446"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8406370,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 25446"
+      }
+    ],
+    "cantidadCuotas": 5,
+    "total": 190467.55
+  },
+  "25482": {
+    "padron": "25482",
+    "estado": "CON DEUDA",
+    "titular": "NIETO NALLIM JUAN GONZALO",
+    "cuil": 20307357675,
+    "nomenclatura": "Nomenclatura 04080300760000190000-",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8151134,
+        "capital": 50310,
+        "interes": 0,
+        "total": 50310,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 25482"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8236218,
+        "capital": 50310,
+        "interes": 0,
+        "total": 50310,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 25482"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8321303,
+        "capital": 50310,
+        "interes": 0,
+        "total": 50310,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 25482"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8406389,
+        "capital": 50310,
+        "interes": 0,
+        "total": 50310,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 25482"
+      }
+    ],
+    "cantidadCuotas": 4,
+    "total": 201240
+  },
+  "25532": {
+    "padron": "25532",
+    "estado": "CON DEUDA",
+    "titular": "GALDEANO DE CORNEJO VICTORIA DOMINGA",
+    "cuil": 27046057800,
+    "nomenclatura": "Nomenclatura 040803001200001200002",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8151168,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 25532"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8236252,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 25532"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8321337,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 25532"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8406423,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 25532"
+      }
+    ],
+    "cantidadCuotas": 4,
+    "total": 117000
+  },
+  "25555": {
+    "padron": "25555",
+    "estado": "CON DEUDA",
+    "titular": "OROZCO ISABEL",
+    "cuil": null,
+    "nomenclatura": "Nomenclatura 040803001000001400003",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 1,
+        "referencia": 1188721,
+        "capital": 29250,
+        "interes": 5733,
+        "total": 34983,
+        "vencimiento": "2026-02-27",
+        "descripcion": "Tributo nro: 25555"
+      },
+      {
+        "anio": 2026,
+        "numero": 2,
+        "referencia": 1188722,
+        "capital": 29250,
+        "interes": 3071.25,
+        "total": 32321.25,
+        "vencimiento": "2026-05-29",
+        "descripcion": "Tributo nro: 25555"
+      },
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8151182,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 25555"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8236266,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 25555"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8321351,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 25555"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8406437,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 25555"
+      }
+    ],
+    "cantidadCuotas": 6,
+    "total": 184304.25
+  },
+  "25655": {
+    "padron": "25655",
+    "estado": "CON DEUDA",
+    "titular": "VELASCO LILIANA NANCY",
+    "cuil": 27142814132,
+    "nomenclatura": "Nomenclatura 04080300270000150000-",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 1,
+        "referencia": 1194181,
+        "capital": 40300,
+        "interes": 7898.8,
+        "total": 48198.8,
+        "vencimiento": "2026-02-27",
+        "descripcion": "Tributo nro: 25655"
+      },
+      {
+        "anio": 2026,
+        "numero": 2,
+        "referencia": 1194182,
+        "capital": 40300,
+        "interes": 4231.5,
+        "total": 44531.5,
+        "vencimiento": "2026-05-29",
+        "descripcion": "Tributo nro: 25655"
+      },
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8151258,
+        "capital": 40300,
+        "interes": 0,
+        "total": 40300,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 25655"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8236342,
+        "capital": 40300,
+        "interes": 0,
+        "total": 40300,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 25655"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8321427,
+        "capital": 40300,
+        "interes": 0,
+        "total": 40300,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 25655"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8406513,
+        "capital": 40300,
+        "interes": 0,
+        "total": 40300,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 25655"
+      }
+    ],
+    "cantidadCuotas": 6,
+    "total": 253930.3
+  },
+  "25763": {
+    "padron": "25763",
+    "estado": "CON DEUDA",
+    "titular": "ADANS ENRIQUE",
+    "cuil": null,
+    "nomenclatura": "Nomenclatura 04080300330000160000-",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 1,
+        "referencia": 1200431,
+        "capital": 37310,
+        "interes": 7312.76,
+        "total": 44622.76,
+        "vencimiento": "2026-02-27",
+        "descripcion": "Tributo nro: 25763"
+      },
+      {
+        "anio": 2026,
+        "numero": 2,
+        "referencia": 1200432,
+        "capital": 37310,
+        "interes": 3917.55,
+        "total": 41227.55,
+        "vencimiento": "2026-05-29",
+        "descripcion": "Tributo nro: 25763"
+      },
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8151345,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 25763"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8236429,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 25763"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8321514,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 25763"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8406600,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 25763"
+      }
+    ],
+    "cantidadCuotas": 6,
+    "total": 235090.31
+  },
+  "25973": {
+    "padron": "25973",
+    "estado": "CON DEUDA",
+    "titular": "MUTTI MAURICIO DAVID",
+    "cuil": 20180838474,
+    "nomenclatura": "Nomenclatura 040803000600001400000",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 2,
+        "referencia": 1210336,
+        "capital": 29250,
+        "interes": 3071.25,
+        "total": 32321.25,
+        "vencimiento": "2026-05-29",
+        "descripcion": "Tributo nro: 25973"
+      },
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8151476,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 25973"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8236560,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 25973"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8321645,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 25973"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8406731,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 25973"
+      }
+    ],
+    "cantidadCuotas": 5,
+    "total": 149321.25
+  },
+  "26001": {
+    "padron": "26001",
+    "estado": "CON DEUDA",
+    "titular": "MARSALA RAUL ALBERTO",
+    "cuil": 20216874197,
+    "nomenclatura": "Nomenclatura 04080300070000120000-",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 1,
+        "referencia": 1211532,
+        "capital": 37310,
+        "interes": 7312.76,
+        "total": 44622.76,
+        "vencimiento": "2026-02-27",
+        "descripcion": "Tributo nro: 26001"
+      },
+      {
+        "anio": 2026,
+        "numero": 2,
+        "referencia": 1211533,
+        "capital": 37310,
+        "interes": 3917.55,
+        "total": 41227.55,
+        "vencimiento": "2026-05-29",
+        "descripcion": "Tributo nro: 26001"
+      },
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8151497,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 26001"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8236581,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 26001"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8321666,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 26001"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8406752,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 26001"
+      }
+    ],
+    "cantidadCuotas": 6,
+    "total": 235090.31
+  },
+  "26003": {
+    "padron": "26003",
+    "estado": "CON DEUDA",
+    "titular": "MARSALA RAUL ALBERTO",
+    "cuil": 20216874197,
+    "nomenclatura": "Nomenclatura 04080300070000140000-",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 1,
+        "referencia": 1211585,
+        "capital": 37310,
+        "interes": 7312.76,
+        "total": 44622.76,
+        "vencimiento": "2026-02-27",
+        "descripcion": "Tributo nro: 26003"
+      },
+      {
+        "anio": 2026,
+        "numero": 2,
+        "referencia": 1211586,
+        "capital": 37310,
+        "interes": 3917.55,
+        "total": 41227.55,
+        "vencimiento": "2026-05-29",
+        "descripcion": "Tributo nro: 26003"
+      },
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8151498,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 26003"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8236582,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 26003"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8321667,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 26003"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8406753,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 26003"
+      }
+    ],
+    "cantidadCuotas": 6,
+    "total": 235090.31
+  },
+  "26004": {
+    "padron": "26004",
+    "estado": "CON DEUDA",
+    "titular": "MARSALA JOSE",
+    "cuil": null,
+    "nomenclatura": "Nomenclatura 04080300070000150000-",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 2,
+        "referencia": 1211643,
+        "capital": 45240,
+        "interes": 4750.2,
+        "total": 49990.2,
+        "vencimiento": "2026-05-29",
+        "descripcion": "Tributo nro: 26004"
+      },
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8151499,
+        "capital": 45240,
+        "interes": 0,
+        "total": 45240,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 26004"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8236583,
+        "capital": 45240,
+        "interes": 0,
+        "total": 45240,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 26004"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8321668,
+        "capital": 45240,
+        "interes": 0,
+        "total": 45240,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 26004"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8406754,
+        "capital": 45240,
+        "interes": 0,
+        "total": 45240,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 26004"
+      }
+    ],
+    "cantidadCuotas": 5,
+    "total": 230950.2
+  },
+  "26016": {
+    "padron": "26016",
+    "estado": "SIN DEUDA",
+    "titular": "ALVARADO AMELIO",
+    "cuil": null,
+    "nomenclatura": "Nomenclatura 04080300070000270000-",
+    "cuotas": [],
+    "cantidadCuotas": 0,
+    "total": 0
+  },
+  "27071": {
+    "padron": "27071",
+    "estado": "CON DEUDA",
+    "titular": "SCAVONE EDUARDO FERNANDO",
+    "cuil": 20252922440,
+    "nomenclatura": "Nomenclatura 040809002900001600005",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 2,
+        "referencia": 1252602,
+        "capital": 39341.5,
+        "interes": 4130.85,
+        "total": 43472.35,
+        "vencimiento": "2026-05-29",
+        "descripcion": "Tributo nro: 27071"
+      },
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8152082,
+        "capital": 41736.5,
+        "interes": 0,
+        "total": 41736.5,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 27071"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8237166,
+        "capital": 41736.5,
+        "interes": 0,
+        "total": 41736.5,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 27071"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8322251,
+        "capital": 41736.5,
+        "interes": 0,
+        "total": 41736.5,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 27071"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8407337,
+        "capital": 41736.5,
+        "interes": 0,
+        "total": 41736.5,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 27071"
+      }
+    ],
+    "cantidadCuotas": 5,
+    "total": 210418.35
+  },
+  "29715": {
+    "padron": "29715",
+    "estado": "SIN DEUDA",
+    "titular": "MORETTI RAUL HECTOR",
+    "cuil": 20220094201,
+    "nomenclatura": "Nomenclatura 040815000200000400000",
+    "cuotas": [],
+    "cantidadCuotas": 0,
+    "total": 0
+  },
+  "29716": {
+    "padron": "29716",
+    "estado": "CON DEUDA",
+    "titular": "GONZALEZ MARIO ANTONIO",
+    "cuil": 20171777055,
+    "nomenclatura": "Nomenclatura 040815000200002800001",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 1,
+        "referencia": 1390684,
+        "capital": 56290,
+        "interes": 11032.84,
+        "total": 67322.84,
+        "vencimiento": "2026-02-27",
+        "descripcion": "Tributo nro: 29716"
+      },
+      {
+        "anio": 2026,
+        "numero": 2,
+        "referencia": 1390685,
+        "capital": 56290,
+        "interes": 5910.45,
+        "total": 62200.45,
+        "vencimiento": "2026-05-29",
+        "descripcion": "Tributo nro: 29716"
+      },
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8153929,
+        "capital": 56290,
+        "interes": 0,
+        "total": 56290,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 29716"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8239013,
+        "capital": 56290,
+        "interes": 0,
+        "total": 56290,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 29716"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8324098,
+        "capital": 56290,
+        "interes": 0,
+        "total": 56290,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 29716"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8409184,
+        "capital": 56290,
+        "interes": 0,
+        "total": 56290,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 29716"
+      }
+    ],
+    "cantidadCuotas": 6,
+    "total": 354683.29
+  },
+  "29722": {
+    "padron": "29722",
+    "estado": "SIN DEUDA",
+    "titular": "BRUNO SILVANO MORETTI",
+    "cuil": 20068744874,
+    "nomenclatura": "Nomenclatura 04081500020000080000-",
+    "cuotas": [],
+    "cantidadCuotas": 0,
+    "total": 0
+  },
+  "29763": {
+    "padron": "29763",
+    "estado": "CON DEUDA",
+    "titular": "PALACIO LORENZO",
+    "cuil": 20066170447,
+    "nomenclatura": "Nomenclatura 04081500050000020000-",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8239047,
+        "capital": 34320,
+        "interes": 0,
+        "total": 34320,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 29763"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8324132,
+        "capital": 34320,
+        "interes": 0,
+        "total": 34320,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 29763"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8409218,
+        "capital": 34320,
+        "interes": 0,
+        "total": 34320,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 29763"
+      }
+    ],
+    "cantidadCuotas": 3,
+    "total": 102960
+  },
+  "30396": {
+    "padron": "30396",
+    "estado": "CON DEUDA",
+    "titular": "CLEMENTI CARLOS MARCELO",
+    "cuil": 20238408513,
+    "nomenclatura": "Nomenclatura 04120300030000190000-",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8239386,
+        "capital": 40300,
+        "interes": 0,
+        "total": 40300,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 30396"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8324471,
+        "capital": 40300,
+        "interes": 0,
+        "total": 40300,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 30396"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8409557,
+        "capital": 40300,
+        "interes": 0,
+        "total": 40300,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 30396"
+      }
+    ],
+    "cantidadCuotas": 3,
+    "total": 120900
+  },
+  "37672": {
+    "padron": "37672",
+    "estado": "CON DEUDA",
+    "titular": "BRECCIA CELESTINO ENIO",
+    "cuil": 20068445052,
+    "nomenclatura": "Nomenclatura 04050300390000330000-",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 1,
+        "referencia": 1737287,
+        "capital": 45240,
+        "interes": 8867.04,
+        "total": 54107.04,
+        "vencimiento": "2026-02-27",
+        "descripcion": "Tributo nro: 37672"
+      },
+      {
+        "anio": 2026,
+        "numero": 2,
+        "referencia": 1737288,
+        "capital": 45240,
+        "interes": 4750.2,
+        "total": 49990.2,
+        "vencimiento": "2026-05-29",
+        "descripcion": "Tributo nro: 37672"
+      },
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8158580,
+        "capital": 45240,
+        "interes": 0,
+        "total": 45240,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 37672"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8243664,
+        "capital": 45240,
+        "interes": 0,
+        "total": 45240,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 37672"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8328749,
+        "capital": 45240,
+        "interes": 0,
+        "total": 45240,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 37672"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8413835,
+        "capital": 45240,
+        "interes": 0,
+        "total": 45240,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 37672"
+      }
+    ],
+    "cantidadCuotas": 6,
+    "total": 285057.24
+  },
+  "38611": {
+    "padron": "38611",
+    "estado": "CON DEUDA",
+    "titular": "BORGNA ARNALDO SANTIAGO",
+    "cuil": 20068448388,
+    "nomenclatura": "Nomenclatura 040503002500002200001",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8159165,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 38611"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8244249,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 38611"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8329334,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 38611"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8414420,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 38611"
+      }
+    ],
+    "cantidadCuotas": 4,
+    "total": 117000
+  },
+  "39242": {
+    "padron": "39242",
+    "estado": "CON DEUDA",
+    "titular": "ZAUZICH JULIO CESAR",
+    "cuil": 20126810637,
+    "nomenclatura": "Nomenclatura 04080300510000590000-",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8159578,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 39242"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8244662,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 39242"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8329747,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 39242"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8414833,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 39242"
+      }
+    ],
+    "cantidadCuotas": 4,
+    "total": 149240
+  },
+  "40108": {
+    "padron": "40108",
+    "estado": "CON DEUDA",
+    "titular": "GOMENSORO SILVIA ESTER",
+    "cuil": 27083387195,
+    "nomenclatura": "Nomenclatura 040505002900000900002",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 1,
+        "referencia": 1856230,
+        "capital": 45240,
+        "interes": 8867.04,
+        "total": 54107.04,
+        "vencimiento": "2026-02-27",
+        "descripcion": "Tributo nro: 40108"
+      },
+      {
+        "anio": 2026,
+        "numero": 2,
+        "referencia": 1856231,
+        "capital": 45240,
+        "interes": 4750.2,
+        "total": 49990.2,
+        "vencimiento": "2026-05-29",
+        "descripcion": "Tributo nro: 40108"
+      },
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8160179,
+        "capital": 45240,
+        "interes": 0,
+        "total": 45240,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 40108"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8245263,
+        "capital": 45240,
+        "interes": 0,
+        "total": 45240,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 40108"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8330348,
+        "capital": 45240,
+        "interes": 0,
+        "total": 45240,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 40108"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8415434,
+        "capital": 45240,
+        "interes": 0,
+        "total": 45240,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 40108"
+      }
+    ],
+    "cantidadCuotas": 6,
+    "total": 285057.24
+  },
+  "41278": {
+    "padron": "41278",
+    "estado": "CON DEUDA",
+    "titular": "NIETO NALLIM MARIA JIMENA",
+    "cuil": 27289777887,
+    "nomenclatura": "Nomenclatura 040803002400002200000",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8160771,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 41278"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8245855,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 41278"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8330940,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 41278"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8416026,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 41278"
+      }
+    ],
+    "cantidadCuotas": 4,
+    "total": 117000
+  },
+  "42468": {
+    "padron": "42468",
+    "estado": "CON DEUDA",
+    "titular": "ALESSANDRA ALICIA MARIA",
+    "cuil": 27213770409,
+    "nomenclatura": "Nomenclatura 04140100130000400000-",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8161559,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 42468"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8246643,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 42468"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8331728,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 42468"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8416814,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 42468"
+      }
+    ],
+    "cantidadCuotas": 4,
+    "total": 117000
+  },
+  "43549": {
+    "padron": "43549",
+    "estado": "CON DEUDA",
+    "titular": "CASTRO MARIA EUGENIA",
+    "cuil": 27245116719,
+    "nomenclatura": "Nomenclatura 040903003900000200002",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8162242,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 43549"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8247327,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 43549"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8332412,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 43549"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8417498,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 43549"
+      }
+    ],
+    "cantidadCuotas": 4,
+    "total": 149240
+  },
+  "43896": {
+    "padron": "43896",
+    "estado": "SIN DEUDA",
+    "titular": "GOSSOS JOSE MATIAS",
+    "cuil": 20083688999,
+    "nomenclatura": "Nomenclatura 040805000200000100520",
+    "cuotas": [],
+    "cantidadCuotas": 0,
+    "total": 0
+  },
+  "46782": {
+    "padron": "46782",
+    "estado": "CON DEUDA",
+    "titular": "RETAMOZO OLGA SUSANA",
+    "cuil": 27167698196,
+    "nomenclatura": "Nomenclatura 040809000300002400009",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 1,
+        "referencia": 2171933,
+        "capital": 29250,
+        "interes": 5733,
+        "total": 34983,
+        "vencimiento": "2026-02-27",
+        "descripcion": "Tributo nro: 46782"
+      },
+      {
+        "anio": 2026,
+        "numero": 2,
+        "referencia": 2171934,
+        "capital": 29250,
+        "interes": 3071.25,
+        "total": 32321.25,
+        "vencimiento": "2026-05-29",
+        "descripcion": "Tributo nro: 46782"
+      },
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8164356,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 46782"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8249441,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 46782"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8334526,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 46782"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8419612,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 46782"
+      }
+    ],
+    "cantidadCuotas": 6,
+    "total": 184304.25
+  },
+  "46927": {
+    "padron": "46927",
+    "estado": "CON DEUDA",
+    "titular": "INSTITUTO PROVINCIAL DE LA VIVIENDA",
+    "cuil": 30999078040,
+    "nomenclatura": "Nomenclatura 04080900170000230000-",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 1,
+        "referencia": 2179803,
+        "capital": 29250,
+        "interes": 5733,
+        "total": 34983,
+        "vencimiento": "2026-02-27",
+        "descripcion": "Tributo nro: 46927"
+      },
+      {
+        "anio": 2026,
+        "numero": 2,
+        "referencia": 2179804,
+        "capital": 29250,
+        "interes": 3071.25,
+        "total": 32321.25,
+        "vencimiento": "2026-05-29",
+        "descripcion": "Tributo nro: 46927"
+      },
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8164484,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 46927"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8249569,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 46927"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8334654,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 46927"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8419740,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 46927"
+      }
+    ],
+    "cantidadCuotas": 6,
+    "total": 184304.25
+  },
+  "55556": {
+    "padron": "55556",
+    "estado": "SIN DEUDA",
+    "titular": "TORINO SOCIEDAD CIVIL",
+    "cuil": 30715047337,
+    "nomenclatura": "Nomenclatura 04080100160000690000-",
+    "cuotas": [],
+    "cantidadCuotas": 0,
+    "total": 0
+  },
+  "55558": {
+    "padron": "55558",
+    "estado": "CON DEUDA",
+    "titular": "LETA RENZO MARTIN",
+    "cuil": 20327515501,
+    "nomenclatura": "Nomenclatura 040804001100009900000",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 1,
+        "referencia": 2603297,
+        "capital": 74360,
+        "interes": 14574.56,
+        "total": 88934.56,
+        "vencimiento": "2026-02-27",
+        "descripcion": "Tributo nro: 55525"
+      },
+      {
+        "anio": 2026,
+        "numero": 2,
+        "referencia": 2603298,
+        "capital": 74360,
+        "interes": 7807.8,
+        "total": 82167.8,
+        "vencimiento": "2026-05-29",
+        "descripcion": "Tributo nro: 55525"
+      },
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8170299,
+        "capital": 74360,
+        "interes": 0,
+        "total": 74360,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 55525"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8255384,
+        "capital": 74360,
+        "interes": 0,
+        "total": 74360,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 55525"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8340469,
+        "capital": 74360,
+        "interes": 0,
+        "total": 74360,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 55525"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8425555,
+        "capital": 74360,
+        "interes": 0,
+        "total": 74360,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 55525"
+      }
+    ],
+    "cantidadCuotas": 6,
+    "total": 468542.36
+  },
+  "58627": {
+    "padron": "58627",
+    "estado": "CON DEUDA",
+    "titular": "AGUERO ALBERTO FABIAN",
+    "cuil": 20255407040,
+    "nomenclatura": "Nomenclatura 040505002400004400009",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 1,
+        "referencia": 2755569,
+        "capital": 29250,
+        "interes": 5733,
+        "total": 34983,
+        "vencimiento": "2026-02-27",
+        "descripcion": "Tributo nro: 58589"
+      },
+      {
+        "anio": 2026,
+        "numero": 2,
+        "referencia": 2755570,
+        "capital": 29250,
+        "interes": 3071.25,
+        "total": 32321.25,
+        "vencimiento": "2026-05-29",
+        "descripcion": "Tributo nro: 58589"
+      },
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8172492,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 58589"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8257577,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 58589"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8342662,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 58589"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8427748,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 58589"
+      }
+    ],
+    "cantidadCuotas": 6,
+    "total": 184304.25
+  },
+  "59969": {
+    "padron": "59969",
+    "estado": "CON DEUDA",
+    "titular": "ROSSA LAURA CECILIA",
+    "cuil": 27223924757,
+    "nomenclatura": "Nomenclatura 040801001100003100005",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8173485,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 59930"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8258570,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 59930"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8343655,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 59930"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8428741,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 59930"
+      }
+    ],
+    "cantidadCuotas": 4,
+    "total": 117000
+  },
+  "60319": {
+    "padron": "60319",
+    "estado": "CON DEUDA",
+    "titular": "GONZALEZ JUAN VICTOR ULISES",
+    "cuil": 20226887335,
+    "nomenclatura": "Nomenclatura 04060100630000150000-",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 1,
+        "referencia": 2843879,
+        "capital": 37310,
+        "interes": 7312.76,
+        "total": 44622.76,
+        "vencimiento": "2026-02-27",
+        "descripcion": "Tributo nro: 60280"
+      },
+      {
+        "anio": 2026,
+        "numero": 2,
+        "referencia": 2843880,
+        "capital": 37310,
+        "interes": 3917.55,
+        "total": 41227.55,
+        "vencimiento": "2026-05-29",
+        "descripcion": "Tributo nro: 60280"
+      },
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8173750,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 60280"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8258835,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 60280"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8343920,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 60280"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8429006,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 60280"
+      }
+    ],
+    "cantidadCuotas": 6,
+    "total": 235090.31
+  },
+  "60407": {
+    "padron": "60407",
+    "estado": "SIN DEUDA",
+    "titular": "INSTITUTO PROVINCIAL DE LA VIVIENDA",
+    "cuil": 30999078040,
+    "nomenclatura": "Nomenclatura 04060100590000250000-",
+    "cuotas": [],
+    "cantidadCuotas": 0,
+    "total": 0
+  },
+  "69532": {
+    "padron": "69532",
+    "estado": "CON DEUDA",
+    "titular": "MASSO GREGORIO JOSE",
+    "cuil": 20226344528,
+    "nomenclatura": "Nomenclatura 04070200330000010000-",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 1,
+        "referencia": 3297315,
+        "capital": 40300,
+        "interes": 7898.8,
+        "total": 48198.8,
+        "vencimiento": "2026-02-27",
+        "descripcion": "Tributo nro: 69466"
+      },
+      {
+        "anio": 2026,
+        "numero": 2,
+        "referencia": 3297316,
+        "capital": 40300,
+        "interes": 4231.5,
+        "total": 44531.5,
+        "vencimiento": "2026-05-29",
+        "descripcion": "Tributo nro: 69466"
+      },
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8180156,
+        "capital": 40300,
+        "interes": 0,
+        "total": 40300,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 69466"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8265241,
+        "capital": 40300,
+        "interes": 0,
+        "total": 40300,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 69466"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8350326,
+        "capital": 40300,
+        "interes": 0,
+        "total": 40300,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 69466"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8435412,
+        "capital": 40300,
+        "interes": 0,
+        "total": 40300,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 69466"
+      }
+    ],
+    "cantidadCuotas": 6,
+    "total": 253930.3
+  },
+  "70863": {
+    "padron": "70863",
+    "estado": "CON DEUDA",
+    "titular": "ADMICOR S.A.",
+    "cuil": 30709630497,
+    "nomenclatura": "Nomenclatura 040602001500000200003",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 1,
+        "referencia": 3361278,
+        "capital": 30290,
+        "interes": 5936.84,
+        "total": 36226.84,
+        "vencimiento": "2026-02-27",
+        "descripcion": "Tributo nro: 70796"
+      },
+      {
+        "anio": 2026,
+        "numero": 2,
+        "referencia": 3361279,
+        "capital": 30290,
+        "interes": 3180.45,
+        "total": 33470.45,
+        "vencimiento": "2026-05-29",
+        "descripcion": "Tributo nro: 70796"
+      },
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8180977,
+        "capital": 30290,
+        "interes": 0,
+        "total": 30290,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 70796"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8266062,
+        "capital": 30290,
+        "interes": 0,
+        "total": 30290,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 70796"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8351147,
+        "capital": 30290,
+        "interes": 0,
+        "total": 30290,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 70796"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8436233,
+        "capital": 30290,
+        "interes": 0,
+        "total": 30290,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 70796"
+      }
+    ],
+    "cantidadCuotas": 6,
+    "total": 190857.28999999998
+  },
+  "74403": {
+    "padron": "74403",
+    "estado": "CON DEUDA",
+    "titular": "RIPPARI LORENA DEOLINDA",
+    "cuil": 27257824441,
+    "nomenclatura": "Nomenclatura 04120500090004120000-",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8352916,
+        "capital": 156520,
+        "interes": 0,
+        "total": 156520,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 73617"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8438003,
+        "capital": 156520,
+        "interes": 0,
+        "total": 156520,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 73617"
+      }
+    ],
+    "cantidadCuotas": 2,
+    "total": 313040
+  },
+  "74772": {
+    "padron": "74772",
+    "estado": "CON DEUDA",
+    "titular": "DURET GONZALO FRANCISCO",
+    "cuil": 20240331447,
+    "nomenclatura": "Nomenclatura 040815002800001400000",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 1,
+        "referencia": 3519539,
+        "capital": 31330,
+        "interes": 6140.68,
+        "total": 37470.68,
+        "vencimiento": "2026-02-27",
+        "descripcion": "Tributo nro: 73983"
+      },
+      {
+        "anio": 2026,
+        "numero": 2,
+        "referencia": 3519540,
+        "capital": 31330,
+        "interes": 3289.65,
+        "total": 34619.65,
+        "vencimiento": "2026-05-29",
+        "descripcion": "Tributo nro: 73983"
+      },
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8182950,
+        "capital": 31330,
+        "interes": 0,
+        "total": 31330,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 73983"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8268035,
+        "capital": 31330,
+        "interes": 0,
+        "total": 31330,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 73983"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8353120,
+        "capital": 31330,
+        "interes": 0,
+        "total": 31330,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 73983"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8438207,
+        "capital": 31330,
+        "interes": 0,
+        "total": 31330,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 73983"
+      }
+    ],
+    "cantidadCuotas": 6,
+    "total": 197410.33000000002
+  },
+  "75504": {
+    "padron": "75504",
+    "estado": "CON DEUDA",
+    "titular": "CICCONI NANCY ELIZABETH",
+    "cuil": 27291487683,
+    "nomenclatura": "Nomenclatura 040801001500005100041",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 1,
+        "referencia": 3557551,
+        "capital": 29250,
+        "interes": 5733,
+        "total": 34983,
+        "vencimiento": "2026-02-27",
+        "descripcion": "Tributo nro: 74663"
+      },
+      {
+        "anio": 2026,
+        "numero": 2,
+        "referencia": 3557552,
+        "capital": 29250,
+        "interes": 3071.25,
+        "total": 32321.25,
+        "vencimiento": "2026-05-29",
+        "descripcion": "Tributo nro: 74663"
+      },
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8183429,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 74663"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8268514,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 74663"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8353599,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 74663"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8438686,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 74663"
+      }
+    ],
+    "cantidadCuotas": 6,
+    "total": 184304.25
+  },
+  "76060": {
+    "padron": "76060",
+    "estado": "CON DEUDA",
+    "titular": "CASCINO DANIELA VIVIANA",
+    "cuil": 27382066028,
+    "nomenclatura": "Nomenclatura 04081500060001010000-",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 1,
+        "referencia": 3581383,
+        "capital": 30290,
+        "interes": 5936.84,
+        "total": 36226.84,
+        "vencimiento": "2026-02-27",
+        "descripcion": "Tributo nro: 75197"
+      },
+      {
+        "anio": 2026,
+        "numero": 2,
+        "referencia": 3581384,
+        "capital": 30290,
+        "interes": 3180.45,
+        "total": 33470.45,
+        "vencimiento": "2026-05-29",
+        "descripcion": "Tributo nro: 75197"
+      },
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8183746,
+        "capital": 30290,
+        "interes": 0,
+        "total": 30290,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 75197"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8268831,
+        "capital": 30290,
+        "interes": 0,
+        "total": 30290,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 75197"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8353916,
+        "capital": 30290,
+        "interes": 0,
+        "total": 30290,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 75197"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8439003,
+        "capital": 30290,
+        "interes": 0,
+        "total": 30290,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 75197"
+      }
+    ],
+    "cantidadCuotas": 6,
+    "total": 190857.28999999998
+  },
+  "76366": {
+    "padron": "76366",
+    "estado": "SIN DEUDA",
+    "titular": "MARTINEZ JOSE ANTONIO",
+    "cuil": 20080299699,
+    "nomenclatura": "Nomenclatura 04090200060000320007-",
+    "cuotas": [],
+    "cantidadCuotas": 0,
+    "total": 0
+  },
+  "81449": {
+    "padron": "81449",
+    "estado": "CON DEUDA",
+    "titular": "VILLAVICENCIO JUAN CARLOS",
+    "cuil": 20213799046,
+    "nomenclatura": "Nomenclatura 040803001500003300001",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8187225,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 80577"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8272310,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 80577"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8357395,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 80577"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8442482,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 80577"
+      }
+    ],
+    "cantidadCuotas": 4,
+    "total": 149240
+  },
+  "82168": {
+    "padron": "82168",
+    "estado": "CON DEUDA",
+    "titular": "BRITOS GABRIELA SUSANA",
+    "cuil": 27269453600,
+    "nomenclatura": "Nomenclatura 040814000100041500000",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 2,
+        "referencia": 3863013,
+        "capital": 39341.5,
+        "interes": 4130.85,
+        "total": 43472.35,
+        "vencimiento": "2026-05-29",
+        "descripcion": "Tributo nro: 81289"
+      },
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8187602,
+        "capital": 41736.5,
+        "interes": 0,
+        "total": 41736.5,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 81289"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8272687,
+        "capital": 41736.5,
+        "interes": 0,
+        "total": 41736.5,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 81289"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8357772,
+        "capital": 41736.5,
+        "interes": 0,
+        "total": 41736.5,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 81289"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8442859,
+        "capital": 41736.5,
+        "interes": 0,
+        "total": 41736.5,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 81289"
+      }
+    ],
+    "cantidadCuotas": 5,
+    "total": 210418.35
+  },
+  "88111": {
+    "padron": "88111",
+    "estado": "CON DEUDA",
+    "titular": "MUTTI MAURICIO DAVID",
+    "cuil": 20180838474,
+    "nomenclatura": "Nomenclatura 040803003600004400005",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 2,
+        "referencia": 4114991,
+        "capital": 37310,
+        "interes": 3917.55,
+        "total": 41227.55,
+        "vencimiento": "2026-05-29",
+        "descripcion": "Tributo nro: 87137"
+      },
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8190876,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 87137"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8275961,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 87137"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8361046,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 87137"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8446133,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 87137"
+      }
+    ],
+    "cantidadCuotas": 5,
+    "total": 190467.55
+  },
+  "96041": {
+    "padron": "96041",
+    "estado": "CON DEUDA",
+    "titular": "DIAZ SARA LAURA",
+    "cuil": 23062693584,
+    "nomenclatura": "Nomenclatura 040702004000001400050",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8196248,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 95028"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8281333,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 95028"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8366418,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 95028"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8451505,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 95028"
+      }
+    ],
+    "cantidadCuotas": 4,
+    "total": 117000
+  },
+  "101131": {
+    "padron": "101131",
+    "estado": "CON DEUDA",
+    "titular": "GONZALEZ LAURA ALICIA",
+    "cuil": 27216874817,
+    "nomenclatura": "Nomenclatura 040804002200002400009",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8199307,
+        "capital": 40300,
+        "interes": 0,
+        "total": 40300,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 100118"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8284392,
+        "capital": 40300,
+        "interes": 0,
+        "total": 40300,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 100118"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8369477,
+        "capital": 40300,
+        "interes": 0,
+        "total": 40300,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 100118"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8454564,
+        "capital": 40300,
+        "interes": 0,
+        "total": 40300,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 100118"
+      }
+    ],
+    "cantidadCuotas": 4,
+    "total": 161200
+  },
+  "105764": {
+    "padron": "105764",
+    "estado": "CON DEUDA",
+    "titular": "PEREZ MARIA EUGENIA",
+    "cuil": 27224072215,
+    "nomenclatura": "Nomenclatura 040803002700002600016",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8202336,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 104751"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8287421,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 104751"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8372506,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 104751"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8457593,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 104751"
+      }
+    ],
+    "cantidadCuotas": 4,
+    "total": 117000
+  },
+  "106729": {
+    "padron": "106729",
+    "estado": "CON DEUDA",
+    "titular": "ALESSANDRA JUAN ANTONIO",
+    "cuil": 20160750953,
+    "nomenclatura": "Nomenclatura 041401001100000600000",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 2,
+        "referencia": 5019525,
+        "capital": 50229,
+        "interes": 5274.04,
+        "total": 55503.04,
+        "vencimiento": "2026-05-29",
+        "descripcion": "Tributo nro: 105716"
+      },
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8202986,
+        "capital": 52624,
+        "interes": 0,
+        "total": 52624,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 105716"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8288071,
+        "capital": 52624,
+        "interes": 0,
+        "total": 52624,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 105716"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8373156,
+        "capital": 52624,
+        "interes": 0,
+        "total": 52624,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 105716"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8458243,
+        "capital": 52624,
+        "interes": 0,
+        "total": 52624,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 105716"
+      }
+    ],
+    "cantidadCuotas": 5,
+    "total": 265999.04000000004
+  },
+  "110755": {
+    "padron": "110755",
+    "estado": "CON DEUDA",
+    "titular": "GOMEZ CARRIZO MARIA ANTONELLA",
+    "cuil": 27375171479,
+    "nomenclatura": "Nomenclatura 040803005100026300021",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8205689,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 109742"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8290774,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 109742"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8375860,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 109742"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8460947,
+        "capital": 29250,
+        "interes": 0,
+        "total": 29250,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 109742"
+      }
+    ],
+    "cantidadCuotas": 4,
+    "total": 117000
+  },
+  "111472": {
+    "padron": "111472",
+    "estado": "SIN DEUDA",
+    "titular": "BRITOS CARLOS SEBASTIAN",
+    "cuil": 20296176436,
+    "nomenclatura": "Nomenclatura 040807008400021200005",
+    "cuotas": [],
+    "cantidadCuotas": 0,
+    "total": 0
+  },
+  "112217": {
+    "padron": "112217",
+    "estado": "CON DEUDA",
+    "titular": "CIAFRELLI MARIANO MIGUEL",
+    "cuil": 20268455773,
+    "nomenclatura": "Nomenclatura 040803005000011800007",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8206710,
+        "capital": 74360,
+        "interes": 0,
+        "total": 74360,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 111204"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8291795,
+        "capital": 74360,
+        "interes": 0,
+        "total": 74360,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 111204"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8376881,
+        "capital": 74360,
+        "interes": 0,
+        "total": 74360,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 111204"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8461968,
+        "capital": 74360,
+        "interes": 0,
+        "total": 74360,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 111204"
+      }
+    ],
+    "cantidadCuotas": 4,
+    "total": 297440
+  },
+  "116983": {
+    "padron": "116983",
+    "estado": "CON DEUDA",
+    "titular": "CICCONI MARIANO VICTOR",
+    "cuil": 20377805721,
+    "nomenclatura": "Nomenclatura 041101000800028600004",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 1,
+        "referencia": 5526013,
+        "capital": 40300,
+        "interes": 7898.8,
+        "total": 48198.8,
+        "vencimiento": "2026-02-27",
+        "descripcion": "Tributo nro: 115927"
+      },
+      {
+        "anio": 2026,
+        "numero": 2,
+        "referencia": 5526014,
+        "capital": 40300,
+        "interes": 4231.5,
+        "total": 44531.5,
+        "vencimiento": "2026-05-29",
+        "descripcion": "Tributo nro: 115927"
+      },
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8209583,
+        "capital": 40300,
+        "interes": 0,
+        "total": 40300,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 115927"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8294668,
+        "capital": 40300,
+        "interes": 0,
+        "total": 40300,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 115927"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8379754,
+        "capital": 40300,
+        "interes": 0,
+        "total": 40300,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 115927"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8464841,
+        "capital": 40300,
+        "interes": 0,
+        "total": 40300,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 115927"
+      }
+    ],
+    "cantidadCuotas": 6,
+    "total": 253930.3
+  },
+  "116984": {
+    "padron": "116984",
+    "estado": "CON DEUDA",
+    "titular": "CICCONI NANCY ELIZABETH",
+    "cuil": 27291487683,
+    "nomenclatura": "Nomenclatura 041101000800028700009",
+    "cuotas": [
+      {
+        "anio": 2026,
+        "numero": 1,
+        "referencia": 5526057,
+        "capital": 37310,
+        "interes": 7312.76,
+        "total": 44622.76,
+        "vencimiento": "2026-02-27",
+        "descripcion": "Tributo nro: 115928"
+      },
+      {
+        "anio": 2026,
+        "numero": 2,
+        "referencia": 5526058,
+        "capital": 37310,
+        "interes": 3917.55,
+        "total": 41227.55,
+        "vencimiento": "2026-05-29",
+        "descripcion": "Tributo nro: 115928"
+      },
+      {
+        "anio": 2026,
+        "numero": 3,
+        "referencia": 8209584,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 115928"
+      },
+      {
+        "anio": 2026,
+        "numero": 4,
+        "referencia": 8294669,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-09-30",
+        "descripcion": "Tributo nro: 115928"
+      },
+      {
+        "anio": 2026,
+        "numero": 5,
+        "referencia": 8379755,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-10-20",
+        "descripcion": "Tributo nro: 115928"
+      },
+      {
+        "anio": 2026,
+        "numero": 6,
+        "referencia": 8464842,
+        "capital": 37310,
+        "interes": 0,
+        "total": 37310,
+        "vencimiento": "2026-12-21",
+        "descripcion": "Tributo nro: 115928"
+      }
+    ],
+    "cantidadCuotas": 6,
+    "total": 235090.31
+  },
+  "117304": {
+    "padron": "117304",
+    "estado": "SIN DEUDA",
+    "titular": "GONZALEZ MARISA BEATRIZ",
+    "cuil": 27220094761,
+    "nomenclatura": "Nomenclatura 040602000100022200214",
+    "cuotas": [],
+    "cantidadCuotas": 0,
+    "total": 0
+  }
+}

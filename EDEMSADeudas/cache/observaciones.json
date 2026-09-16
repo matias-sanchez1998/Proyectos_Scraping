@@ -1,0 +1,86 @@
+{
+  "fecha": "2026-09-15T20:13:51.702Z",
+  "resumen": {
+    "totalRegistros": 131,
+    "nicValidos": 116,
+    "nicVacios": 11,
+    "nicInvalidos": 4
+  },
+  "registros": [
+    {
+      "inquilino": "TRICAZA MATURANO, FRANCO LIONEL",
+      "propietario": "AMAYA, JUAN CARLOS",
+      "nic": "002-006-342"
+    },
+    {
+      "inquilino": "ORTIZ CASTELLON, JAQUELINA TAMARA",
+      "propietario": "CIAFRELLI, MARIA LAURA",
+      "nic": ""
+    },
+    {
+      "inquilino": "MANRIQUE, CLAUDIA FABIANA",
+      "propietario": "CIAFRELLI, MARIA LAURA",
+      "nic": ""
+    },
+    {
+      "inquilino": "RIVERO, MAURICIO TOMAS",
+      "propietario": "CICCONI, MARIO NAZARENO",
+      "nic": ""
+    },
+    {
+      "inquilino": "FOSSAS, FRANCO SAMUEL",
+      "propietario": "CICCONI, MARIO NAZARENO",
+      "nic": ""
+    },
+    {
+      "inquilino": "ECHEVERRIA, DENISE",
+      "propietario": "CICCONI, MARIO NAZARENOALPATACAL 1128",
+      "nic": ""
+    },
+    {
+      "inquilino": "FORMOSO, DIEGO RAUL",
+      "propietario": "GIORDANO, ORLANDO RUBEN",
+      "nic": ""
+    },
+    {
+      "inquilino": "AMIN, SAS",
+      "propietario": "GIORDANO, ORLANDO RUBEN",
+      "nic": ""
+    },
+    {
+      "inquilino": "QUIROZ, GABRIELA ANDREA",
+      "propietario": "MAROTTA, NELLY CECILIA",
+      "nic": ""
+    },
+    {
+      "inquilino": "MONTIEL, JULIO CESAR",
+      "propietario": "MARTINEZ, GERARDO",
+      "nic": "026-003-113"
+    },
+    {
+      "inquilino": "LUGO, NIDIA BEATRIZ",
+      "propietario": "MASSO, RODOLFO FABIAN",
+      "nic": ""
+    },
+    {
+      "inquilino": "ESCUDERO, GISELA",
+      "propietario": "MORAN, CARLOS CEFERINO",
+      "nic": ""
+    },
+    {
+      "inquilino": "BRIZUELA, CAMILA MAGALI",
+      "propietario": "NIETO NALLIM, JUAN GONZALO",
+      "nic": "25002004 coop gc"
+    },
+    {
+      "inquilino": "PARLANTI, JOSE LUIS",
+      "propietario": "RAVALLE, JOSE ANTONIO",
+      "nic": "002-006-344"
+    },
+    {
+      "inquilino": "LOPEZ, DIEGO LEONARDO",
+      "propietario": "Sentinelli, Teresa Ines",
+      "nic": ""
+    }
+  ]
+}

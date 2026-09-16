@@ -1,0 +1,21 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python (entornos virtuales y cache)
+__pycache__/
+*.py[cod]
+venv/
+.venv/
+env/
+ENV/
+
+# Variables de entorno y claves privadas
+.env
+*.local
+
+# Archivos temporales de sistemas operativos
+.DS_Store
+Thumbs.db

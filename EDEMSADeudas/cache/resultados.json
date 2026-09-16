@@ -1,0 +1,5232 @@
+{
+  "1019641": {
+    "nic": "1019641",
+    "inquilinos": [
+      "TAPIA, WALTER DANIEL"
+    ],
+    "propietarios": [
+      "CICCONI, MARIO NAZARENO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32859634",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 63719,
+        "vencimiento": "21/08/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32859634",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 63719,
+        "vencimiento": "21/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-32859634",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 63719,
+        "vencimiento": "21/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 1,
+    "deudaTotal": 63719,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.642Z"
+  },
+  "2558461": {
+    "nic": "2558461",
+    "inquilinos": [
+      "ALESSANDRIA, NESTOR GABRIEL"
+    ],
+    "propietarios": [
+      "CICCONI, MARIO NAZARENO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33091894",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 59658.5,
+        "vencimiento": "18/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33091894",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 59658.5,
+        "vencimiento": "19/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33091894",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 59658.5,
+        "vencimiento": "18/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33091894",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 59658.5,
+        "vencimiento": "19/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 2,
+    "deudaTotal": 119317,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.704Z"
+  },
+  "2559242": {
+    "nic": "2559242",
+    "inquilinos": [
+      "QUIPILDOR, OSCAR LEONARDO",
+      "MORALES, SEBASTIAN"
+    ],
+    "propietarios": [
+      "COMOTTI, JUAN CRISTOBAL"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33080096",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 77081.5,
+        "vencimiento": "17/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33080096",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 77081.5,
+        "vencimiento": "19/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33080096",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 77081.5,
+        "vencimiento": "17/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33080096",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 77081.5,
+        "vencimiento": "19/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 2,
+    "deudaTotal": 154163,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.719Z"
+  },
+  "2562431": {
+    "nic": "2562431",
+    "inquilinos": [
+      "MOYANO, YANINA PAOLA"
+    ],
+    "propietarios": [
+      "GIORDANO, ORLANDO RUBEN"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33097736",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 29709.5,
+        "vencimiento": "21/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33097736",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 29709.5,
+        "vencimiento": "21/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33097736",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 29709.5,
+        "vencimiento": "21/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33097736",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 29709.5,
+        "vencimiento": "21/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 2,
+    "deudaTotal": 59419,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.801Z"
+  },
+  "2562432": {
+    "nic": "2562432",
+    "inquilinos": [
+      "FAMAR, LUIS OCTAVIO"
+    ],
+    "propietarios": [
+      "GIORDANO, ORLANDO RUBEN"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33102710",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 22386,
+        "vencimiento": "21/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33102710",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 22386,
+        "vencimiento": "21/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33102710",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 22386,
+        "vencimiento": "21/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33102710",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 22386,
+        "vencimiento": "21/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 2,
+    "deudaTotal": 44772,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.857Z"
+  },
+  "2562433": {
+    "nic": "2562433",
+    "inquilinos": [
+      "CASTILLO, LUCINDA REBECA"
+    ],
+    "propietarios": [
+      "GIORDANO, ORLANDO RUBEN"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33097737",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 34108.5,
+        "vencimiento": "21/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33097737",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 34108.5,
+        "vencimiento": "21/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33097737",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 34108.5,
+        "vencimiento": "21/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33097737",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 34108.5,
+        "vencimiento": "21/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 2,
+    "deudaTotal": 68217,
+    "estado": "OK",
+    "actualizado": "2026-09-15T20:01:52.884Z"
+  },
+  "2562667": {
+    "nic": "2562667",
+    "inquilinos": [
+      "ZAPATA, SANDRA CRISTINA",
+      "SUAREZ, ROSALIA ESTEFANIA"
+    ],
+    "propietarios": [
+      "ENCINAS, DARDO ARIEL"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33140200",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 73548.5,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33140200",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 73548.5,
+        "vencimiento": "26/10/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32671893",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 82854.5,
+        "vencimiento": "30/07/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32671893",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 82854.5,
+        "vencimiento": "31/08/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33140200",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 73548.5,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33140200",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 73548.5,
+        "vencimiento": "26/10/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32671893",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 82854.5,
+        "vencimiento": "31/08/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 3,
+    "deudaTotal": 229951.5,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.736Z"
+  },
+  "2562705": {
+    "nic": "2562705",
+    "inquilinos": [
+      "MUTTI, MARCOS DAVID",
+      "ANDRADE, ROBERTO JACINTO"
+    ],
+    "propietarios": [
+      "CICCONI, MARIO NAZARENO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33140190",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 59907,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33140190",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 59907,
+        "vencimiento": "26/10/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32671869",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 65841,
+        "vencimiento": "30/07/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32671869",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 65841,
+        "vencimiento": "31/08/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33140190",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 59907,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33140190",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 59907,
+        "vencimiento": "26/10/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32671869",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 65841,
+        "vencimiento": "31/08/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 3,
+    "deudaTotal": 185655,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.686Z"
+  },
+  "2562778": {
+    "nic": "2562778",
+    "inquilinos": [
+      "LOPEZ NAVARRO, KAREN MICAELA"
+    ],
+    "propietarios": [
+      "CIAFRELLI, MARIA LAURA"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33131683",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 37513,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33131683",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 37513,
+        "vencimiento": "26/10/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32658935",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 38181.5,
+        "vencimiento": "30/07/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32658935",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 38181.5,
+        "vencimiento": "31/08/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32166846",
+        "periodo": "03/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 29430,
+        "vencimiento": "27/05/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32166846",
+        "periodo": "03/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 29430,
+        "vencimiento": "26/06/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33131683",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 37513,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33131683",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 37513,
+        "vencimiento": "26/10/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32658935",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 38181.5,
+        "vencimiento": "30/07/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32658935",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 38181.5,
+        "vencimiento": "31/08/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32166846",
+        "periodo": "03/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 29430,
+        "vencimiento": "27/05/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32166846",
+        "periodo": "03/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 29430,
+        "vencimiento": "26/06/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 6,
+    "deudaTotal": 210249,
+    "estado": "OK",
+    "actualizado": "2026-09-15T20:01:52.766Z"
+  },
+  "2562782": {
+    "nic": "2562782",
+    "inquilinos": [
+      "ABDALA, SERGIO EMANUEL"
+    ],
+    "propietarios": [
+      "RINALDINI, ROSA ANGELA"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33137973",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 41528.5,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33137973",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 41528.5,
+        "vencimiento": "26/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33137973",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 41528.5,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33137973",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 41528.5,
+        "vencimiento": "26/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 2,
+    "deudaTotal": 83057,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.180Z"
+  },
+  "2563387": {
+    "nic": "2563387",
+    "inquilinos": [
+      "FREDES, JUAN CARLOS"
+    ],
+    "propietarios": [
+      "MOYANO, ELSA MIRTA"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33155995",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 50294.5,
+        "vencimiento": "29/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33155995",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 50294.5,
+        "vencimiento": "29/10/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32664613",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 45816,
+        "vencimiento": "30/07/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32664613",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 45816,
+        "vencimiento": "31/08/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33155995",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 50294.5,
+        "vencimiento": "29/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33155995",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 50294.5,
+        "vencimiento": "29/10/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32664613",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 45816,
+        "vencimiento": "31/08/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 3,
+    "deudaTotal": 146405,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.054Z"
+  },
+  "2564461": {
+    "nic": "2564461",
+    "inquilinos": [
+      "DEFIS, CLAUDIA"
+    ],
+    "propietarios": [
+      "BRECCIA, RUBEN DARIO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33142648",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 108808.5,
+        "vencimiento": "28/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33142648",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 108808.5,
+        "vencimiento": "28/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33142648",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 108808.5,
+        "vencimiento": "28/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33142648",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 108808.5,
+        "vencimiento": "28/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 2,
+    "deudaTotal": 217617,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.546Z"
+  },
+  "2564746": {
+    "nic": "2564746",
+    "inquilinos": [
+      "CAPRIO, CRISTIAN HERNAN"
+    ],
+    "propietarios": [
+      "FACELLO, VIVIANA BEATRIZ"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33146212",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 119372.5,
+        "vencimiento": "28/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33146212",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 119372.5,
+        "vencimiento": "28/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33146212",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 119372.5,
+        "vencimiento": "28/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33146212",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 119372.5,
+        "vencimiento": "28/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 2,
+    "deudaTotal": 238745,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.741Z"
+  },
+  "2565951": {
+    "nic": "2565951",
+    "inquilinos": [
+      "ORTIZ, BRENDA CARLA",
+      "GARCIA DAVILA, SABRINA BELEN"
+    ],
+    "propietarios": [
+      "CICCONI, MARIO NAZARENO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33099965",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 57449.5,
+        "vencimiento": "21/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33099965",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 57449.5,
+        "vencimiento": "21/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33099965",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 57449.5,
+        "vencimiento": "21/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33099965",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 57449.5,
+        "vencimiento": "21/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 2,
+    "deudaTotal": 114899,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.657Z"
+  },
+  "2569133": {
+    "nic": "2569133",
+    "inquilinos": [
+      "DANIELLE , ERNESTO OSCAR"
+    ],
+    "propietarios": [
+      "BRECCIA, RUBEN DARIO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [],
+    "pendientes": [],
+    "cantidadPendientes": 0,
+    "deudaTotal": 0,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.553Z"
+  },
+  "2569277": {
+    "nic": "2569277",
+    "inquilinos": [
+      "DEBIACCI PEREYRA, GEORGINA NAHIR"
+    ],
+    "propietarios": [
+      "GIORDANO, ORLANDO RUBEN"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33128063",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 302399,
+        "vencimiento": "22/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33128063",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 302399,
+        "vencimiento": "22/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33128063",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 302399,
+        "vencimiento": "22/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33128063",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 302399,
+        "vencimiento": "22/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 2,
+    "deudaTotal": 604798,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.880Z"
+  },
+  "2569391": {
+    "nic": "2569391",
+    "inquilinos": [
+      "CUELLO, FERNANDA ANALIA"
+    ],
+    "propietarios": [
+      "NALLIM, MIRTA SILVIA"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33128977",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 70654,
+        "vencimiento": "24/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33128977",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 70654,
+        "vencimiento": "26/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33128977",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 70654,
+        "vencimiento": "24/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33128977",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 70654,
+        "vencimiento": "26/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 2,
+    "deudaTotal": 141308,
+    "estado": "OK",
+    "actualizado": "2026-09-15T20:01:52.913Z"
+  },
+  "2570198": {
+    "nic": "2570198",
+    "inquilinos": [
+      "PLAZA, NATALIA BEATRIZ"
+    ],
+    "propietarios": [
+      "GIORDANO, ORLANDO RUBEN"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33128121",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 30327,
+        "vencimiento": "24/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33128121",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 30327,
+        "vencimiento": "26/10/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32668926",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 24359,
+        "vencimiento": "30/07/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32668926",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 24359,
+        "vencimiento": "31/08/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33128121",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 30327,
+        "vencimiento": "24/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33128121",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 30327,
+        "vencimiento": "26/10/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32668926",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 24359,
+        "vencimiento": "31/08/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 3,
+    "deudaTotal": 85013,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.791Z"
+  },
+  "2570199": {
+    "nic": "2570199",
+    "inquilinos": [
+      "SANTANA, GUSTAVO SEBASTIAN"
+    ],
+    "propietarios": [
+      "GIORDANO, ORLANDO RUBEN"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "A-0003-02322330",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 468895.5,
+        "vencimiento": "22/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "A-0003-02322330",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 468895.5,
+        "vencimiento": "22/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "A-0003-02322330",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 468895.5,
+        "vencimiento": "22/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "A-0003-02322330",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 468895.5,
+        "vencimiento": "22/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 2,
+    "deudaTotal": 937791,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.774Z"
+  },
+  "2570203": {
+    "nic": "2570203",
+    "inquilinos": [
+      "INGRA, ANALIA VERONICA"
+    ],
+    "propietarios": [
+      "GIORDANO, ORLANDO RUBEN"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33123525",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 180132.5,
+        "vencimiento": "22/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33123525",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 180132.5,
+        "vencimiento": "22/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33123525",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 180132.5,
+        "vencimiento": "22/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33123525",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 180132.5,
+        "vencimiento": "22/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 2,
+    "deudaTotal": 360265,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.821Z"
+  },
+  "2571427": {
+    "nic": "2571427",
+    "inquilinos": [
+      "JURADO, IVAN ALEJANDRO"
+    ],
+    "propietarios": [
+      "ZAUZICH, JULIO CESAR"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [],
+    "pendientes": [],
+    "cantidadPendientes": 0,
+    "deudaTotal": 0,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.533Z"
+  },
+  "2571633": {
+    "nic": "2571633",
+    "inquilinos": [
+      "LEGUIZAMON, JENNIFER ESTEFANIA",
+      "RODRIGUEZ, GERMAN DAVID"
+    ],
+    "propietarios": [
+      "CICCONI, MARIO NAZARENO",
+      "MORAN, CARLOS CEFERINO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [],
+    "pendientes": [],
+    "cantidadPendientes": 0,
+    "deudaTotal": 0,
+    "estado": "OK",
+    "actualizado": "2026-09-15T20:01:52.839Z"
+  },
+  "2574261": {
+    "nic": "2574261",
+    "inquilinos": [
+      "VIDELA, HUGO CEFERINO"
+    ],
+    "propietarios": [
+      "MORETTI, RAUL HECTOR"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [],
+    "pendientes": [],
+    "cantidadPendientes": 0,
+    "deudaTotal": 0,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.025Z"
+  },
+  "2574262": {
+    "nic": "2574262",
+    "inquilinos": [
+      "CHOQUE QUISPE, FRANCO",
+      "CHAVERO VELAZQUEZ, LUCAS SEBASTIAN"
+    ],
+    "propietarios": [
+      "FERNANDEZ, MARIA ANTONIA"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32773383",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 206658.5,
+        "vencimiento": "11/08/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32773383",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 206658.5,
+        "vencimiento": "10/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-32773383",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 206658.5,
+        "vencimiento": "10/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 1,
+    "deudaTotal": 206658.5,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.751Z"
+  },
+  "2574265": {
+    "nic": "2574265",
+    "inquilinos": [
+      "KRUGER , SERGIO JAVIER"
+    ],
+    "propietarios": [
+      "MORETTI, MARIA AMALIA"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [],
+    "pendientes": [],
+    "cantidadPendientes": 0,
+    "deudaTotal": 0,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.020Z"
+  },
+  "2574302": {
+    "nic": "2574302",
+    "inquilinos": [
+      "AMPUERO, PATRICIA MAGDALENA"
+    ],
+    "propietarios": [
+      "MIRTO, NOELIA ELIZABETH"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32767199",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 33564,
+        "vencimiento": "11/08/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32767199",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 33564,
+        "vencimiento": "10/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32306583",
+        "periodo": "03/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 17116.5,
+        "vencimiento": "12/06/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32306583",
+        "periodo": "03/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 17116.5,
+        "vencimiento": "14/07/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-32767199",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 33564,
+        "vencimiento": "10/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32306583",
+        "periodo": "03/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 17116.5,
+        "vencimiento": "14/07/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 2,
+    "deudaTotal": 50680.5,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.977Z"
+  },
+  "2574341": {
+    "nic": "2574341",
+    "inquilinos": [
+      "RAMOS, ROCIO BELEN"
+    ],
+    "propietarios": [
+      "MORETTI, RAUL HECTOR"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [],
+    "pendientes": [],
+    "cantidadPendientes": 0,
+    "deudaTotal": 0,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.034Z"
+  },
+  "2574342": {
+    "nic": "2574342",
+    "inquilinos": [
+      "PALMA, PAULA MACARENA"
+    ],
+    "propietarios": [
+      "MORETTI, RAUL HECTOR"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32767909",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 47288.5,
+        "vencimiento": "11/08/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32767909",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 47288.5,
+        "vencimiento": "10/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-32767909",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 47288.5,
+        "vencimiento": "10/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 1,
+    "deudaTotal": 47288.5,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.040Z"
+  },
+  "2576245": {
+    "nic": "2576245",
+    "inquilinos": [
+      "MININI, JOSE ALEJANDRO"
+    ],
+    "propietarios": [
+      "LORIA, JUAN CARLOS"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [],
+    "pendientes": [],
+    "cantidadPendientes": 0,
+    "deudaTotal": 0,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.910Z"
+  },
+  "2577414": {
+    "nic": "2577414",
+    "inquilinos": [
+      "D ANGELO, MIGUEL"
+    ],
+    "propietarios": [
+      "PORCEL, MARCELA"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [],
+    "pendientes": [],
+    "cantidadPendientes": 0,
+    "deudaTotal": 0,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.161Z"
+  },
+  "2579421": {
+    "nic": "2579421",
+    "inquilinos": [
+      "MENDOZA, JOSE ANTONIO"
+    ],
+    "propietarios": [
+      "GIORDANO, ORLANDO RUBEN"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33137918",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 21310,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33137918",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 21310,
+        "vencimiento": "26/10/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32654935",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 19375.5,
+        "vencimiento": "28/07/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32654935",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 19375.5,
+        "vencimiento": "27/08/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32171536",
+        "periodo": "03/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 25342,
+        "vencimiento": "27/05/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32171536",
+        "periodo": "03/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 25342,
+        "vencimiento": "26/06/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-31689451",
+        "periodo": "02/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 16882,
+        "vencimiento": "30/03/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-31689451",
+        "periodo": "02/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 16882,
+        "vencimiento": "29/04/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33137918",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 21310,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33137918",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 21310,
+        "vencimiento": "26/10/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32654935",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 19375.5,
+        "vencimiento": "28/07/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32654935",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 19375.5,
+        "vencimiento": "27/08/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32171536",
+        "periodo": "03/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 25342,
+        "vencimiento": "27/05/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32171536",
+        "periodo": "03/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 25342,
+        "vencimiento": "26/06/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-31689451",
+        "periodo": "02/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 16882,
+        "vencimiento": "30/03/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-31689451",
+        "periodo": "02/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 16882,
+        "vencimiento": "29/04/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 8,
+    "deudaTotal": 165819,
+    "estado": "OK",
+    "actualizado": "2026-09-15T20:01:52.871Z"
+  },
+  "2579708": {
+    "nic": "2579708",
+    "inquilinos": [
+      "CUSSI, ROXANA ELIZABETH"
+    ],
+    "propietarios": [
+      "CICCONI, MARIO NAZARENO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33148849",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 20896.5,
+        "vencimiento": "28/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33148849",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 20896.5,
+        "vencimiento": "28/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33148849",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 20896.5,
+        "vencimiento": "28/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33148849",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 20896.5,
+        "vencimiento": "28/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 2,
+    "deudaTotal": 41793,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.699Z"
+  },
+  "2579734": {
+    "nic": "2579734",
+    "inquilinos": [
+      "CHAPANA, JUAN MILTON"
+    ],
+    "propietarios": [
+      "ROSSA, JUAN"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33131751",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 46249,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33131751",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 46249,
+        "vencimiento": "26/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33131751",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 46249,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33131751",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 46249,
+        "vencimiento": "26/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 2,
+    "deudaTotal": 92498,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.187Z"
+  },
+  "2579737": {
+    "nic": "2579737",
+    "inquilinos": [
+      "MAGALLANES, SABRINA ESTEFANIA"
+    ],
+    "propietarios": [
+      "GIORDANO, ORLANDO RUBEN"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33132226",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 60974,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33132226",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 60974,
+        "vencimiento": "26/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33132226",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 60974,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33132226",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 60974,
+        "vencimiento": "26/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 2,
+    "deudaTotal": 121948,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.808Z"
+  },
+  "2582128": {
+    "nic": "2582128",
+    "inquilinos": [
+      "FARIAS, JOSEFA"
+    ],
+    "propietarios": [
+      "PONCE, ERIKA JANET"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32706598",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 19500.5,
+        "vencimiento": "04/08/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32706598",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 19500.5,
+        "vencimiento": "03/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-32706598",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 19500.5,
+        "vencimiento": "03/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 1,
+    "deudaTotal": 19500.5,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.151Z"
+  },
+  "2582129": {
+    "nic": "2582129",
+    "inquilinos": [
+      "JOHANA, LUCERO"
+    ],
+    "propietarios": [
+      "PONCE, ERIKA JANET"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [],
+    "pendientes": [],
+    "cantidadPendientes": 0,
+    "deudaTotal": 0,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.140Z"
+  },
+  "2583555": {
+    "nic": "2583555",
+    "inquilinos": [
+      "TRIBIÑO, ELIANA PAULA"
+    ],
+    "propietarios": [
+      "MASSO, GREGORIO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [],
+    "pendientes": [],
+    "cantidadPendientes": 0,
+    "deudaTotal": 0,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.953Z"
+  },
+  "2583884": {
+    "nic": "2583884",
+    "inquilinos": [
+      "CORTINAS, GARAY"
+    ],
+    "propietarios": [
+      "GANCIA, SILVIA GRACIELA"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [],
+    "pendientes": [],
+    "cantidadPendientes": 0,
+    "deudaTotal": 0,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.767Z"
+  },
+  "2585382": {
+    "nic": "2585382",
+    "inquilinos": [
+      "D AMICO, DAVID ISMAEL"
+    ],
+    "propietarios": [
+      "CIAFRELLI, MARIA LAURA"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32776887",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 24912,
+        "vencimiento": "11/08/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32776887",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 24912,
+        "vencimiento": "10/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-32776887",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 24912,
+        "vencimiento": "10/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 1,
+    "deudaTotal": 24912,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.617Z"
+  },
+  "2585438": {
+    "nic": "2585438",
+    "inquilinos": [
+      "ESPINOZA, ADRIAN GONZALO"
+    ],
+    "propietarios": [
+      "CASCINO, JORGE ALBERTO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33122274",
+        "periodo": "",
+        "tipo": "CAR (Consumo antirreglamentario)",
+        "cuota": 1,
+        "importe": 161859.32,
+        "vencimiento": "22/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32862141",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 32811,
+        "vencimiento": "21/08/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32862141",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 32811,
+        "vencimiento": "21/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33122274",
+        "periodo": "",
+        "tipo": "CAR (Consumo antirreglamentario)",
+        "cuota": 1,
+        "importe": 161859.32,
+        "vencimiento": "22/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32862141",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 32811,
+        "vencimiento": "21/08/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32862141",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 32811,
+        "vencimiento": "21/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 3,
+    "deudaTotal": 227481.32,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.597Z"
+  },
+  "2595957": {
+    "nic": "2595957",
+    "inquilinos": [
+      "ROJAS, MARIA ESTHER"
+    ],
+    "propietarios": [
+      "ZALAZAR, CRISTINA ALICIA"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32846253",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 48975,
+        "vencimiento": "20/08/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32846253",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 48975,
+        "vencimiento": "21/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-32846253",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 48975,
+        "vencimiento": "21/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 1,
+    "deudaTotal": 48975,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.524Z"
+  },
+  "2596104": {
+    "nic": "2596104",
+    "inquilinos": [
+      "GORDILLO, ARIEL JEREMIAS"
+    ],
+    "propietarios": [
+      "RETAMOZO, OLGA SUSANA"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32846222",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 79797,
+        "vencimiento": "20/08/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32846222",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 79797,
+        "vencimiento": "21/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-32846222",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 79797,
+        "vencimiento": "21/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 1,
+    "deudaTotal": 79797,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.171Z"
+  },
+  "2596184": {
+    "nic": "2596184",
+    "inquilinos": [
+      "CACERES, ROCIO BELEN"
+    ],
+    "propietarios": [
+      "GALDEANO, VICTORIA DOMINGA"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32890024",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 17964.5,
+        "vencimiento": "26/08/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32890024",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 17964.5,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-32890024",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 17964.5,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 1,
+    "deudaTotal": 17964.5,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.758Z"
+  },
+  "2596215": {
+    "nic": "2596215",
+    "inquilinos": [
+      "SOSA, JAVIER ORLANDO",
+      "SOSA, ANA VIRGINIA"
+    ],
+    "propietarios": [
+      "CICCONI, MARIO NAZARENO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [],
+    "pendientes": [],
+    "cantidadPendientes": 0,
+    "deudaTotal": 0,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.650Z"
+  },
+  "2596305": {
+    "nic": "2596305",
+    "inquilinos": [
+      "NEGRETTI, FLORENCIA"
+    ],
+    "propietarios": [
+      "MUTTI, MAURICIO DAVID"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [],
+    "pendientes": [],
+    "cantidadPendientes": 0,
+    "deudaTotal": 0,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.070Z"
+  },
+  "2596318": {
+    "nic": "2596318",
+    "inquilinos": [
+      "GUTIERREZ, RODRIGO"
+    ],
+    "propietarios": [
+      "ALVARADO, PABLO IVAN"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32890181",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 56555.5,
+        "vencimiento": "26/08/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32890181",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 56555.5,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-32890181",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 56555.5,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 1,
+    "deudaTotal": 56555.5,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.502Z"
+  },
+  "2596414": {
+    "nic": "2596414",
+    "inquilinos": [
+      "ROJAS, ELISA ROMINA"
+    ],
+    "propietarios": [
+      "MORAN, CARLOS CEFERINO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32890208",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 20795.5,
+        "vencimiento": "26/08/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32890208",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 20795.5,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-32890208",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 20795.5,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 1,
+    "deudaTotal": 20795.5,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.992Z"
+  },
+  "2596427": {
+    "nic": "2596427",
+    "inquilinos": [
+      "CALDERON, LINDA VANESA"
+    ],
+    "propietarios": [
+      "NALLIM, MIRTA SILVIA"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [],
+    "pendientes": [],
+    "cantidadPendientes": 0,
+    "deudaTotal": 0,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.101Z"
+  },
+  "2596570": {
+    "nic": "2596570",
+    "inquilinos": [
+      "BIONDO , GLADYS LILIANA"
+    ],
+    "propietarios": [
+      "PEREZ, MARIA EUGENIA"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32882333",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 78111,
+        "vencimiento": "26/08/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32882333",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 78111,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-32882333",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 78111,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 1,
+    "deudaTotal": 78111,
+    "estado": "OK",
+    "actualizado": "2026-09-15T20:01:52.928Z"
+  },
+  "2596571": {
+    "nic": "2596571",
+    "inquilinos": [
+      "VARAS CORNEJO, CESAR ANDRES"
+    ],
+    "propietarios": [
+      "PEREZ, MARIA GABRIELA"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [],
+    "pendientes": [],
+    "cantidadPendientes": 0,
+    "deudaTotal": 0,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.135Z"
+  },
+  "2596572": {
+    "nic": "2596572",
+    "inquilinos": [
+      "BALMACEDA, NOELIA BERENICE"
+    ],
+    "propietarios": [
+      "PEREZ, MARIA EUGENIA"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32882335",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 21278.5,
+        "vencimiento": "26/08/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32882335",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 21278.5,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32401833",
+        "periodo": "03/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 36441.5,
+        "vencimiento": "24/06/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32401833",
+        "periodo": "03/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 36441.5,
+        "vencimiento": "24/07/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-32882335",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 21278.5,
+        "vencimiento": "26/08/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32882335",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 21278.5,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32401833",
+        "periodo": "03/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 36441.5,
+        "vencimiento": "24/07/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 3,
+    "deudaTotal": 78998.5,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.125Z"
+  },
+  "2597389": {
+    "nic": "2597389",
+    "inquilinos": [
+      "LEZCANO, FLORENCIA YAMILA"
+    ],
+    "propietarios": [
+      "MORALES, MAGDALENA"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32886826",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 38865,
+        "vencimiento": "26/08/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32886826",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 38865,
+        "vencimiento": "25/09/2026",
+        "estado": "PAGADO"
+      }
+    ],
+    "pendientes": [],
+    "cantidadPendientes": 0,
+    "deudaTotal": 0,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.986Z"
+  },
+  "2598269": {
+    "nic": "2598269",
+    "inquilinos": [
+      "MARCHESI, JUAN MANUEL"
+    ],
+    "propietarios": [
+      "ORTIZ, MARIA ELENA"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32913323",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 41746.5,
+        "vencimiento": "28/08/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32913323",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 41746.5,
+        "vencimiento": "28/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-32913323",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 41746.5,
+        "vencimiento": "28/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 1,
+    "deudaTotal": 41746.5,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.108Z"
+  },
+  "2603029": {
+    "nic": "2603029",
+    "inquilinos": [
+      "SILVA TEN, EMILIANO JOSE"
+    ],
+    "propietarios": [
+      "ALESSANDRA, ALICIA MARIA"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32942399",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 203276.5,
+        "vencimiento": "03/09/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32942399",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 203276.5,
+        "vencimiento": "05/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-32942399",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 203276.5,
+        "vencimiento": "05/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 1,
+    "deudaTotal": 203276.5,
+    "estado": "OK",
+    "actualizado": "2026-09-15T20:15:18.499Z"
+  },
+  "2603286": {
+    "nic": "2603286",
+    "inquilinos": [
+      "BARRERA, JUAN FRANCISCO"
+    ],
+    "propietarios": [
+      "ALESSANDRA, JUAN ANTONIO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32992176",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 78859,
+        "vencimiento": "08/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32992176",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 78859,
+        "vencimiento": "08/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-32992176",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 78859,
+        "vencimiento": "08/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32992176",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 78859,
+        "vencimiento": "08/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 2,
+    "deudaTotal": 157718,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.439Z"
+  },
+  "2603400": {
+    "nic": "2603400",
+    "inquilinos": [
+      "GONZALEZ, WALTER OMAR"
+    ],
+    "propietarios": [
+      "CICCONI, MARIO NAZARENO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [],
+    "pendientes": [],
+    "cantidadPendientes": 0,
+    "deudaTotal": 0,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.690Z"
+  },
+  "2606311": {
+    "nic": "2606311",
+    "inquilinos": [
+      "GIAMPIETRO, MARIA CRISTINA"
+    ],
+    "propietarios": [
+      "GIORDANO, ORLANDO RUBEN"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32902594",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 233613.5,
+        "vencimiento": "27/08/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32902594",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 233613.5,
+        "vencimiento": "28/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-32902594",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 233613.5,
+        "vencimiento": "28/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 1,
+    "deudaTotal": 233613.5,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.831Z"
+  },
+  "2606312": {
+    "nic": "2606312",
+    "inquilinos": [
+      "DURE, DAVID MANUEL"
+    ],
+    "propietarios": [
+      "GIORDANO, ORLANDO RUBEN"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32897043",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 193770.5,
+        "vencimiento": "27/08/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32897043",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 193770.5,
+        "vencimiento": "28/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-32897043",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 193770.5,
+        "vencimiento": "28/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 1,
+    "deudaTotal": 193770.5,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.871Z"
+  },
+  "2607196": {
+    "nic": "2607196",
+    "inquilinos": [
+      "DAZA PENACHO, ADEMAR SANTOS"
+    ],
+    "propietarios": [
+      "BALMACEDA, ADRIANA ANALIA"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33000420",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 33354,
+        "vencimiento": "09/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33000420",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 33354,
+        "vencimiento": "09/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33000420",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 33354,
+        "vencimiento": "09/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33000420",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 33354,
+        "vencimiento": "09/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 2,
+    "deudaTotal": 66708,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.522Z"
+  },
+  "2610935": {
+    "nic": "2610935",
+    "inquilinos": [
+      "SRL, GEOPEHUEN"
+    ],
+    "propietarios": [
+      "BALMACEDA, ADRIANA ANALIA"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [],
+    "pendientes": [],
+    "cantidadPendientes": 0,
+    "deudaTotal": 0,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.510Z"
+  },
+  "2613735": {
+    "nic": "2613735",
+    "inquilinos": [
+      "CRUZ, TANIA SABRINA"
+    ],
+    "propietarios": [
+      "CICCONI, MARIO NAZARENOSAAVEDRA 1527"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [],
+    "pendientes": [],
+    "cantidadPendientes": 0,
+    "deudaTotal": 0,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.710Z"
+  },
+  "2616144": {
+    "nic": "2616144",
+    "inquilinos": [
+      "VEGAS, ROBERTO MIGUEL",
+      "ARCE, SONIA PATRICIA"
+    ],
+    "propietarios": [
+      "CICCONI, MARIO NAZARENO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33015266",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 185887.5,
+        "vencimiento": "10/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33015266",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 185887.5,
+        "vencimiento": "13/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33015266",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 185887.5,
+        "vencimiento": "10/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33015266",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 185887.5,
+        "vencimiento": "13/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 2,
+    "deudaTotal": 371775,
+    "estado": "OK",
+    "actualizado": "2026-09-15T20:01:52.823Z"
+  },
+  "2617863": {
+    "nic": "2617863",
+    "inquilinos": [
+      "PAULUCCI, LAURA GABRIELA"
+    ],
+    "propietarios": [
+      "MARTINEZ, JOSE ANTONIO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33045327",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 20852.5,
+        "vencimiento": "14/09/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-33045327",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 20852.5,
+        "vencimiento": "14/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33045327",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 20852.5,
+        "vencimiento": "14/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 1,
+    "deudaTotal": 20852.5,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.949Z"
+  },
+  "2621431": {
+    "nic": "2621431",
+    "inquilinos": [
+      "PONCE, MIGUEL ANGEL"
+    ],
+    "propietarios": [
+      "PENA, SILVIA LUCIA"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33070400",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 35481,
+        "vencimiento": "16/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33070400",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 35481,
+        "vencimiento": "16/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33070400",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 35481,
+        "vencimiento": "16/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33070400",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 35481,
+        "vencimiento": "16/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 2,
+    "deudaTotal": 70962,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.117Z"
+  },
+  "2621487": {
+    "nic": "2621487",
+    "inquilinos": [
+      "BREUER VARGAS, HANS DIETER"
+    ],
+    "propietarios": [
+      "MARSALA, RAUL ALBERTO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33070431",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 398801.5,
+        "vencimiento": "14/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33070431",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 398801.5,
+        "vencimiento": "14/10/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32579437",
+        "periodo": "03/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 341326,
+        "vencimiento": "14/07/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32579437",
+        "periodo": "03/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 341326,
+        "vencimiento": "13/08/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33070431",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 398801.5,
+        "vencimiento": "14/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33070431",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 398801.5,
+        "vencimiento": "14/10/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32579437",
+        "periodo": "03/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 341326,
+        "vencimiento": "13/08/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 3,
+    "deudaTotal": 1138929,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.937Z"
+  },
+  "2621488": {
+    "nic": "2621488",
+    "inquilinos": [
+      "GIMENEZ, EVELYN ELIZABETH",
+      "BREUER VARGAS, HANS DIETER"
+    ],
+    "propietarios": [
+      "MARSALA, RAUL ALBERTO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33062296",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 310724.5,
+        "vencimiento": "16/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33062296",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 310724.5,
+        "vencimiento": "16/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33062296",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 310724.5,
+        "vencimiento": "16/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33062296",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 310724.5,
+        "vencimiento": "16/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 2,
+    "deudaTotal": 621449,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.926Z"
+  },
+  "2621496": {
+    "nic": "2621496",
+    "inquilinos": [
+      "CHARRON, FEDERICO JONATHAN"
+    ],
+    "propietarios": [
+      "MUTTI, MAURICIO DAVID"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33076284",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 18306.5,
+        "vencimiento": "16/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33076284",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 18306.5,
+        "vencimiento": "16/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33076284",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 18306.5,
+        "vencimiento": "16/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33076284",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 18306.5,
+        "vencimiento": "16/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 2,
+    "deudaTotal": 36613,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.091Z"
+  },
+  "3001973": {
+    "nic": "3001973",
+    "inquilinos": [
+      "RAMIREZ SEGOVIA, JUAN"
+    ],
+    "propietarios": [
+      "MORAN, CARLOS CEFERINO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [],
+    "pendientes": [],
+    "cantidadPendientes": 0,
+    "deudaTotal": 0,
+    "estado": "OK",
+    "actualizado": "2026-09-15T20:01:52.894Z"
+  },
+  "3001974": {
+    "nic": "3001974",
+    "inquilinos": [
+      "GONZALEZ, MATIAS IGNACIO"
+    ],
+    "propietarios": [
+      "MORAN, CARLOS CEFERINO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32890206",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 175477.5,
+        "vencimiento": "26/08/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32890206",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 175477.5,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-32890206",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 175477.5,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 1,
+    "deudaTotal": 175477.5,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.016Z"
+  },
+  "3010647": {
+    "nic": "3010647",
+    "inquilinos": [
+      "RODRIGUEZ, BIANCA MACARENA"
+    ],
+    "propietarios": [
+      "MASSO, GREGORIO JOSE"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33015251",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 30144.5,
+        "vencimiento": "10/09/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-33015251",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 30144.5,
+        "vencimiento": "13/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33015251",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 30144.5,
+        "vencimiento": "13/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 1,
+    "deudaTotal": 30144.5,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.969Z"
+  },
+  "3025134": {
+    "nic": "3025134",
+    "inquilinos": [
+      "BENITEZ , GUSTAVO OSCAR"
+    ],
+    "propietarios": [
+      "GONZALEZ, JUAN VICTOR ULISES"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32881029",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 95530.5,
+        "vencimiento": "26/08/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32881029",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 95530.5,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-32881029",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 95530.5,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 1,
+    "deudaTotal": 95530.5,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.893Z"
+  },
+  "3035406": {
+    "nic": "3035406",
+    "inquilinos": [
+      "LOPEZ, NAHUEL MAXIMILIANO"
+    ],
+    "propietarios": [
+      "VILLAVICENCIO , ELIZABETH YOLANDA"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33138005",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 61311.5,
+        "vencimiento": "25/09/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-33138005",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 61311.5,
+        "vencimiento": "26/10/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32668631",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 80004,
+        "vencimiento": "30/07/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32668631",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 80004,
+        "vencimiento": "31/08/2026",
+        "estado": "PAGADO"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33138005",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 61311.5,
+        "vencimiento": "26/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 1,
+    "deudaTotal": 61311.5,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.518Z"
+  },
+  "3047436": {
+    "nic": "3047436",
+    "inquilinos": [
+      "NAVARRETE, JAVIER HERNAN"
+    ],
+    "propietarios": [
+      "SCAVONE, EDUARDO FERNANDO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32759171",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 28295.5,
+        "vencimiento": "10/08/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32759171",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 28295.5,
+        "vencimiento": "09/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-32759171",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 28295.5,
+        "vencimiento": "09/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 1,
+    "deudaTotal": 28295.5,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.248Z"
+  },
+  "3047437": {
+    "nic": "3047437",
+    "inquilinos": [
+      "VASQUEZ , IRAICA DEL VALLE"
+    ],
+    "propietarios": [
+      "SCAVONE, EDUARDO FERNANDO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32759172",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 20578,
+        "vencimiento": "10/08/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32759172",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 20578,
+        "vencimiento": "09/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-32759172",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 20578,
+        "vencimiento": "09/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 1,
+    "deudaTotal": 20578,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.194Z"
+  },
+  "3051563": {
+    "nic": "3051563",
+    "inquilinos": [
+      "MERCAU, DAVID HERNAN MERCAU"
+    ],
+    "propietarios": [
+      "MUTTI, MAURICIO DAVID"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33128981",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 50008,
+        "vencimiento": "24/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33128981",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 50008,
+        "vencimiento": "26/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33128981",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 50008,
+        "vencimiento": "24/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33128981",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 50008,
+        "vencimiento": "26/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 2,
+    "deudaTotal": 100016,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.086Z"
+  },
+  "3054698": {
+    "nic": "3054698",
+    "inquilinos": [
+      "TEMPESTI, CRISTINA CARINA"
+    ],
+    "propietarios": [
+      "SCAVONE, EDUARDO FERNANDO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [],
+    "pendientes": [],
+    "cantidadPendientes": 0,
+    "deudaTotal": 0,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.202Z"
+  },
+  "3054699": {
+    "nic": "3054699",
+    "inquilinos": [
+      "CASTILLO, JESICA PAOLA"
+    ],
+    "propietarios": [
+      "SCAVONE, EDUARDO FERNANDO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32759173",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 16231.5,
+        "vencimiento": "10/08/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32759173",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 16231.5,
+        "vencimiento": "09/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-32759173",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 16231.5,
+        "vencimiento": "10/08/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32759173",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 16231.5,
+        "vencimiento": "09/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 2,
+    "deudaTotal": 32463,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.499Z"
+  },
+  "3070087": {
+    "nic": "3070087",
+    "inquilinos": [
+      "SALAS, GRISELDA BELEN"
+    ],
+    "propietarios": [
+      "DIAZ, SARA LAURA"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32754277",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 18844.5,
+        "vencimiento": "10/08/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32754277",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 18844.5,
+        "vencimiento": "09/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-32754277",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 18844.5,
+        "vencimiento": "10/08/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-32754277",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 18844.5,
+        "vencimiento": "09/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 2,
+    "deudaTotal": 37689,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.725Z"
+  },
+  "3071950": {
+    "nic": "3071950",
+    "inquilinos": [
+      "NOGARA, FERNANDO ELISEO"
+    ],
+    "propietarios": [
+      "MUTTI, MAURICIO DAVID"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33128982",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 24044.5,
+        "vencimiento": "24/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33128982",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 24044.5,
+        "vencimiento": "26/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33128982",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 24044.5,
+        "vencimiento": "24/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33128982",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 24044.5,
+        "vencimiento": "26/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 2,
+    "deudaTotal": 48089,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.065Z"
+  },
+  "3076587": {
+    "nic": "3076587",
+    "inquilinos": [
+      "ROSALES SEPULVEDA, ANGELA DAIANA"
+    ],
+    "propietarios": [
+      "GIORDANO, ORLANDO RUBEN"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33128122",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 554170,
+        "vencimiento": "22/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33128122",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 554170,
+        "vencimiento": "22/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33128122",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 554170,
+        "vencimiento": "22/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33128122",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 554170,
+        "vencimiento": "22/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 2,
+    "deudaTotal": 1108340,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.784Z"
+  },
+  "3083954": {
+    "nic": "3083954",
+    "inquilinos": [
+      "IRUSTA, PRISCILA MARIANA"
+    ],
+    "propietarios": [
+      "SCAVONE, EDUARDO FERNANDO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32693660",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 48564.5,
+        "vencimiento": "03/08/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32693660",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 48564.5,
+        "vencimiento": "02/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-32693660",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 48564.5,
+        "vencimiento": "02/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 1,
+    "deudaTotal": 48564.5,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.399Z"
+  },
+  "3083955": {
+    "nic": "3083955",
+    "inquilinos": [
+      "ESCUDERO, ARIADNA BETSABE"
+    ],
+    "propietarios": [
+      "SCAVONE, EDUARDO FERNANDO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32693661",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 25990.5,
+        "vencimiento": "03/08/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32693661",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 25990.5,
+        "vencimiento": "02/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-32693661",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 25990.5,
+        "vencimiento": "02/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 1,
+    "deudaTotal": 25990.5,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.438Z"
+  },
+  "3083956": {
+    "nic": "3083956",
+    "inquilinos": [
+      "CHAMBON RIVERO, MARCOS NICOLAS"
+    ],
+    "propietarios": [
+      "SCAVONE, EDUARDO FERNANDO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32693662",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 51335.5,
+        "vencimiento": "03/08/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32693662",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 51335.5,
+        "vencimiento": "02/09/2026",
+        "estado": "EN TRÁMITE"
+      }
+    ],
+    "pendientes": [],
+    "cantidadPendientes": 0,
+    "deudaTotal": 0,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.473Z"
+  },
+  "3083957": {
+    "nic": "3083957",
+    "inquilinos": [
+      "RIFFO, DELFINA NATALI"
+    ],
+    "propietarios": [
+      "SCAVONE, EDUARDO FERNANDO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [],
+    "pendientes": [],
+    "cantidadPendientes": 0,
+    "deudaTotal": 0,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.237Z"
+  },
+  "3087787": {
+    "nic": "3087787",
+    "inquilinos": [
+      "OLIVARES, MATIAS SANTIAGO"
+    ],
+    "propietarios": [
+      "CICCONI, MARIO NAZARENO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [],
+    "pendientes": [],
+    "cantidadPendientes": 0,
+    "deudaTotal": 0,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.665Z"
+  },
+  "3102725": {
+    "nic": "3102725",
+    "inquilinos": [
+      "MORALES VALDES, RUTH NATALI"
+    ],
+    "propietarios": [
+      "CICCONI, MARIO NAZARENO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [],
+    "pendientes": [],
+    "cantidadPendientes": 0,
+    "deudaTotal": 0,
+    "estado": "OK",
+    "actualizado": "2026-09-15T20:15:18.546Z"
+  },
+  "3111641": {
+    "nic": "3111641",
+    "inquilinos": [
+      "ROQUE, FLORENCIA AGUSTINA",
+      "ORTIZ , MARCELO ADRIAN"
+    ],
+    "propietarios": [
+      "SCAVONE, EDUARDO FERNANDO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [],
+    "pendientes": [],
+    "cantidadPendientes": 0,
+    "deudaTotal": 0,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.219Z"
+  },
+  "3111642": {
+    "nic": "3111642",
+    "inquilinos": [
+      "SALAS, ALICIA"
+    ],
+    "propietarios": [
+      "SCAVONE, EDUARDO FERNANDO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [],
+    "pendientes": [],
+    "cantidadPendientes": 0,
+    "deudaTotal": 0,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.207Z"
+  },
+  "3124481": {
+    "nic": "3124481",
+    "inquilinos": [
+      "TARIFA , AGUSTINA AYELEN"
+    ],
+    "propietarios": [
+      "GOMEZ, LELIO DALTON"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32893382",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 61808,
+        "vencimiento": "26/08/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32893382",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 61808,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-32893382",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 61808,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 1,
+    "deudaTotal": 61808,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.887Z"
+  },
+  "3142635": {
+    "nic": "3142635",
+    "inquilinos": [
+      "GABRIEL, LUIS FRANCISCO"
+    ],
+    "propietarios": [
+      "GONZALEZ, MARISA"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33158781",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 23911,
+        "vencimiento": "29/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33158781",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 23911,
+        "vencimiento": "29/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33158781",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 23911,
+        "vencimiento": "29/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33158781",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 23911,
+        "vencimiento": "29/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 2,
+    "deudaTotal": 47822,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.905Z"
+  },
+  "3142788": {
+    "nic": "3142788",
+    "inquilinos": [
+      "PARDO, MARISA ELIZABETH"
+    ],
+    "propietarios": [
+      "MORAN, CARLOS CEFERINO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33128152",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 40490.5,
+        "vencimiento": "24/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33128152",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 40490.5,
+        "vencimiento": "26/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33128152",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 40490.5,
+        "vencimiento": "24/09/2026",
+        "estado": "PENDIENTE"
+      },
+      {
+        "numero": "B-0003-33128152",
+        "periodo": "05/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 40490.5,
+        "vencimiento": "26/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 2,
+    "deudaTotal": 80981,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.004Z"
+  },
+  "3174290": {
+    "nic": "3174290",
+    "inquilinos": [
+      "OLIVARES, ANDREA LUCIANA"
+    ],
+    "propietarios": [
+      "CICCONI, MARIO NAZARENO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "A-0003-02290128",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 254393,
+        "vencimiento": "06/08/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "A-0003-02290128",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 254393,
+        "vencimiento": "07/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "A-0003-02290128",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 254393,
+        "vencimiento": "07/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 1,
+    "deudaTotal": 254393,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.671Z"
+  },
+  "3179442": {
+    "nic": "3179442",
+    "inquilinos": [
+      "RODRIGUEZ, NOEMI FANNY"
+    ],
+    "propietarios": [
+      "MASSO, GREGORIO JOSE"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-33015108",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 92911.5,
+        "vencimiento": "08/09/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-33015108",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 92911.5,
+        "vencimiento": "08/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-33015108",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 92911.5,
+        "vencimiento": "08/10/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 1,
+    "deudaTotal": 92911.5,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.960Z"
+  },
+  "3197699": {
+    "nic": "3197699",
+    "inquilinos": [
+      "ROJO, ROBERTO"
+    ],
+    "propietarios": [
+      "SCAVONE, EDUARDO FERNANDO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [],
+    "pendientes": [],
+    "cantidadPendientes": 0,
+    "deudaTotal": 0,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.232Z"
+  },
+  "3197700": {
+    "nic": "3197700",
+    "inquilinos": [
+      "DALMAU, MARCELO ALEJANDRO"
+    ],
+    "propietarios": [
+      "SCAVONE, EDUARDO FERNANDO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [],
+    "pendientes": [],
+    "cantidadPendientes": 0,
+    "deudaTotal": 0,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.447Z"
+  },
+  "3236786": {
+    "nic": "3236786",
+    "inquilinos": [
+      "TUMBARELLO, ROMINA JANET"
+    ],
+    "propietarios": [
+      "BRITOS, CARLOS ROQUE"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32859168",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 99227,
+        "vencimiento": "21/08/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32859168",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 99227,
+        "vencimiento": "21/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-32859168",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 99227,
+        "vencimiento": "21/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 1,
+    "deudaTotal": 99227,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.566Z"
+  },
+  "3236788": {
+    "nic": "3236788",
+    "inquilinos": [
+      "MORENO, DANIEL ALFREDO"
+    ],
+    "propietarios": [
+      "BRITOS, CARLOS ROQUE"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32859169",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 238627.5,
+        "vencimiento": "21/08/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32859169",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 238627.5,
+        "vencimiento": "21/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-32859169",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 238627.5,
+        "vencimiento": "21/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 1,
+    "deudaTotal": 238627.5,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.583Z"
+  },
+  "3236789": {
+    "nic": "3236789",
+    "inquilinos": [
+      "SANCHEZ, LUIS OSVALDO"
+    ],
+    "propietarios": [
+      "BRITOS, CARLOS ROQUE"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [],
+    "pendientes": [],
+    "cantidadPendientes": 0,
+    "deudaTotal": 0,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.570Z"
+  },
+  "3247098": {
+    "nic": "3247098",
+    "inquilinos": [
+      "IGLESIAS, OMAR ARMANDO"
+    ],
+    "propietarios": [
+      "CIAFRELLI, MARCELA ADRIANA"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32882128",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 90065.5,
+        "vencimiento": "26/08/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32882128",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 90065.5,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-32882128",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 90065.5,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 1,
+    "deudaTotal": 90065.5,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.605Z"
+  },
+  "3247100": {
+    "nic": "3247100",
+    "inquilinos": [
+      "DEBIACCI PEREYRA, GEORGINA NAHIR"
+    ],
+    "propietarios": [
+      "VILLAFAÑE, ALEJANDRA VIVIANA"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32882130",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 56201,
+        "vencimiento": "26/08/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32882130",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 56201,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-32882130",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 56201,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 1,
+    "deudaTotal": 56201,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:11.506Z"
+  },
+  "3247102": {
+    "nic": "3247102",
+    "inquilinos": [
+      "MORENO FERNANDEZ, NAHUEL"
+    ],
+    "propietarios": [
+      "MANCHADO, CLAUDIO"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32882131",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 53672.5,
+        "vencimiento": "26/08/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32882131",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 53672.5,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-32882131",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 53672.5,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 1,
+    "deudaTotal": 53672.5,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.920Z"
+  },
+  "3247107": {
+    "nic": "3247107",
+    "inquilinos": [
+      "BAVERA, CARLOS ARMANDO"
+    ],
+    "propietarios": [
+      "CIAFRELLI, MARIA LAURA"
+    ],
+    "titular": "",
+    "direccion": "",
+    "consumoActual": null,
+    "periodoConsumoActual": "",
+    "consumoAnterior": null,
+    "periodoConsumoAnterior": "",
+    "ultimaFactura": "",
+    "importeUltimaFactura": 0,
+    "facturas": [
+      {
+        "numero": "B-0003-32882134",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 1,
+        "importe": 55479.5,
+        "vencimiento": "26/08/2026",
+        "estado": "PAGADO"
+      },
+      {
+        "numero": "B-0003-32882134",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 55479.5,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "pendientes": [
+      {
+        "numero": "B-0003-32882134",
+        "periodo": "04/2026",
+        "tipo": "FACTURA",
+        "cuota": 2,
+        "importe": 55479.5,
+        "vencimiento": "25/09/2026",
+        "estado": "PENDIENTE"
+      }
+    ],
+    "cantidadPendientes": 1,
+    "deudaTotal": 55479.5,
+    "estado": "OK",
+    "actualizado": "2026-09-15T19:48:10.636Z"
+  }
+}
