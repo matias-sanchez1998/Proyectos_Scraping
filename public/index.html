@@ -1,0 +1,1036 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel de Deudas Mendoza - Gestión Unificada</title>
+    <!-- Bootstrap 5 CSS & Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: #f4f6f9;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .navbar {
+        background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+      }
+      .card {
+        border: none;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      }
+      .kpi-card {
+        transition: transform 0.2s;
+      }
+      .kpi-card:hover {
+        transform: translateY(-3px);
+      }
+      /* Fuente monospace/tabular para alinear cifras contables */
+      .monto-num {
+        font-variant-numeric: tabular-nums;
+        font-family:
+          ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+          "Liberation Mono", monospace;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+      }
+
+      /* Pastillas minimalistas y sutiles */
+      .badge-deuda-vencida {
+        background-color: #fef2f2;
+        color: #991b1b;
+        border: 1px solid #fecaca;
+        font-size: 0.82rem;
+        padding: 4px 8px;
+        border-radius: 6px;
+      }
+
+      .badge-deuda-avencer {
+        background-color: #fffbeb;
+        color: #92400e;
+        border: 1px solid #fde68a;
+        font-size: 0.82rem;
+        padding: 4px 8px;
+        border-radius: 6px;
+      }
+
+      .badge-aldia {
+        background-color: #f0fdf4;
+        color: #166534;
+        border: 1px solid #bbf7d0;
+        font-size: 0.82rem;
+        padding: 4px 10px;
+        border-radius: 6px;
+      }
+
+      /* Pill de estado ultra discreto */
+      .tag-venc {
+        font-size: 0.6rem;
+        font-weight: 700;
+        letter-spacing: 0.03em;
+        padding: 1px 4px;
+        border-radius: 4px;
+        margin-left: 6px;
+        text-transform: uppercase;
+      }
+      .tag-venc.rojo {
+        background-color: #dc2626;
+        color: #fff;
+      }
+      .tag-venc.amarillo {
+        background-color: #d97706;
+        color: #fff;
+      }
+
+      /* Icono de compartido más sutil */
+      .icon-shared {
+        color: #d97706;
+        opacity: 0.8;
+        font-size: 0.95rem;
+        margin-right: 6px;
+      }
+
+      /* Filas con hover suave y separación */
+      .table tbody tr {
+        transition: background-color 0.15s ease-in-out;
+        cursor: pointer;
+      }
+      .table tbody tr:hover {
+        background-color: #f8fafc !important;
+      }
+      /* Evita que las celdas se rompan en dos líneas y les da un ancho más uniforme */
+      .td-monto {
+        white-space: nowrap;
+      }
+      .table-hover tbody tr:hover {
+        background-color: #f8fafc;
+        cursor: pointer;
+      }
+      .th-sortable {
+        cursor: pointer;
+        user-select: none;
+        transition: background-color 0.15s;
+      }
+      .th-sortable:hover {
+        background-color: #e9ecef;
+      }
+
+      /* Ocultar la pestaña de detalle del menú superior */
+      #nav-tab-detalle {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark shadow-sm py-3 mb-4">
+      <div class="container d-flex justify-content-between">
+        <span class="navbar-brand mb-0 h1 fs-4"
+          ><i class="bi bi-shield-check me-2"></i>Gestor de Deudas
+          Inmobiliarias</span
+        >
+        <span class="text-white-50 small"
+          >AYSAM · Guaymallén · EDEMSA · Ecogas</span
+        >
+      </div>
+    </nav>
+
+    <div class="container-fluid px-4 mb-5">
+      <!-- Navegación por pestañas -->
+      <ul
+        class="nav nav-pills mb-4 nav-justified bg-white p-2 rounded-3 shadow-sm"
+        id="mainTabs"
+        role="tablist"
+      >
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active fw-bold py-2"
+            id="resumen-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#resumen-view"
+            type="button"
+            role="tab"
+          >
+            <i class="bi bi-people-fill me-2"></i>Resumen General
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link fw-bold py-2"
+            id="consultar-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#consultar-view"
+            type="button"
+            role="tab"
+          >
+            <i class="bi bi-cloud-arrow-up-fill me-2"></i>Ejecutar Scrapers
+          </button>
+        </li>
+        <li class="nav-item" role="presentation" id="nav-tab-detalle">
+          <button
+            class="nav-link fw-bold py-2"
+            id="detalle-tab"
+            data-bs-toggle="pill"
+            data-bs-target="#detalle-view"
+            type="button"
+            role="tab"
+          >
+            Detalle Inquilino
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <!-- PESTAÑA 1: RESUMEN GENERAL -->
+        <div
+          class="tab-pane fade show active"
+          id="resumen-view"
+          role="tabpanel"
+        >
+          <div class="row g-3 mb-4">
+            <div class="col-md-3">
+              <div class="card p-3 kpi-card bg-primary text-white">
+                <div>
+                  <small class="text-white-50 text-uppercase fw-bold"
+                    >Deuda Global Total</small
+                  >
+                  <h3 class="fw-bold mb-0" id="kpi-deuda-total">$0</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card p-3 kpi-card bg-danger text-white">
+                <div>
+                  <small class="text-white-50 text-uppercase fw-bold"
+                    >Con Deuda</small
+                  >
+                  <h3 class="fw-bold mb-0" id="kpi-con-deuda">0</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card p-3 kpi-card bg-success text-white">
+                <div>
+                  <small class="text-white-50 text-uppercase fw-bold"
+                    >Al Día</small
+                  >
+                  <h3 class="fw-bold mb-0" id="kpi-al-dia">0</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="card p-3 kpi-card bg-dark text-white">
+                <div>
+                  <small class="text-white-50 text-uppercase fw-bold"
+                    >Total Inquilinos</small
+                  >
+                  <h3 class="fw-bold mb-0" id="kpi-total-inq">0</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+          <select id="filtro-estado" class="form-select">
+            <option value="todos">Todos los estados</option>
+            <option value="vencidas">⚠️ Con Deuda VENCIDA</option>
+            <option value="a-vencer">⏳ Solo A Vencer</option>
+            <option value="con-deuda">Con Cualquier Deuda</option>
+            <option value="al-dia">Al Día</option>
+          </select>
+          <div
+            class="d-flex flex-wrap gap-3 align-items-center justify-content-end mb-3 text-muted small"
+            id="panel-actualizaciones"
+          >
+            <span
+              ><i class="bi bi-clock-history me-1"></i>Últimas consultas:</span
+            >
+            <span id="act-aysam" class="badge bg-light text-secondary border"
+              >AYSAM: Sin datos</span
+            >
+            <span
+              id="act-guaymallen"
+              class="badge bg-light text-secondary border"
+              >Guaymallén: Sin datos</span
+            >
+            <span id="act-edemsa" class="badge bg-light text-secondary border"
+              >EDEMSA: Sin datos</span
+            >
+            <span id="act-ecogas" class="badge bg-light text-secondary border"
+              >Ecogas: Sin datos</span
+            >
+          </div>
+          <div class="card p-4 mb-4">
+            <div class="row g-3 align-items-center justify-content-between">
+              <div class="col-md-5">
+                <div class="input-group">
+                  <span class="input-group-text bg-light border-end-0"
+                    ><i class="bi bi-search text-muted"></i
+                  ></span>
+                  <input
+                    type="text"
+                    id="buscador"
+                    class="form-control border-start-0"
+                    placeholder="Buscar por inquilino o propietario..."
+                  />
+                </div>
+              </div>
+              <div class="col-md-4 d-flex gap-2">
+                <button
+                  id="btn-recargar-resumen"
+                  class="btn btn-outline-secondary"
+                  title="Recargar datos"
+                >
+                  <i class="bi bi-arrow-clockwise"></i>
+                </button>
+              </div>
+              <div class="col-md-3 text-end">
+                <button
+                  class="btn btn-success w-100"
+                  onclick="window.location.href = '/api/descargar-excel'"
+                >
+                  <i class="bi bi-download me-1"></i> Bajar Excel
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="card p-0 overflow-hidden">
+            <div class="table-responsive">
+              <table
+                class="table table-hover align-middle mb-0"
+                id="tabla-inquilinos"
+              >
+                <thead class="table-light">
+                  <tr class="text-secondary small text-uppercase">
+                    <th
+                      class="ps-4 th-sortable"
+                      onclick="cambiarOrden('inquilino')"
+                    >
+                      Inquilino <span id="icon-inquilino"></span>
+                    </th>
+                    <th
+                      class="text-end th-sortable"
+                      onclick="cambiarOrden('aysam')"
+                    >
+                      AYSAM <span id="icon-aysam"></span>
+                    </th>
+                    <th
+                      class="text-end th-sortable"
+                      onclick="cambiarOrden('guaymallen')"
+                    >
+                      Guaymallén <span id="icon-guaymallen"></span>
+                    </th>
+                    <th
+                      class="text-end th-sortable"
+                      onclick="cambiarOrden('edemsa')"
+                    >
+                      EDEMSA <span id="icon-edemsa"></span>
+                    </th>
+                    <th
+                      class="text-end th-sortable"
+                      onclick="cambiarOrden('ecogas')"
+                    >
+                      Ecogas <span id="icon-ecogas"></span>
+                    </th>
+                    <th
+                      class="text-end pe-4 th-sortable"
+                      onclick="cambiarOrden('deudaTotal')"
+                    >
+                      Total
+                      <span id="icon-deudaTotal" class="text-dark fw-bold"
+                        ><i class="bi bi-sort-numeric-down-alt"></i
+                      ></span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="tabla-cuerpo"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- PESTAÑA 2: EJECUTAR SCRAPERS -->
+        <div class="tab-pane fade" id="consultar-view" role="tabpanel">
+          <div class="card p-4">
+            <h4 class="fw-bold mb-3">Lanzar Consulta</h4>
+            <form id="form-consulta">
+              <select class="form-select mb-3" id="servicio" required>
+                <option value="todos">EJECUTAR TODOS</option>
+                <option value="aysam">Solo AYSAM</option>
+                <option value="guaymallen">Solo Guaymallén</option>
+                <option value="edemsa">Solo EDEMSA</option>
+                <option value="ecogas">Solo Ecogas</option>
+              </select>
+              <button
+                type="submit"
+                id="btn-iniciar"
+                class="btn btn-primary w-100"
+              >
+                Iniciar Scraping
+              </button>
+              <!-- BARRA DE PROGRESO OCULTA POR DEFECTO -->
+              <div
+                class="progress mt-3 d-none"
+                id="contenedor-progreso"
+                style="height: 25px"
+              >
+                <div
+                  id="barra-progreso"
+                  class="progress-bar progress-bar-striped progress-bar-animated bg-primary fw-bold"
+                  role="progressbar"
+                  style="width: 0%"
+                  aria-valuenow="0"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                >
+                  0%
+                </div>
+              </div>
+
+              <hr class="my-4" />
+
+              <!-- CONTROL DE CACHÉ -->
+              <h6 class="fw-bold text-muted mb-2">
+                <i class="bi bi-trash me-2"></i>Limpiar Caché
+              </h6>
+              <div class="input-group mb-3">
+                <select class="form-select" id="select-cache">
+                  <option value="todos">Todos los servicios</option>
+                  <option value="aysam">AYSAM</option>
+                  <option value="guaymallen">Guaymallén</option>
+                  <option value="edemsa">EDEMSA</option>
+                  <option value="ecogas">Ecogas</option>
+                </select>
+                <button
+                  class="btn btn-outline-danger"
+                  id="btn-borrar-cache"
+                  type="button"
+                >
+                  Borrar
+                </button>
+              </div>
+            </form>
+            <div id="alerta-estado" class="alert mt-4 d-none"></div>
+          </div>
+        </div>
+
+        <!-- PESTAÑA 3: DETALLE COMPLETO (REEMPLAZA AL MODAL) -->
+        <div class="tab-pane fade" id="detalle-view" role="tabpanel">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <button
+              class="btn btn-outline-secondary"
+              onclick="volverAlResumen()"
+            >
+              <i class="bi bi-arrow-left me-2"></i> Volver a la tabla
+            </button>
+            <div class="text-end">
+              <h5 class="text-muted mb-0">Total Acumulado</h5>
+              <h2 class="fw-bold text-danger mb-0" id="vista-total-deuda">
+                $0
+              </h2>
+            </div>
+          </div>
+
+          <div class="card p-4 shadow-sm mb-4 border-0">
+            <div class="row align-items-center">
+              <div class="col-md-8">
+                <h2 class="fw-bold text-dark mb-1" id="vista-inquilino">
+                  Nombre Inquilino
+                </h2>
+                <p class="text-muted mb-0 fs-5" id="vista-propietario">
+                  <i class="bi bi-house-door me-2"></i>Propietario
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row g-4" id="contenedor-tarjetas-servicios">
+            <!-- Se inyectan con JS -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      let inquilinosData = [];
+      let ordenActual = { columna: "deudaTotal", sentido: "desc" };
+
+      function formatearTiempoRelativo(isoString) {
+        if (!isoString) return "Sin datos";
+        const fecha = new Date(isoString);
+        const diffMin = Math.round((new Date() - fecha) / 60000);
+
+        if (diffMin < 1) return "hace instantes";
+        if (diffMin < 60) return `hace ${diffMin} min`;
+        const diffHoras = Math.round(diffMin / 60);
+        if (diffHoras < 24) return `hace ${diffHoras} h`;
+        return fecha.toLocaleDateString("es-AR", {
+          day: "2-digit",
+          month: "2-digit",
+          hour: "2-digit",
+          minute: "2-digit",
+        });
+      }
+
+      const formatearMoneda = (monto) =>
+        new Intl.NumberFormat("es-AR", {
+          style: "currency",
+          currency: "ARS",
+          maximumFractionDigits: 0,
+        }).format(monto || 0);
+      const renderBadgeServicio = (serv) => {
+        if (!serv || serv.estado === "SIN CONSULTAR") {
+          return `<span class="text-muted opacity-50 fw-light">—</span>`;
+        }
+
+        const iconComp = serv.compartido
+          ? `<i class="bi bi-people-fill icon-shared" title="Cuenta compartida"></i>`
+          : "";
+
+        if (serv.deuda > 0) {
+          const esVencida = serv.estado === "VENCIDA";
+          const claseBox = esVencida
+            ? "badge-deuda-vencida"
+            : "badge-deuda-avencer";
+          const tag = esVencida
+            ? `<span class="tag-venc rojo">Vencida</span>`
+            : `<span class="tag-venc amarillo">A Vencer</span>`;
+
+          return `
+                    <div class="d-inline-flex align-items-center justify-content-end text-nowrap">
+                        ${iconComp}
+                        <div class="${claseBox} d-inline-flex align-items-center">
+                            <span class="monto-num">${formatearMoneda(serv.deuda)}</span>
+                            ${tag}
+                        </div>
+                    </div>`;
+        }
+
+        return `
+                <div class="d-inline-flex align-items-center justify-content-end text-nowrap">
+                    ${iconComp}
+                    <div class="badge-aldia d-inline-flex align-items-center">
+                        <i class="bi bi-check2 me-1"></i> Al día
+                    </div>
+                </div>`;
+      };
+      async function cargarResumen() {
+        try {
+          const res = await fetch("/api/resumen-general");
+          const data = await res.json();
+          if (data.exito) {
+            inquilinosData = data.inquilinos || [];
+            document.getElementById("kpi-deuda-total").textContent =
+              formatearMoneda(data.kpis.totalDeuda);
+            document.getElementById("kpi-con-deuda").textContent =
+              data.kpis.conDeuda;
+            document.getElementById("kpi-al-dia").textContent = data.kpis.alDia;
+            document.getElementById("kpi-total-inq").textContent =
+              data.kpis.totalInquilinos;
+
+            // Mostrar timestamps de scrapers
+            if (data.actualizaciones) {
+              document.getElementById("act-aysam").textContent =
+                `AYSAM: ${formatearTiempoRelativo(data.actualizaciones.aysam)}`;
+              document.getElementById("act-guaymallen").textContent =
+                `Guaymallén: ${formatearTiempoRelativo(data.actualizaciones.guaymallen)}`;
+              document.getElementById("act-edemsa").textContent =
+                `EDEMSA: ${formatearTiempoRelativo(data.actualizaciones.edemsa)}`;
+              document.getElementById("act-ecogas").textContent =
+                `Ecogas: ${formatearTiempoRelativo(data.actualizaciones.ecogas)}`;
+            }
+
+            renderizarTabla();
+          }
+        } catch (err) {
+          console.error(err);
+        }
+      }
+      function cambiarOrden(columna) {
+        if (ordenActual.columna === columna) {
+          ordenActual.sentido = ordenActual.sentido === "asc" ? "desc" : "asc";
+        } else {
+          ordenActual.columna = columna;
+          ordenActual.sentido = columna === "inquilino" ? "asc" : "desc";
+        }
+        renderizarTabla();
+      }
+
+      function renderizarTabla() {
+        const textoBuscador = document
+          .getElementById("buscador")
+          .value.toLowerCase()
+          .trim();
+        const filtroEstado = document.getElementById("filtro-estado").value;
+        const cuerpo = document.getElementById("tabla-cuerpo");
+
+        let filtrados = inquilinosData.filter((item) => {
+          const matchTexto =
+            item.inquilino.toLowerCase().includes(textoBuscador) ||
+            item.propietario.toLowerCase().includes(textoBuscador);
+
+          const tieneVencida = [
+            item.aysam,
+            item.guaymallen,
+            item.edemsa,
+            item.ecogas,
+          ].some((s) => s.estado === "VENCIDA");
+          const tieneAVencer = [
+            item.aysam,
+            item.guaymallen,
+            item.edemsa,
+            item.ecogas,
+          ].some((s) => s.estado === "A VENCER");
+
+          let matchEstado = true;
+          if (filtroEstado === "vencidas") matchEstado = tieneVencida;
+          else if (filtroEstado === "a-vencer")
+            matchEstado = tieneAVencer && !tieneVencida;
+          else if (filtroEstado === "con-deuda")
+            matchEstado = item.deudaTotal > 0;
+          else if (filtroEstado === "al-dia")
+            matchEstado = item.deudaTotal === 0;
+
+          return matchTexto && matchEstado;
+        });
+
+        const factor = ordenActual.sentido === "asc" ? 1 : -1;
+        filtrados.sort((a, b) => {
+          if (ordenActual.columna === "inquilino")
+            return a.inquilino.localeCompare(b.inquilino) * factor;
+          if (
+            ["aysam", "guaymallen", "edemsa", "ecogas"].includes(
+              ordenActual.columna,
+            )
+          )
+            return (
+              ((a[ordenActual.columna]?.deuda || 0) -
+                (b[ordenActual.columna]?.deuda || 0)) *
+              factor
+            );
+          return (a.deudaTotal - b.deudaTotal) * factor;
+        });
+        cuerpo.innerHTML = filtrados
+          .map((item) => {
+            return `
+
+<tr onclick="verDetalleCompleto(${item.id})">
+
+<td class="ps-4 py-3" style="min-width: 260px; max-width: 320px;">
+
+<div class="d-flex align-items-center justify-content-between">
+
+<div class="fw-bold text-dark text-truncate" title="${item.inquilino}">
+
+${item.inquilino}
+
+</div>
+
+<button class="btn btn-sm btn-light border-0 text-muted ms-2 px-2 py-0"
+
+title="Copiar mensaje de reclamo"
+
+onclick="copiarMensajeReclamo(event, ${item.id})">
+
+<i class="bi bi-chat-text"></i>
+
+</button>
+
+</div>
+
+<div class="small text-secondary text-truncate" title="${item.propietario}">Prop: ${item.propietario}</div>
+
+</td>
+
+<td class="text-end py-3 td-monto">${renderBadgeServicio(item.aysam)}</td>
+
+<td class="text-end py-3 td-monto">${renderBadgeServicio(item.guaymallen)}</td>
+
+<td class="text-end py-3 td-monto">${renderBadgeServicio(item.edemsa)}</td>
+
+<td class="text-end py-3 td-monto">${renderBadgeServicio(item.ecogas)}</td>
+
+<td class="text-end pe-4 py-3 td-monto" style="min-width: 140px;">
+
+<span class="monto-num fs-6 fw-bold ${item.deudaTotal > 0 ? "text-danger" : "text-success"}">
+
+${formatearMoneda(item.deudaTotal)}
+
+</span>
+
+</td>
+
+</tr>
+
+`;
+          })
+          .join("");
+      }
+
+      function renderizarTarjetaServicio(
+        titulo,
+        icono,
+        colorClase,
+        servicioObj,
+        identificadorStr,
+      ) {
+        const deuda = servicioObj.deuda || 0;
+        const esDeuda = deuda > 0;
+        const estadoClase = esDeuda ? "text-danger" : "text-success";
+
+        let htmlVencimientos = "";
+        if (servicioObj.vencimientos && servicioObj.vencimientos.length > 0) {
+          htmlVencimientos = `<hr><div class="small text-muted fw-bold mb-2">Comprobantes pendientes:</div>
+                                    <ul class="list-unstyled small mb-0">`;
+          servicioObj.vencimientos.forEach((v) => {
+            // Adaptar por si quedó caché vieja (string) o caché nueva (objeto)
+            const fechaTxt = typeof v === "string" ? v : v.fecha;
+            const montoHtml =
+              typeof v === "object" && v.monto > 0
+                ? `<span class="fw-bold text-dark ms-auto">${formatearMoneda(v.monto)}</span>`
+                : "";
+
+            htmlVencimientos += `<li class="d-flex align-items-center mb-1 pb-1 border-bottom border-light">
+                                            <i class="bi bi-calendar-x me-2 text-danger"></i> 
+                                            <span class="text-muted">Vto: ${fechaTxt}</span>
+                                            ${montoHtml}
+                                         </li>`;
+          });
+          htmlVencimientos += `</ul>`;
+        }
+
+        return `
+            <div class="col-md-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm" style="border-top: 4px solid ${colorClase} !important;">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-3">
+                            <h5 class="fw-bold text-muted mb-0"><i class="${icono} me-2" style="color: ${colorClase}"></i>${titulo}</h5>
+                        </div>
+                        <h3 class="fw-bold ${estadoClase} mb-1">${formatearMoneda(deuda)}</h3>
+                        <p class="text-muted small mb-0">${identificadorStr}: <strong>${servicioObj.cuenta || servicioObj.padron || servicioObj.nic || "N/D"}</strong></p>
+                        <p class="text-muted small mb-0">${servicioObj.detalle} | <strong>${servicioObj.estado}</strong></p>
+                        ${htmlVencimientos}
+                    </div>
+                </div>
+            </div>`;
+      }
+      window.verDetalleCompleto = function (idFila) {
+        const item = inquilinosData.find((i) => i.id === idFila);
+        if (!item) return;
+
+        // Resto del código se mantiene igual...
+        document.getElementById("vista-inquilino").textContent = item.inquilino;
+        document.getElementById("vista-propietario").textContent =
+          `Propietario: ${item.propietario}`;
+        document.getElementById("vista-total-deuda").textContent =
+          formatearMoneda(item.deudaTotal);
+        // ... (sigue con las tarjetas)
+
+        const htmlTarjetas =
+          renderizarTarjetaServicio(
+            "AYSAM",
+            "bi-droplet",
+            "#0d6efd",
+            item.aysam,
+            "Cta",
+          ) +
+          renderizarTarjetaServicio(
+            "Guaymallén",
+            "bi-building",
+            "#0dcaf0",
+            item.guaymallen,
+            "Padrón",
+          ) +
+          renderizarTarjetaServicio(
+            "EDEMSA",
+            "bi-lightning-charge",
+            "#ffc107",
+            item.edemsa,
+            "NIC",
+          ) +
+          renderizarTarjetaServicio(
+            "Ecogas",
+            "bi-fire",
+            "#dc3545",
+            item.ecogas,
+            "Cta",
+          );
+
+        document.getElementById("contenedor-tarjetas-servicios").innerHTML =
+          htmlTarjetas;
+
+        const tab = new bootstrap.Tab(document.getElementById("detalle-tab"));
+        tab.show();
+      };
+
+      window.volverAlResumen = function () {
+        const tab = new bootstrap.Tab(document.getElementById("resumen-tab"));
+        tab.show();
+      };
+
+      document
+        .getElementById("buscador")
+        .addEventListener("input", renderizarTabla);
+      document
+        .getElementById("filtro-estado")
+        .addEventListener("change", renderizarTabla);
+      document
+        .getElementById("btn-recargar-resumen")
+        .addEventListener("click", cargarResumen);
+      cargarResumen();
+      // ==========================================
+      // EVENTO: INICIAR SCRAPING
+      // ==========================================
+      // ==========================================
+      // EVENTO: INICIAR SCRAPING Y LEER PROGRESO
+      // ==========================================
+      const formConsulta = document.getElementById("form-consulta");
+      const btnIniciar = document.getElementById("btn-iniciar");
+      const alerta = document.getElementById("alerta-estado");
+      const contenedorProgreso = document.getElementById("contenedor-progreso");
+      const barraProgreso = document.getElementById("barra-progreso");
+
+      if (formConsulta) {
+        formConsulta.addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const servicio = document.getElementById("servicio").value;
+          const formData = new FormData();
+          formData.append("servicio", servicio);
+
+          btnIniciar.disabled = true;
+          btnIniciar.innerHTML = `<span class="spinner-border spinner-border-sm me-2"></span>Procesando...`;
+          alerta.className = "alert alert-info mt-3";
+          alerta.textContent = `Scraping en curso. Por favor, no cierres esta ventana.`;
+          alerta.classList.remove("d-none");
+
+          // Mostrar y resetear barra de progreso
+          contenedorProgreso.classList.remove("d-none");
+          barraProgreso.style.width = "0%";
+          barraProgreso.textContent = "Calculando...";
+
+          // Temporizador que consulta el % al backend cada segundo
+          const intervaloProgreso = setInterval(async () => {
+            try {
+              const resProg = await fetch("/api/progreso");
+              const dataProg = await resProg.json();
+              if (dataProg.total > 0) {
+                barraProgreso.style.width = dataProg.porcentaje + "%";
+                barraProgreso.textContent = `${dataProg.porcentaje}% (${dataProg.actual}/${dataProg.total})`;
+              }
+            } catch (err) {
+              /* Silenciamos errores de red temporales */
+            }
+          }, 1000);
+
+          try {
+            const res = await fetch("/api/consultar", {
+              method: "POST",
+              body: formData,
+            });
+            const data = await res.json();
+
+            if (data.exito) {
+              alerta.className = "alert alert-success mt-3";
+              alerta.textContent = data.mensaje;
+              cargarResumen(); // Recarga la tabla de abajo
+            } else {
+              alerta.className = "alert alert-danger mt-3";
+              alerta.textContent = `Error: ${data.mensaje}`;
+            }
+          } catch (err) {
+            alerta.className = "alert alert-danger mt-3";
+            alerta.textContent = `Error de red: ${err.message}`;
+          } finally {
+            clearInterval(intervaloProgreso); // Detenemos la consulta de progreso
+            barraProgreso.style.width = "100%";
+            barraProgreso.textContent = "100% Completado";
+            btnIniciar.disabled = false;
+            btnIniciar.innerHTML = `Iniciar Scraping`;
+          }
+        });
+      }
+
+      // ==========================================
+      // EVENTO: BORRAR CACHÉ DESDE LA WEB
+      // ==========================================
+      document
+        .getElementById("btn-borrar-cache")
+        .addEventListener("click", async () => {
+          const servicio = document.getElementById("select-cache").value;
+          const btn = document.getElementById("btn-borrar-cache");
+
+          if (
+            !confirm(
+              `¿Estás seguro de borrar la caché de: ${servicio.toUpperCase()}? Los próximos reportes tardarán más porque deberán consultarse en vivo.`,
+            )
+          )
+            return;
+
+          btn.disabled = true;
+          btn.innerHTML = "Borrando...";
+
+          try {
+            const res = await fetch("/api/borrar-cache", {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ servicio }),
+            });
+            const data = await res.json();
+
+            if (data.exito) {
+              alert(data.mensaje);
+              cargarResumen(); // Refrescamos la tabla porque ahora esos campos dirán "Sin consultar"
+            } else {
+              alert("Error: " + data.mensaje);
+            }
+          } catch (error) {
+            alert("Error de conexión al intentar borrar la caché.");
+          } finally {
+            btn.disabled = false;
+            btn.innerHTML = "Borrar";
+          }
+        });
+
+      function extraerPrimerNombre(nombreCompleto) {
+        if (!nombreCompleto) return "inquilino/a";
+
+        let nombrePila = "";
+        const textoLimpio = nombreCompleto.trim().replace(/\s+/g, " ");
+
+        if (textoLimpio.includes(",")) {
+          // Formato estándar: APELLIDO, NOMBRE1 NOMBRE2
+          const partes = textoLimpio.split(",");
+          const nombres = partes[1].trim().split(" ");
+          nombrePila = nombres[0];
+        } else {
+          // Formato sin coma: descarta prefijos comunes si los hubiera
+          const palabras = textoLimpio.split(" ");
+          const prefijos = [
+            "DE",
+            "DEL",
+            "DE",
+            "LA",
+            "LAS",
+            "LOS",
+            "SAN",
+            "SANTA",
+          ];
+          let idx = 0;
+          while (
+            idx < palabras.length - 1 &&
+            prefijos.includes(palabras[idx].toUpperCase())
+          ) {
+            idx++;
+          }
+          // Toma la palabra posterior al apellido
+          nombrePila = palabras[idx + 1] || palabras[0];
+        }
+
+        if (!nombrePila) return "inquilino/a";
+        return (
+          nombrePila.charAt(0).toUpperCase() + nombrePila.slice(1).toLowerCase()
+        );
+      }
+
+      function copiarMensajeReclamo(event, id) {
+        event.stopPropagation();
+
+        const item = inquilinosData.find((i) => i.id === id);
+        if (!item) return;
+
+        // Servicios individuales con su etiqueta
+        const servicios = [
+          { nombre: "AYSAM", etiqueta: "Cuenta", serv: item.aysam },
+          { nombre: "Guaymallén", etiqueta: "Padrón", serv: item.guaymallen },
+          { nombre: "EDEMSA", etiqueta: "NIC", serv: item.edemsa },
+          { nombre: "Ecogas", etiqueta: "Cuenta", serv: item.ecogas },
+        ];
+
+        // Filtrar solo los NO compartidos y VENCIDOS, buscando el número correcto
+        const serviciosVencidos = servicios
+          .filter(
+            (s) => s.serv && !s.serv.compartido && s.serv.estado === "VENCIDA",
+          )
+          .map((s) => {
+            const nro = (
+              s.serv.cuenta ||
+              s.serv.padron ||
+              s.serv.nic ||
+              s.serv.identificador ||
+              ""
+            )
+              .toString()
+              .trim();
+            if (nro) {
+              return s.nombre + " (" + s.etiqueta + ": " + nro + ")";
+            }
+            return s.nombre;
+          });
+
+        if (serviciosVencidos.length === 0) {
+          // Feedback visual silencioso si no hay deuda (cruz roja)
+          const btn = event.currentTarget;
+          const iconoOriginal = btn.innerHTML;
+          btn.innerHTML = "**";
+          setTimeout(() => {
+            btn.innerHTML = iconoOriginal;
+          }, 1500);
+          return;
+        }
+
+        // Unir la lista gramaticalmente
+        let listaServicios = "";
+        if (serviciosVencidos.length === 1) {
+          listaServicios = serviciosVencidos[0];
+        } else {
+          listaServicios =
+            serviciosVencidos.slice(0, -1).join(", ") +
+            " y " +
+            serviciosVencidos[serviciosVencidos.length - 1];
+        }
+
+        const primerNombre = extraerPrimerNombre(item.inquilino);
+
+        // Mensaje final
+        const mensaje =
+          "Hola " +
+          primerNombre +
+          ", te escribe Matias. Te pido revises tu situación con " +
+          listaServicios +
+          " porque figuran facturas vencidas. Saludos!";
+
+        // Copiado invisible y forzado para evitar el cartel negro
+        const inputOculto = document.createElement("textarea");
+        inputOculto.value = mensaje;
+        inputOculto.style.position = "absolute";
+        inputOculto.style.left = "-9999px";
+        document.body.appendChild(inputOculto);
+
+        inputOculto.select();
+
+        try {
+          document.execCommand("copy");
+
+          // Ícono amigable (portapapeles con tilde verde)
+          const btn = event.currentTarget;
+          const iconoOriginal = btn.innerHTML;
+          btn.innerHTML =
+            '<i class="bi bi-clipboard-check-fill text-success fs-6"></i>';
+          setTimeout(() => {
+            btn.innerHTML = iconoOriginal;
+          }, 1500);
+        } catch (err) {
+          console.error("Error al copiar:", err);
+        } finally {
+          document.body.removeChild(inputOculto);
+        }
+      }
+    </script>
+  </body>
+</html>
