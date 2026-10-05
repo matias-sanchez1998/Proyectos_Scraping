@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Generador de Contratos Avanzado</title>
+    <!-- CKEditor 5 desde CDN -->
+    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #f0f2f5;
+        margin: 0;
+        padding: 20px;
+      }
+      .header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      .container {
+        display: flex;
+        gap: 20px;
+        height: 85vh;
+      }
+
+      /* Panel Izquierdo: Formulario */
+      .panel-form {
+        flex: 1;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
+      }
+      .panel-form h3 {
+        margin-top: 0;
+        color: #333;
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 5px;
+      }
+      .form-group {
+        margin-bottom: 15px;
+      }
+      .form-group label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+        font-size: 13px;
+        color: #555;
+      }
+      .form-group input,
+      .form-group select,
+      .form-group textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      /* Panel Derecho: Editor */
+      .panel-editor {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      }
+      .ck-editor__editable_inline {
+        flex-grow: 1;
+        min-height: 500px;
+      }
+
+      /* Botones */
+      .btn {
+        padding: 12px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 15px;
+      }
+      .btn-primary {
+        background: #007bff;
+      }
+      .btn-primary:hover {
+        background: #0056b3;
+      }
+      .btn-success {
+        background: #28a745;
+      }
+      .btn-success:hover {
+        background: #218838;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h1>Gestor de Contratos de Locación</h1>
+    </div>
+
+    <div class="container">
+      <!-- FORMULARIO DE PARÁMETROS -->
+      <div class="panel-form">
+        <form id="contratoForm">
+          <h3>1. Datos de la Operación</h3>
+          <div class="form-group">
+            <label>Tipo de Contrato</label>
+            <select name="tipo_operacion">
+              <option value="nuevo">Nuevo Contrato</option>
+              <option value="renovacion">Renovación</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Destino</label>
+            <select name="destino">
+              <option value="vivienda">Vivienda (Familiar/Personal)</option>
+              <option value="comercial">
+                Comercial (Local, Kiosco, Rotisería)
+              </option>
+            </select>
+          </div>
+
+          <h3>2. Locador</h3>
+          <div class="form-group">
+            <label>Nombre</label
+            ><input
+              type="text"
+              name="locador_nombre"
+              value="Carlos Roque Britos"
+            />
+          </div>
+          <div class="form-group">
+            <label>DNI / CUIT</label
+            ><input type="text" name="locador_dni" value="05.273.345" />
+          </div>
+          <div class="form-group">
+            <label>Domicilio</label
+            ><input
+              type="text"
+              name="locador_domicilio"
+              value="Bandera de Los Andes 4701, Villa Nueva"
+            />
+          </div>
+          <div class="form-group">
+            <label>Email</label
+            ><input
+              type="text"
+              name="locador_email"
+              value="lgpropiedades.inmo@gmail.com"
+            />
+          </div>
+          <div class="form-group">
+            <label>Teléfono</label
+            ><input type="text" name="locador_tel" value="2615255295" />
+          </div>
+
+          <h3>3. Locatario</h3>
+          <div class="form-group">
+            <label>Nombre</label
+            ><input
+              type="text"
+              name="locatario_nombre"
+              value="Romina Janet Tumbarello"
+            />
+          </div>
+          <div class="form-group">
+            <label>DNI / CUIT</label
+            ><input type="text" name="locatario_dni" value="34.063.767" />
+          </div>
+          <div class="form-group">
+            <label>Domicilio</label
+            ><input
+              type="text"
+              name="locatario_domicilio"
+              value="Corrientes Sur 1140, Guaymallén"
+            />
+          </div>
+          <div class="form-group">
+            <label>Email</label
+            ><input
+              type="text"
+              name="locatario_email"
+              value="negramendocina14@gmail.com"
+            />
+          </div>
+          <div class="form-group">
+            <label>Teléfono</label
+            ><input type="text" name="locatario_tel" value="2615155989" />
+          </div>
+          <div class="form-group">
+            <label>Personas que conviven (Si es vivienda)</label
+            ><textarea name="personas_convivientes" rows="2">
+Gael Ignacio Salinas y Santino Francesco Salinas.</textarea
+            >
+          </div>
+
+          <h3>4. Inmueble</h3>
+          <div class="form-group">
+            <label>Dirección del Inmueble</label
+            ><input
+              type="text"
+              name="inmueble_direccion"
+              value="Corrientes Sur 1140, Complejo La Esquina, Depto 1"
+            />
+          </div>
+          <div class="form-group">
+            <label>N° Padrón ATM</label
+            ><input type="text" name="inmueble_padron" value="04-628897" />
+          </div>
+          <div class="form-group">
+            <label>Detalle / Inventario</label
+            ><textarea name="inmueble_detalle" rows="3">
+Living, Cocina-Comedor, Baño completo, 2 dormitorios, Patio.</textarea
+            >
+          </div>
+
+          <h3>5. Condiciones Económicas</h3>
+          <div class="form-group">
+            <label>Plazo</label
+            ><input type="text" name="plazo" value="24 Meses" />
+          </div>
+          <div class="form-group">
+            <label>Fecha Inicio</label
+            ><input
+              type="text"
+              name="fecha_inicio"
+              value="1 de Agosto de 2026"
+            />
+          </div>
+          <div class="form-group">
+            <label>Fecha Fin</label
+            ><input type="text" name="fecha_fin" value="31 de Julio de 2028" />
+          </div>
+          <div class="form-group">
+            <label>Canon Inicial Mensual</label
+            ><input
+              type="text"
+              name="monto"
+              value="PESOS QUINIENTOS SETENTA MIL ($570.000)"
+            />
+          </div>
+          <div class="form-group">
+            <label>Índice de Ajuste</label>
+            <select name="indice_ajuste">
+              <option value="IPC (INDEC)">IPC (INDEC)</option>
+              <option value="ICL (BCRA)">ICL (BCRA)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Frecuencia de Ajuste</label>
+            <select name="frecuencia_ajuste">
+              <option value="Cuatrimestral">Cuatrimestral</option>
+              <option value="Trimestral">Trimestral</option>
+              <option value="Semestral">Semestral</option>
+            </select>
+          </div>
+
+          <h3>6. Servicios compartidos / NICs</h3>
+          <div class="form-group">
+            <label>Edemsa (Luz)</label
+            ><input
+              type="text"
+              name="servicios_edemsa"
+              value="NIC 3236786 - 100%"
+            />
+          </div>
+          <div class="form-group">
+            <label>Ecogas (Gas)</label
+            ><input
+              type="text"
+              name="servicios_ecogas"
+              value="Cuenta 22174358 - 100%"
+            />
+          </div>
+          <div class="form-group">
+            <label>Aysam (Agua)</label
+            ><input
+              type="text"
+              name="servicios_aysam"
+              value="Cliente 059-3130743-000-7 - 25% incluido en expensas"
+            />
+          </div>
+          <div class="form-group">
+            <label>Municipalidad</label
+            ><input
+              type="text"
+              name="servicios_muni"
+              value="Padrón 111472 - 25% incluido en expensas"
+            />
+          </div>
+
+          <h3>7. Garantías y Codeudores</h3>
+          <div class="form-group">
+            <label>Modalidad de Depósito</label>
+            <select name="tipo_deposito">
+              <option value="Efectivo">Efectivo</option>
+              <option value="Pagaré a la vista">Pagaré a la Vista</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Monto del Depósito / Pagaré</label
+            ><input
+              type="text"
+              name="monto_deposito"
+              value="PESOS TRESCIENTOS VEINTE MIL ($320.000)"
+            />
+          </div>
+          <div class="form-group">
+            <label>Datos de los Codeudores</label
+            ><textarea name="codeudores" rows="4">
+1) SRA. EVELYN AYELÉN SALINAS, DNI 41.367.228, Alberdi 207, Cdad.
+2) SRA. MARIA ROSA MOLINA, DNI 27.757.585, Tte. Olivera 1459, Maipu.</textarea
+            >
+          </div>
+
+          <button type="submit" class="btn btn-primary">
+            1. Generar Borrador del Contrato >>
+          </button>
+        </form>
+      </div>
+
+      <!-- EDITOR DE TEXTO (VISTA PREVIA) -->
+      <div class="panel-editor">
+        <h3 style="margin-top: 0">Vista Previa (Editor)</h3>
+        <textarea id="editor"></textarea>
+        <button id="btn-pdf" class="btn btn-success">
+          2. Guardar y Exportar a PDF
+        </button>
+      </div>
+    </div>
+
+    <script>
+      let myEditor;
+
+      ClassicEditor.create(document.querySelector("#editor"))
+        .then((editor) => {
+          myEditor = editor;
+          editor.setData(
+            '<p><em>Completa el formulario de la izquierda y haz clic en "Generar Borrador" para ver el contrato aquí.</em></p>',
+          );
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+
+      // Evento al enviar el formulario
+      document
+        .getElementById("contratoForm")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const formData = new FormData(e.target);
+          const data = Object.fromEntries(formData.entries());
+
+          // Si cambiaste la ruta en tu index.js, asegúrate que esto apunte a la correcta
+          const res = await fetch("/api/contratos/generar-vista-previa", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+          });
+
+          const htmlCompilado = await res.text();
+          myEditor.setData(htmlCompilado);
+        });
+
+      // Evento al pedir el PDF
+      document.getElementById("btn-pdf").addEventListener("click", async () => {
+        const htmlEditado = myEditor.getData();
+        const nombreLocatario = document
+          .querySelector('input[name="locatario_nombre"]')
+          .value.replace(/ /g, "_");
+        const btn = document.getElementById("btn-pdf");
+        btn.innerText = "Generando PDF, por favor espera...";
+
+        const res = await fetch("/api/contratos/generar-pdf", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            htmlEditado: htmlEditado,
+            nombreArchivo: `Contrato_${nombreLocatario}`,
+          }),
+        });
+
+        const resultado = await res.json();
+        alert(resultado.mensaje);
+        btn.innerText = "2. Guardar y Exportar a PDF";
+      });
+    </script>
+  </body>
+</html>

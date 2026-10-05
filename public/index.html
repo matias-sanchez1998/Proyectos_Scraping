@@ -455,11 +455,47 @@
         </div>
       </div>
     </div>
+    <!-- Formulario de entrada -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       let inquilinosData = [];
       let ordenActual = { columna: "deudaTotal", sentido: "desc" };
+      function generarVistaPrevia() {
+        const locador = document.getElementById("locador_nombre").value;
+        const locatario = document.getElementById("locatario_nombre").value;
+        const direccion = document.getElementById("direccion_inmueble").value;
+        const precio = document.getElementById("precio_alquiler").value;
+
+        // Plantilla básica (Aquí cargaríamos el texto completo de tus modelos)
+        const plantilla = `
+        <h2 style="text-align: center;">CONTRATO DE LOCACIÓN</h2>
+        <p>Entre el SR. <strong>${locador}</strong>, por una parte y en adelante denominada la LOCADORA; y el SR. <strong>${locatario}</strong>, por la otra parte y en adelante denominada la LOCATARIA; convienen en celebrar el presente contrato de locación...</p>
+        <p><strong>OBJETO:</strong> La LOCADORA entrega en locación a la LOCATARIA un inmueble ubicado en <strong>${direccion}</strong>...</p>
+        <p><strong>PRECIO:</strong> La LOCATARIA pagará un canon inicial mensual de PESOS <strong>${precio}</strong>...</p>
+    `;
+
+        document.getElementById("vista-previa").innerHTML = plantilla;
+      }
+
+      async function descargarContrato() {
+        const contenidoHTML = document.getElementById("vista-previa").innerHTML;
+
+        // Enviamos el HTML modificado al backend para convertirlo en Word
+        const response = await fetch("/api/contratos/descargar", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ html: contenidoHTML }),
+        });
+
+        // Lógica para forzar la descarga del archivo que devuelve el servidor
+        const blob = await response.blob();
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = `Contrato_${document.getElementById("locatario_nombre").value}.docx`;
+        a.click();
+      }
 
       function formatearTiempoRelativo(isoString) {
         if (!isoString) return "Sin datos";

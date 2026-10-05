@@ -10,8 +10,8 @@ import { procesarEdemsa } from "./src/scrapers/edemsa.js";
 import { procesarEcogas } from "./src/scrapers/ecogas.js";
 import { leerExcel, guardarExcel } from "./src/core/excel.js";
 import ExcelJS from "exceljs";
-//import PizZip from "pizzip";
-//import Docxtemplater from "docxtemplater";
+import htmlToDocx from "html-to-docx";
+import rutasContratos from "./src/contratos.js"; //import Docxtemplater from "docxtemplater";
 
 function mostrarConsumoRAM() {
   const memoria = process.memoryUsage();
@@ -95,6 +95,8 @@ app.post("/api/borrar-cache", express.json(), (req, res) => {
 // Servir los archivos estáticos de la web
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
+app.use("/api/contratos", rutasContratos);
+app.use(express.static("public"));
 
 // Ruta principal que recibe el formulario de la web
 // ============================================================================
@@ -162,193 +164,6 @@ app.post("/api/consultar", upload.single("archivo"), async (req, res) => {
     res.status(500).json({ exito: false, mensaje: error.message });
   }
 });
-// ============================================================================
-// API: RESUMEN GENERAL CONSOLIDADO POR INQUILINO
-// ============================================================================
-
-// ============================================================================
-// API: RESUMEN GENERAL CONSOLIDADO POR INQUILINO
-// ============================================================================
-
-// ============================================================================
-// API: RESUMEN GENERAL CONSOLIDADO POR INQUILINO
-// ============================================================================
-
-// ============================================================================
-// API: RESUMEN GENERAL CONSOLIDADO POR INQUILINO
-// ============================================================================
-
-// ============================================================================
-// API: RESUMEN GENERAL CONSOLIDADO POR INQUILINO
-// ============================================================================
-
-// app.get('/api/resumen-general', async (req, res) => {
-//     try {
-//         const dirResultados = path.join(__dirname, 'resultados');
-//         if (!fs.existsSync(dirResultados)) {
-//             return res.json({ exito: true, inquilinos: [], kpis: { totalDeuda: 0, conDeuda: 0, alDia: 0 } });
-//         }
-
-//         const archivos = {
-//             aysam: path.join(dirResultados, 'Deudas_AYSAM_Actualizado.xlsx'),
-//             guaymallen: path.join(dirResultados, 'Deudas_Guaymallen_Actualizado.xlsx'),
-//             edemsa: path.join(dirResultados, 'Deudas_EDEMSA_Actualizado.xlsx'),
-//             ecogas: path.join(dirResultados, 'Deudas_Ecogas_Actualizado.xlsx'),
-//         };
-
-//         const mapaInquilinos = new Map();
-
-//         // Rastrear cuentas compartidas (Mapeo: Servicio -> Cuenta (TEXTO) -> Set de Inquilinos)
-//         const usoCuentas = { aysam: new Map(), guaymallen: new Map(), edemsa: new Map(), ecogas: new Map() };
-
-//         const registrarUso = (servicio, cuenta, inquilino) => {
-//             if (!cuenta) return;
-//             if (!usoCuentas[servicio].has(cuenta)) usoCuentas[servicio].set(cuenta, new Set());
-//             usoCuentas[servicio].get(cuenta).add(inquilino);
-//         };
-
-//         const obtenerOCrear = (nombreInquilino, propietarioDefault = '') => {
-//             const clave = String(nombreInquilino || '').trim().toUpperCase();
-//             if (!clave) return null;
-
-//             if (!mapaInquilinos.has(clave)) {
-//                 mapaInquilinos.set(clave, {
-//                     inquilino: clave,
-//                     propietario: propietarioDefault || 'N/D',
-//                     aysam: { deuda: 0, estado: 'SIN CONSULTAR', cuenta: '', detalle: '', compartido: false },
-//                     guaymallen: { deuda: 0, estado: 'SIN CONSULTAR', padron: '', detalle: '', compartido: false },
-//                     edemsa: { deuda: 0, estado: 'SIN CONSULTAR', nic: '', detalle: '', compartido: false },
-//                     ecogas: { deuda: 0, estado: 'SIN CONSULTAR', cuenta: '', detalle: '', compartido: false },
-//                     deudaTotal: 0
-//                 });
-//             }
-//             return mapaInquilinos.get(clave);
-//         };
-
-//         // Función para atrapar todas las variantes posibles del nombre de columna
-//         const obtenerInq = (f) => f.INQUILINO || f.INQUILINOS || f.Inquilino || f.Inquilinos || f.inquilino || f.inquilinos || '';
-//         const obtenerProp = (f) => f.PROPIETARIO || f.PROPIETARIOS || f.Propietario || f.Propietarios || f.propietario || f.propietarios || '';
-
-//         // 1. Cargar AYSAM
-//         if (fs.existsSync(archivos.aysam)) {
-//             const filas = await leerExcel(archivos.aysam);
-//             for (const f of filas) {
-//                 const cuenta = String(f.AYSAM || f.aysam || '').trim();
-//                 const item = obtenerOCrear(obtenerInq(f), obtenerProp(f));
-//                 if (item) {
-//                     registrarUso('aysam', cuenta, item.inquilino);
-//                     item.aysam.deuda = Number(f.DEUDA_TOTAL || 0);
-//                     item.aysam.estado = f.ESTADO_AYSAM || 'DESCONOCIDO';
-//                     item.aysam.cuenta = cuenta;
-//                     item.aysam.detalle = f.FACTURAS_PENDIENTES ? `${f.FACTURAS_PENDIENTES} facturas` : '';
-//                 }
-//             }
-//         }
-
-//         // 2. Cargar Guaymallén
-//         if (fs.existsSync(archivos.guaymallen)) {
-//             const filas = await leerExcel(archivos.guaymallen);
-//             for (const f of filas) {
-//                 const cuenta = String(f.MUNICIPALIDAD || f.PADRON || '').trim();
-//                 const item = obtenerOCrear(obtenerInq(f), obtenerProp(f));
-//                 if (item) {
-//                     registrarUso('guaymallen', cuenta, item.inquilino);
-//                     item.guaymallen.deuda = Number(f.DEUDA_TOTAL_MUNI || 0);
-//                     item.guaymallen.estado = f.ESTADO_MUNI || 'DESCONOCIDO';
-//                     item.guaymallen.padron = cuenta;
-//                     item.guaymallen.detalle = f.CANTIDAD_CUOTAS ? `${f.CANTIDAD_CUOTAS} cuotas` : '';
-//                 }
-//             }
-//         }
-
-//         // 3. Cargar EDEMSA
-
-//         if (fs.existsSync(archivos.edemsa)) {
-//             const filas = await leerExcel(archivos.edemsa);
-//             for (const f of filas) {
-//                 // Atrapa cualquier variante posible del encabezado
-//                 const cuenta = String(
-//                     f['NIC EDEMSA'] || f.NIC || f.EDEMSA || f.Edemsa || f.nic || f.NIS || f.CUENTA || ''
-//                 ).trim();
-
-//                 const item = obtenerOCrear(obtenerInq(f), obtenerProp(f));
-//                 if (item) {
-//                     registrarUso('edemsa', cuenta, item.inquilino);
-//                     item.edemsa.deuda = Number(f.DEUDA_TOTAL_EDEMSA || 0);
-//                     item.edemsa.estado = f.ESTADO_EDEMSA || 'DESCONOCIDO';
-//                     item.edemsa.nic = cuenta;
-//                     item.edemsa.detalle = f.FACTURAS_PENDIENTES_EDEMSA ? `${f.FACTURAS_PENDIENTES_EDEMSA} facturas` : '';
-//                 }
-//             }
-//         }
-
-//         // 4. Cargar Ecogas
-//         if (fs.existsSync(archivos.ecogas)) {
-//             const filas = await leerExcel(archivos.ecogas);
-//             for (const f of filas) {
-//                 const cuenta = String(f.ECOGAS || f.CLIENTE || '').trim();
-//                 const item = obtenerOCrear(obtenerInq(f), obtenerProp(f));
-//                 if (item) {
-//                     registrarUso('ecogas', cuenta, item.inquilino);
-//                     item.ecogas.deuda = Number(f.DEUDA_TOTAL_ECOGAS || 0);
-//                     item.ecogas.estado = f.ESTADO_ECOGAS || 'DESCONOCIDO';
-//                     item.ecogas.cuenta = cuenta;
-//                     item.ecogas.detalle = f.CANTIDAD_COMPROBANTES ? `${f.CANTIDAD_COMPROBANTES} comprobantes` : '';
-//                 }
-//             }
-//         }
-
-//         let sumaGlobalDeuda = 0;
-//         let conDeudaCount = 0;
-//         let alDiaCount = 0;
-
-//         // Sets para no sumar dos veces la misma cuenta al KPI Global
-//         const deudasSumadas = { aysam: new Set(), guaymallen: new Set(), edemsa: new Set(), ecogas: new Set() };
-
-//         const listaInquilinos = Array.from(mapaInquilinos.values()).map(item => {
-//             item.aysam.compartido = item.aysam.cuenta && usoCuentas.aysam.get(item.aysam.cuenta)?.size > 1;
-//             item.guaymallen.compartido = item.guaymallen.padron && usoCuentas.guaymallen.get(item.guaymallen.padron)?.size > 1;
-//             item.edemsa.compartido = item.edemsa.nic && usoCuentas.edemsa.get(item.edemsa.nic)?.size > 1;
-//             item.ecogas.compartido = item.ecogas.cuenta && usoCuentas.ecogas.get(item.ecogas.cuenta)?.size > 1;
-
-//             item.deudaTotal = item.aysam.deuda + item.guaymallen.deuda + item.edemsa.deuda + item.ecogas.deuda;
-
-//             if (item.aysam.cuenta && !deudasSumadas.aysam.has(item.aysam.cuenta)) { sumaGlobalDeuda += item.aysam.deuda; deudasSumadas.aysam.add(item.aysam.cuenta); }
-//             if (item.guaymallen.padron && !deudasSumadas.guaymallen.has(item.guaymallen.padron)) { sumaGlobalDeuda += item.guaymallen.deuda; deudasSumadas.guaymallen.add(item.guaymallen.padron); }
-//             if (item.edemsa.nic && !deudasSumadas.edemsa.has(item.edemsa.nic)) { sumaGlobalDeuda += item.edemsa.deuda; deudasSumadas.edemsa.add(item.edemsa.nic); }
-//             if (item.ecogas.cuenta && !deudasSumadas.ecogas.has(item.ecogas.cuenta)) { sumaGlobalDeuda += item.ecogas.deuda; deudasSumadas.ecogas.add(item.ecogas.cuenta); }
-
-//             if (item.deudaTotal > 0) conDeudaCount++;
-//             else alDiaCount++;
-
-//             return item;
-//         });
-
-//         listaInquilinos.sort((a, b) => b.deudaTotal - a.deudaTotal);
-
-//         res.json({
-//             exito: true,
-//             inquilinos: listaInquilinos,
-//             kpis: {
-//                 totalDeuda: sumaGlobalDeuda,
-//                 conDeuda: conDeudaCount,
-//                 alDia: alDiaCount,
-//                 totalInquilinos: listaInquilinos.length
-//             }
-//         });
-
-//     } catch (error) {
-//         console.error('Error generando resumen:', error);
-//         res.status(500).json({ exito: false, mensaje: error.message });
-//     }
-// });
-// ============================================================================
-// API: RESUMEN GENERAL CONSOLIDADO POR INQUILINO (EN TIEMPO REAL DESDE CACHÉ)
-// ============================================================================
-
-// ============================================================================
-// API: RESUMEN GENERAL CONSOLIDADO POR INQUILINO (EN TIEMPO REAL DESDE CACHÉ)
-// ============================================================================
 
 app.get("/api/resumen-general", async (req, res) => {
   try {
@@ -773,71 +588,28 @@ app.get("/api/estado-servidor", (req, res) => {
   });
 });
 
-// ============================================================================
-// API: GENERACIÓN DE CONTRATOS
-// ============================================================================
-// app.post("/api/generar-contrato", async (req, res) => {
-//   try {
-//     const datos = req.body;
+app.post("/api/contratos/descargar", async (req, res) => {
+  try {
+    const { html } = req.body;
 
-//     // Validar que la plantilla exista
-//     const rutaPlantilla = path.join(
-//       __dirname,
-//       "plantillas",
-//       datos.tipo_plantilla,
-//     );
-//     if (!fs.existsSync(rutaPlantilla)) {
-//       return res
-//         .status(404)
-//         .json({ exito: false, mensaje: "Plantilla no encontrada." });
-//     }
+    // Convertimos el HTML de la vista previa a un buffer de documento Word
+    const fileBuffer = await htmlToDocx(html, null, {
+      table: { row: { cantSplit: true } },
+      footer: true,
+      pageNumber: true,
+    });
 
-//     // Cargar y procesar el documento Word
-//     const content = fs.readFileSync(rutaPlantilla, "binary");
-//     const zip = new PizZip(content);
-//     const doc = new Docxtemplater(zip, {
-//       paragraphLoop: true,
-//       linebreaks: true,
-//     });
-
-//     // Inyectar las variables que vienen del frontend
-//     doc.render(datos);
-
-//     // Generar el archivo resultante
-//     const buf = doc.getZip().generate({ type: "nodebuffer" });
-
-//     // Crear un nombre de archivo único
-//     const nombreArchivo = `Contrato_\({datos.locatario_nombre.replace(/\s+/g, '_')}_\){Date.now()}.docx`;
-//     const rutaSalida = path.join(
-//       __dirname,
-//       "contratos_generados",
-//       nombreArchivo,
-//     );
-
-//     fs.writeFileSync(rutaSalida, buf);
-
-//     res.json({
-//       exito: true,
-//       mensaje: "Contrato generado exitosamente.",
-//       archivo: nombreArchivo,
-//     });
-//   } catch (error) {
-//     console.error("Error generando contrato:", error);
-//     res
-//       .status(500)
-//       .json({ exito: false, mensaje: "Error al generar el documento." });
-//   }
-// });
-
-// // Ruta para descargar el contrato generado
-// app.get("/api/descargar-contrato/:archivo", (req, res) => {
-//   const ruta = path.join(__dirname, "contratos_generados", req.params.archivo);
-//   if (fs.existsSync(ruta)) {
-//     res.download(ruta);
-//   } else {
-//     res.status(404).send("Archivo no encontrado.");
-//   }
-// });
+    res.setHeader(
+      "Content-Type",
+      "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+    );
+    res.setHeader("Content-Disposition", "attachment; filename=Contrato.docx");
+    res.send(fileBuffer);
+  } catch (error) {
+    console.error("Error al generar el contrato:", error);
+    res.status(500).send("Error generando el documento");
+  }
+});
 app.listen(PUERTO, "0.0.0.0", () => {
   console.log(
     `🚀 Servidor unificado corriendo en red local en el puerto ${PUERTO}`,
