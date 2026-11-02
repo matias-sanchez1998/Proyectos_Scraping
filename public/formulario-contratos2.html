@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Nuevo contrato</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        color: #203049;
+        background: #edf1f6;
+      }
+      header {
+        background: #173b64;
+        color: white;
+        padding: 18px 24px;
+      }
+      header a {
+        color: white;
+      }
+      h1 {
+        font-size: 23px;
+        margin: 0 0 8px;
+      }
+      h2 {
+        font-size: 18px;
+      }
+      p {
+        line-height: 1.5;
+      }
+      main {
+        display: grid;
+        grid-template-columns: 370px 1fr;
+        gap: 18px;
+        padding: 18px;
+      }
+      aside,
+      .panel {
+        background: white;
+        border-radius: 10px;
+        padding: 18px;
+      }
+      aside {
+        max-height: calc(100vh - 140px);
+        overflow: auto;
+      }
+      .aviso {
+        background: #eef5fc;
+        padding: 12px;
+        border-radius: 6px;
+        font-size: 13px;
+      }
+      .grupo {
+        border: 1px solid #d5dce6;
+        border-radius: 7px;
+        margin: 14px 0;
+        padding: 12px;
+      }
+      legend {
+        font-weight: bold;
+      }
+      label {
+        display: block;
+        font-size: 13px;
+        margin: 12px 0 5px;
+      }
+      input,
+      textarea,
+      select {
+        width: 100%;
+        padding: 9px;
+        border: 1px solid #aebdce;
+        border-radius: 5px;
+        font: inherit;
+      }
+      textarea {
+        resize: vertical;
+      }
+      button {
+        border: 1px solid #aebdce;
+        border-radius: 5px;
+        background: white;
+        color: #173b64;
+        padding: 10px;
+        cursor: pointer;
+        margin: 4px 0;
+      }
+      .principal {
+        background: #173b64;
+        color: white;
+      }
+      button:disabled {
+        opacity: 0.45;
+        cursor: default;
+      }
+      .acciones {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin: 12px 0;
+      }
+      .papel {
+        overflow: auto;
+        background: #e6ebf1;
+        padding: 18px;
+        max-height: 70vh;
+      }
+      #editor {
+        background: white;
+        min-height: 700px;
+        width: 210mm;
+        max-width: 100%;
+        padding: 25mm 20mm;
+        margin: auto;
+        font: 11pt/1.4 Arial;
+        text-align: justify;
+        white-space: pre-wrap;
+        outline: none;
+      }
+      #editor p {
+        margin: 0 0 8pt;
+      }
+      #estado {
+        padding: 12px 24px;
+        background: white;
+      }
+      .error {
+        color: #a51d2d;
+      }
+      #pendientes {
+        background: #fff2cc;
+        padding: 10px;
+      }
+      dialog {
+        width: 95vw;
+        height: 92vh;
+        padding: 12px;
+        border: 0;
+        border-radius: 8px;
+      }
+      dialog::backdrop {
+        background: #0008;
+      }
+      iframe {
+        display: block;
+        width: 100%;
+        height: calc(100% - 55px);
+        border: 0;
+      }
+      .nota {
+        font-size: 12px;
+        color: #5d6f83;
+      }
+      @media (max-width: 850px) {
+        main {
+          display: block;
+          padding: 10px;
+        }
+        aside {
+          max-height: none;
+          margin-bottom: 12px;
+        }
+        #editor {
+          padding: 20px;
+        }
+        .papel {
+          padding: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Crear contrato</h1>
+      <a href="/">Volver al inicio</a>
+    </header>
+    <div id="estado" role="status" aria-live="polite">Cargando formulario…</div>
+    <main>
+      <aside>
+        <h2>1. Datos del contrato</h2>
+        <p class="aviso" id="condiciones"></p>
+        <p class="nota">
+          Primera plantilla: vivienda, basada en Grilli–Mahona. Sus cláusulas se
+          mantienen completas. Completá los datos nuevos; no se cargan los datos
+          de las personas anteriores.
+        </p>
+        <form id="formulario">
+          <div id="campos"></div>
+          <button id="generar" class="principal" type="submit">
+            Generar vista previa
+          </button>
+        </form>
+        <hr />
+        <h2>Borradores</h2>
+        <label for="nombre">Nombre del contrato</label
+        ><input id="nombre" value="Contrato de vivienda" />
+        <button id="guardar" type="button">Guardar borrador</button>
+        <label for="borradores">Borradores guardados</label
+        ><select id="borradores"></select>
+        <button id="abrir" type="button">Recuperar borrador</button>
+        <p class="nota">El guardado queda en este navegador y computadora.</p>
+      </aside>
+      <section class="panel">
+        <h2>2. Vista previa editable</h2>
+        <p>
+          Completá el formulario y generá el contrato. Después podés corregir el
+          texto directamente aquí.
+        </p>
+        <p id="pendientes" hidden>
+          Hay datos del formulario pendientes de aplicar. Generá nuevamente la
+          vista previa antes de descargar el PDF.
+        </p>
+        <div class="acciones" id="herramientas">
+          <button type="button" data-formato="bold">Negrita</button
+          ><button type="button" data-formato="italic">Cursiva</button
+          ><button type="button" data-formato="underline">Subrayado</button
+          ><button type="button" data-formato="justifyFull">Justificar</button
+          ><button type="button" data-formato="undo">Deshacer</button
+          ><button type="button" data-formato="redo">Rehacer</button>
+        </div>
+        <div class="papel">
+          <div
+            id="editor"
+            contenteditable="false"
+            role="textbox"
+            aria-label="Contrato editable"
+            aria-multiline="true"
+          ></div>
+        </div>
+        <div class="acciones">
+          <button id="vistaPdf" type="button">Ver páginas del PDF</button
+          ><button id="descargar" class="principal" type="button">
+            Descargar PDF final
+          </button>
+        </div>
+      </section>
+    </main>
+    <dialog id="dialogo">
+      <button id="cerrar" type="button">Cerrar y seguir editando</button
+      ><iframe id="pdf" title="Vista previa del PDF"></iframe>
+    </dialog>
+    <script>
+      const $ = (id) => document.getElementById(id);
+      const clave = "contratos-formulario-grilli-v1";
+      let esquema = null,
+        ocupado = false,
+        manual = false,
+        pendiente = true,
+        sinGuardar = false,
+        idActual = null,
+        urlPdf = null;
+      function estado(mensaje, error = false) {
+        $("estado").textContent = mensaje;
+        $("estado").className = error ? "error" : "";
+      }
+      function controles() {
+        document
+          .querySelectorAll("input,textarea,select,button")
+          .forEach((el) => (el.disabled = ocupado || !esquema));
+        const hayTexto = !!$("editor").textContent.trim();
+        $("editor").contentEditable = String(hayTexto && !ocupado);
+        document
+          .querySelectorAll("[data-formato]")
+          .forEach((b) => (b.disabled = ocupado || !hayTexto));
+        for (const id of ["vistaPdf", "descargar"])
+          $(id).disabled = ocupado || !hayTexto || pendiente;
+        $("abrir").disabled = ocupado || !$("borradores").value;
+        $("pendientes").hidden = !hayTexto || !pendiente;
+      }
+      async function tarea(fn) {
+        if (ocupado) return;
+        ocupado = true;
+        controles();
+        try {
+          await fn();
+        } catch (e) {
+          estado(e.message, true);
+        } finally {
+          ocupado = false;
+          controles();
+        }
+      }
+      async function pedir(url, datos) {
+        const r = await fetch(
+          url,
+          datos === undefined
+            ? {}
+            : {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(datos),
+              },
+        );
+        if (!r.ok) {
+          const e = await r.json().catch(() => ({}));
+          throw new Error(e.error || "No se pudo completar la operación.");
+        }
+        return r;
+      }
+      function datos() {
+        return Object.fromEntries(
+          esquema.campos.map((c) => [c.id, $("dato-" + c.id).value]),
+        );
+      }
+      function construir() {
+        let grupo = "",
+          caja;
+        for (const c of esquema.campos) {
+          if (c.grupo !== grupo) {
+            grupo = c.grupo;
+            caja = document.createElement("fieldset");
+            caja.className = "grupo";
+            const titulo = document.createElement("legend");
+            titulo.textContent = grupo;
+            caja.append(titulo);
+            $("campos").append(caja);
+          }
+          const label = document.createElement("label");
+          label.htmlFor = "dato-" + c.id;
+          label.textContent = c.etiqueta;
+          const input = document.createElement(
+            c.tipo === "textarea" ? "textarea" : "input",
+          );
+          input.id = label.htmlFor;
+          input.name = c.id;
+          if (c.tipo === "textarea") input.rows = 4;
+          else input.type = c.tipo;
+          if (c.tipo === "number") {
+            input.min = "1";
+            input.step = c.id === "meses" ? "1" : "0.01";
+          }
+          input.required = true;
+          input.addEventListener("input", () => {
+            pendiente = true;
+            sinGuardar = true;
+            controles();
+          });
+          caja.append(label, input);
+        }
+      }
+      $("formulario").addEventListener("submit", (e) => {
+        e.preventDefault();
+        if (
+          manual &&
+          !confirm(
+            "Volver a generar usa los datos del formulario y reemplaza tus correcciones manuales. ¿Continuar?",
+          )
+        )
+          return;
+        tarea(async () => {
+          estado("Generando contrato con las cláusulas completas…");
+          const html = await (
+            await pedir("/api/formulario-contratos/borrador", {
+              datos: datos(),
+            })
+          ).text();
+          $("editor").innerHTML = html;
+          manual = false;
+          pendiente = false;
+          sinGuardar = true;
+          estado(
+            "Contrato generado. Ahora podés corregir el texto a mano y revisar el PDF.",
+          );
+        });
+      });
+      $("editor").addEventListener("input", () => {
+        manual = true;
+        sinGuardar = true;
+      });
+      $("editor").addEventListener("paste", (e) => {
+        e.preventDefault();
+        document.execCommand(
+          "insertText",
+          false,
+          e.clipboardData.getData("text/plain"),
+        );
+      });
+      document.querySelectorAll("[data-formato]").forEach((b) => {
+        b.addEventListener("mousedown", (e) => e.preventDefault());
+        b.addEventListener("click", () => {
+          $("editor").focus();
+          document.execCommand(b.dataset.formato, false);
+          manual = true;
+          sinGuardar = true;
+        });
+      });
+      function lista() {
+        const v = JSON.parse(localStorage.getItem(clave) || "[]");
+        if (!Array.isArray(v))
+          throw new Error("No se pudo leer la lista de borradores.");
+        return v;
+      }
+      function listar() {
+        $("borradores").replaceChildren(new Option("Elegí un borrador…", ""));
+        for (const b of lista())
+          $("borradores").add(
+            new Option(
+              b.nombre + " · " + new Date(b.fecha).toLocaleString("es-AR"),
+              b.id,
+            ),
+          );
+      }
+      $("nombre").addEventListener("input", () => (sinGuardar = true));
+      $("guardar").addEventListener("click", () =>
+        tarea(async () => {
+          const guardados = lista(),
+            id = idActual || crypto.randomUUID();
+          const b = {
+            id,
+            nombre: $("nombre").value || "Contrato",
+            datos: datos(),
+            html: $("editor").innerHTML,
+            manual,
+            pendiente,
+            fecha: new Date().toISOString(),
+          };
+          const i = guardados.findIndex((x) => x.id === id);
+          if (i < 0) guardados.unshift(b);
+          else guardados[i] = b;
+          localStorage.setItem(clave, JSON.stringify(guardados));
+          idActual = id;
+          sinGuardar = false;
+          listar();
+          $("borradores").value = id;
+          estado("Datos y correcciones guardados en este navegador.");
+        }),
+      );
+      $("borradores").addEventListener("change", controles);
+      $("abrir").addEventListener("click", () => {
+        if (
+          sinGuardar &&
+          !confirm(
+            "Hay cambios sin guardar. ¿Recuperar el borrador y descartarlos?",
+          )
+        )
+          return;
+        tarea(async () => {
+          const b = lista().find((x) => x.id === $("borradores").value);
+          if (!b) throw new Error("No se encontró el borrador.");
+          for (const c of esquema.campos)
+            $("dato-" + c.id).value = b.datos[c.id] || "";
+          $("editor").innerHTML = b.html;
+          $("nombre").value = b.nombre;
+          manual = !!b.manual;
+          pendiente = !!b.pendiente;
+          idActual = b.id;
+          sinGuardar = false;
+          estado("Borrador recuperado con sus correcciones manuales.");
+        });
+      });
+      $("vistaPdf").addEventListener("click", () =>
+        tarea(async () => {
+          estado("Preparando las páginas del PDF…");
+          const r = await pedir("/api/contratos/vista-pdf", {
+            htmlEditado: $("editor").innerHTML,
+          });
+          if (urlPdf) URL.revokeObjectURL(urlPdf);
+          urlPdf = URL.createObjectURL(await r.blob());
+          $("pdf").src = urlPdf;
+          $("dialogo").showModal();
+          estado("Vista del PDF lista.");
+        }),
+      );
+      $("cerrar").addEventListener("click", () => $("dialogo").close());
+      $("dialogo").addEventListener("close", () => {
+        $("pdf").removeAttribute("src");
+        if (urlPdf) URL.revokeObjectURL(urlPdf);
+        urlPdf = null;
+      });
+      $("descargar").addEventListener("click", () =>
+        tarea(async () => {
+          estado("Generando PDF con el texto editado…");
+          const nombre = $("nombre").value || "Contrato";
+          const r = await (
+            await pedir("/api/contratos/generar-pdf", {
+              htmlEditado: $("editor").innerHTML,
+              nombreArchivo: nombre,
+            })
+          ).json();
+          if (!r.url?.startsWith("/api/contratos/descargar-pdf/"))
+            throw new Error("No se recibió la dirección del PDF.");
+          const pdf = await pedir(r.url);
+          const url = URL.createObjectURL(await pdf.blob());
+          const a = document.createElement("a");
+          a.href = url;
+          a.download =
+            (nombre.replace(/[^a-zA-Z0-9_-]/g, "_").slice(0, 90) ||
+              "Contrato") + ".pdf";
+          document.body.append(a);
+          a.click();
+          a.remove();
+          setTimeout(() => URL.revokeObjectURL(url), 30000);
+          estado("PDF descargado con el texto final del editor.");
+        }),
+      );
+      window.addEventListener("beforeunload", (e) => {
+        if (sinGuardar) {
+          e.preventDefault();
+          e.returnValue = "";
+        }
+      });
+      tarea(async () => {
+        esquema = await (
+          await pedir("/api/formulario-contratos/modelo")
+        ).json();
+        $("condiciones").textContent = esquema.condiciones;
+        construir();
+        listar();
+        estado("Completá los datos nuevos para generar el contrato.");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,984 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nuevo contrato</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;color:#203049;background:#edf1f6}header{background:#173b64;color:white;padding:18px 24px}header a{color:white}h1{font-size:23px;margin:0 0 8px}h2{font-size:18px}p{line-height:1.5}main{display:grid;grid-template-columns:420px 1fr;gap:18px;padding:18px}aside,.panel{background:white;border-radius:10px;padding:18px}aside{max-height:calc(100vh - 140px);overflow:auto}.aviso{background:#eef5fc;padding:12px;border-radius:6px;font-size:13px}.grupo{border:1px solid #d5dce6;border-radius:7px;margin:14px 0;padding:12px}legend{font-weight:bold}label{display:block;font-size:13px;margin:12px 0 5px}input,textarea,select{width:100%;padding:9px;border:1px solid #aebdce;border-radius:5px;font:inherit}textarea{resize:vertical}button{border:1px solid #aebdce;border-radius:5px;background:white;color:#173b64;padding:10px;cursor:pointer;margin:4px 0}.principal{background:#173b64;color:white}button:disabled{opacity:.45;cursor:default}.acciones{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}.papel{overflow:auto;background:#e6ebf1;padding:18px;max-height:70vh}#editor{background:white;min-height:700px;width:210mm;max-width:100%;padding:25mm 20mm;margin:auto;font:11pt/1.4 Arial;text-align:justify;white-space:pre-wrap;outline:none}#editor p{margin:0 0 8pt}#estado{padding:12px 24px;background:white}.error{color:#a51d2d}#pendientes{background:#fff2cc;padding:10px}dialog{width:95vw;height:92vh;padding:12px;border:0;border-radius:8px}dialog::backdrop{background:#0008}iframe{display:block;width:100%;height:calc(100% - 55px);border:0}.importe-letras{display:block;font-size:12px;background:#eef5fc;padding:8px;margin-top:5px}[hidden]{display:none!important}.nota{font-size:12px;color:#5d6f83}@media(max-width:850px){main{display:block;padding:10px}aside{max-height:none;margin-bottom:12px}#editor{padding:20px}.papel{padding:8px}}
+#editor [data-referencia-pendiente]{background:#fff2cc}#herramientasClausulas{background:#f7faff}.persona{border:1px solid #bdcad9;border-radius:7px;padding:12px;margin:12px 0}.persona h3{font-size:15px;margin:0}.persona input[type=checkbox]{width:auto}.persona .quitar{color:#a51d2d}.fila-check{display:flex;align-items:center;gap:8px}.contador{font-size:12px;color:#5d6f83}
+.paso-oculto{display:none!important}main:has(.panel.paso-oculto){grid-template-columns:minmax(320px,850px);justify-content:center}main:has(.panel.paso-oculto) aside{max-height:none}.pasos{display:flex;flex-wrap:wrap;gap:6px}.pasos button{font-size:12px}.agenda-en-persona{padding:8px;background:#f3f7fc;border-radius:5px;margin:8px 0}.agenda-en-persona input{margin-bottom:6px}#resumenContrato table{width:100%;border-collapse:collapse;font-size:13px}#resumenContrato th,#resumenContrato td{padding:8px;border-bottom:1px solid #d5dce6;text-align:left;vertical-align:top}#dialogoAgenda{max-width:750px;overflow:auto}#dialogoAgenda input,#dialogoAgenda select,#dialogoAgenda textarea{max-width:100%}
+.listado-contratos{margin:0 18px 18px}.filtros-contratos{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px}.tabla-desplazable{overflow:auto}#tablaContratos{width:100%;border-collapse:collapse;font-size:13px}#tablaContratos th,#tablaContratos td{border-bottom:1px solid #d5dce6;padding:10px;text-align:left;vertical-align:top}#tablaContratos th{background:#eef5fc}#tablaContratos select{min-width:140px}.acciones-contrato{min-width:260px}.acciones-contrato button{margin:3px;padding:7px}.eliminar-contrato{color:#a51d2d;border-color:#a51d2d}@media(max-width:850px){.filtros-contratos{display:block}.listado-contratos{margin:0 10px 10px}}
+</style>
+</head>
+<body>
+<header><h1>Crear contrato</h1><a href="/">Volver al inicio</a></header>
+<div id="estado" role="status" aria-live="polite">Cargando formulario…</div>
+<main>
+<aside>
+<h2>Datos del contrato</h2>
+<button id="abrirAgenda" type="button">Agenda de personas e inmuebles</button>
+<nav class="pasos" aria-label="Pasos del contrato">
+<button type="button" data-ir-paso="1">1. Personas</button><button type="button" data-ir-paso="2">2. Inmueble</button><button type="button" data-ir-paso="3">3. Condiciones</button><button type="button" data-ir-paso="4">4. Servicios</button><button type="button" data-ir-paso="5">5. Revisión</button>
+</nav><h2 id="tituloPaso">Paso 1 de 5 · Personas</h2>
+<label for="tipoContrato">Tipo de contrato</label><select id="tipoContrato"><option value="nuevo">Contrato nuevo</option><option value="renovacion">Renovación</option></select>
+<label for="tipoInmueble">Destino del inmueble</label><select id="tipoInmueble"><option value="vivienda">Vivienda</option><option value="local">Local comercial</option></select><select id="modelo" hidden aria-hidden="true"></select><p class="aviso" id="condiciones"></p>
+<button id="cargarPrueba" type="button">📝 Cargar datos de prueba</button>
+<p class="nota">Agregá las personas, ocupantes y servicios de cada caso. Indicá qué parte de cada servicio paga la locataria. Intervención profesional: Laura Alicia González, matrícula 1572. Lugar de firma: Guaymallén, Mendoza.</p>
+<form id="formulario" novalidate>
+<div id="partes" data-paso="1"></div>
+<fieldset class="grupo" data-paso="2"><legend>Inmuebles guardados</legend>
+<input id="buscarInmueble" placeholder="Buscar inmueble por referencia o domicilio" aria-label="Buscar inmueble">
+<select id="inmuebleGuardado" aria-label="Inmueble guardado"><option value="">Elegí un inmueble guardado…</option></select>
+<button id="guardarInmueble" type="button">Guardar inmueble en agenda</button>
+</fieldset>
+<div id="ocupantes" data-paso="2"></div><div id="servicios" data-paso="4"></div><div id="campos"></div>
+<section data-paso="5"><h2>Revisá los datos</h2><div id="resumenContrato"></div><button id="generar" class="principal" type="submit">Generar vista previa</button></section>
+<div class="acciones"><button id="pasoAnterior" type="button">Anterior</button><button id="pasoSiguiente" type="button">Siguiente</button></div></form>
+<hr><h2>Contratos compartidos</h2>
+<label for="nombre">Nombre del contrato</label><input id="nombre" value="Contrato de vivienda">
+<button id="guardar" type="button">Guardar cambios</button><button id="guardarCopia" type="button">Duplicar contrato</button><span id="guardadoAutomatico" class="nota" role="status"></span>
+<label for="estadoContratoActual">Estado del contrato actual</label><select id="estadoContratoActual"><option value="borrador">Borrador</option><option value="revision">En revisión</option><option value="finalizado">Finalizado</option></select><p id="archivoContratoActual" class="nota"></p>
+<p class="nota"><a href="#listadoContratos">Ver contratos guardados</a> · Buscá y abrí tus contratos en la tabla al pie de esta página.</p>
+<div hidden><select id="borradores"></select><button id="abrir" type="button">Recuperar borrador</button></div>
+<button id="borrarTodosBorradores" type="button" style="color:#a51d2d;border-color:#a51d2d">Eliminar todos los borradores</button>
+<button id="actualizarCompartidos" type="button">Actualizar contratos y agenda</button>
+<p class="nota">Los equipos que acceden al mismo servidor comparten estos contratos y la agenda. También se conserva una copia local si falla la conexión.</p>
+<details><summary>Borradores locales anteriores y copias de respaldo</summary><label for="borradoresLocales">Borradores de este navegador</label><select id="borradoresLocales"></select><button id="abrirLocal" type="button">Abrir copia local</button><p class="nota">Abrí un borrador local y usá Guardar contrato compartido para compartir una copia.</p></details>
+</aside>
+<section class="panel" data-paso="5">
+<h2>2. Vista previa editable</h2>
+<p>Completá el formulario y generá el contrato. Después podés corregir el texto directamente aquí.</p>
+<p id="pendientes" hidden>Hay datos del formulario pendientes de aplicar. Generá nuevamente la vista previa antes de descargar el PDF.</p>
+<fieldset class="grupo" id="herramientasClausulas">
+<legend>Trabajar por cláusula</legend>
+<label for="clausulaElegida">Cláusula</label><select id="clausulaElegida"><option value="">Generá primero el contrato…</option></select>
+<div class="acciones"><button id="editarClausula" type="button">Editar texto</button><button id="subirClausula" type="button">Subir</button><button id="bajarClausula" type="button">Bajar</button><button id="eliminarClausula" type="button">Eliminar completa</button><button id="restaurarClausula" type="button">Restaurar original</button><button id="deshacerClausula" type="button">Deshacer último cambio de cláusula</button></div>
+<p class="nota">Restaurar recupera el texto con los datos que tenía al generar esta vista previa. Las cláusulas eliminadas aparecen al final de la lista. En borradores antiguos sin original guardado, podés editar y mover, pero la restauración requiere una vista previa nueva.</p>
+</fieldset>
+<div class="acciones" id="herramientas">
+<button type="button" data-formato="bold">Negrita</button><button type="button" data-formato="italic">Cursiva</button><button type="button" data-formato="underline">Subrayado</button><button type="button" data-formato="justifyFull">Justificar</button><button type="button" data-formato="undo">Deshacer</button><button type="button" data-formato="redo">Rehacer</button>
+</div>
+<div class="papel"><div id="editor" contenteditable="false" role="textbox" aria-label="Contrato editable" aria-multiline="true"></div></div>
+<div class="acciones"><button id="vistaPdf" type="button">Ver páginas del PDF</button><button id="descargar" class="principal" type="button">Descargar PDF final</button></div>
+</section>
+</main>
+<section id="listadoContratos" class="panel listado-contratos">
+<h2>Contratos guardados</h2>
+<div class="filtros-contratos"><div><label for="buscarContrato">Buscar por nombre, inquilino o dirección</label><input id="buscarContrato" type="search" placeholder="Buscar contrato…"></div><div><label for="filtrarEstadoContrato">Estado</label><select id="filtrarEstadoContrato"><option value="">Todos los estados</option><option value="borrador">Borrador</option><option value="revision">En revisión</option><option value="finalizado">Finalizado</option></select></div><div><label for="filtrarArchivoContrato">Mostrar</label><select id="filtrarArchivoContrato"><option value="activos">Activos</option><option value="archivados">Archivados</option><option value="todos">Todos</option></select></div></div>
+<button id="actualizarTablaContratos" type="button">Actualizar tabla</button><p id="cantidadContratos" class="nota" role="status"></p>
+<div class="tabla-desplazable"><table id="tablaContratos"><thead><tr><th>Contrato</th><th>Inquilinos</th><th>Inmueble</th><th>Estado</th><th>Última modificación</th><th>Acciones</th></tr></thead><tbody id="filasContratos"></tbody></table></div>
+<p class="nota">Archivar conserva el contrato y lo aparta de la lista de activos. Los estados ayudan a organizar el trabajo; Finalizado sigue permitiendo editar el contrato.</p>
+</section>
+<dialog id="dialogo"><button id="cerrar" type="button">Cerrar y seguir editando</button><iframe id="pdf" title="Vista previa del PDF"></iframe></dialog>
+<dialog id="dialogoAgenda">
+<h2>Agenda compartida</h2><button id="cerrarAgenda" type="button">Cerrar agenda</button>
+<label for="tipoAgenda">Tipo de registro</label><select id="tipoAgenda"><option value="personas">Personas</option><option value="inmuebles">Inmuebles</option></select>
+<label for="buscarAgenda">Buscar</label><input id="buscarAgenda" placeholder="Nombre, DNI, referencia o domicilio">
+<select id="listaAgenda" aria-label="Registros de agenda"></select><button id="nuevoAgenda" type="button">Nuevo registro</button>
+<form id="formAgenda"><div id="camposAgenda"></div><p id="notaAgenda" class="nota"></p><button type="submit" class="principal">Guardar en agenda</button><button id="eliminarAgenda" type="button">Eliminar registro</button></form>
+<p id="mensajeAgenda" role="status" aria-live="polite"></p></dialog>
+<script>
+const $ = id => document.getElementById(id);
+const clave = "contratos-formulario-dinamico-v1";
+let partes = { locadores: [], locatarios: [], garantes: [] };
+let servicios=[],otrosOcupantes=[];
+let esquema = null, ocupado = false, manual = false, pendiente = true, sinGuardar = false, idActual = null, urlPdf = null;
+function estado(mensaje, error = false) { $("estado").textContent = mensaje; $("estado").className = error ? "error" : ""; }
+function controles() {
+  document.querySelectorAll("input,textarea,select,button").forEach(el => el.disabled = ocupado || !esquema || !!el.closest("[hidden]"));
+  const hayTexto = !!$("editor").textContent.trim();
+  $("editor").contentEditable = String(hayTexto && !ocupado);
+  document.querySelectorAll("[data-formato]").forEach(b => b.disabled = ocupado || !hayTexto);
+  for (const id of ["vistaPdf", "descargar"]) $(id).disabled = ocupado || !hayTexto || pendiente;
+  $("abrir").disabled = ocupado || !$("borradores").value;
+  $("pendientes").hidden = !hayTexto || !pendiente;
+  controlesClausulas();
+  actualizarControlFechas();
+  actualizarPasos();
+  if ($("dialogoAgenda").open) $("eliminarAgenda").disabled=ocupado||!registroAgenda;
+}
+async function tarea(fn) {
+  if (ocupado) return; ocupado = true; controles();
+  try { await fn(); } catch(e) { estado(e.message, true); }
+  finally { ocupado = false; controles(); }
+}
+async function pedir(url, datos) {
+  const r = await fetch(url, datos === undefined ? {} : { method:"POST", headers:{"Content-Type":"application/json"}, body:JSON.stringify(datos) });
+  if (!r.ok) { const e = await r.json().catch(() => ({})); throw new Error(e.error || "No se pudo completar la operación."); }
+  return r;
+}
+function datos() { return Object.fromEntries(esquema.campos.map(c => [c.id, $("dato-" + c.id).value])); }
+function condicionesCampos() {
+  for(const c of esquema.campos){
+    const visible=!c.visibleSi || Object.entries(c.visibleSi).every(([id,valores])=>[].concat(valores).includes($("dato-"+id)?.value));
+    const cont=$("campo-"+c.id),input=$("dato-"+c.id);cont.hidden=!visible;input.required=visible && c.id!=="padronAtm";input.disabled=ocupado||!visible;
+  }
+}
+async function letrasImporte(c){
+  const input=$("dato-"+c.id),salida=$("letras-"+c.id),valor=input.value;
+  salida.textContent=valor?"Calculando…":"El importe se escribirá en letras automáticamente.";
+  if(!valor)return;
+  try{const r=await(await pedir("/api/formulario-contratos/importe?valor="+encodeURIComponent(valor))).json();if(input.value===valor)salida.textContent=r.completo;}
+  catch(e){if(input.value===valor)salida.textContent=e.message;}
+}
+function actualizarImportes(){for(const c of esquema.campos)if(c.importe)letrasImporte(c);}
+function construir() {
+  $("campos").replaceChildren();
+  let grupo = "", caja;
+  for (const c of esquema.campos) {
+    if (c.grupo !== grupo) {
+      grupo = c.grupo; caja = document.createElement("fieldset"); caja.className = "grupo";
+      const titulo = document.createElement("legend"); titulo.textContent = grupo; caja.append(titulo); $("campos").append(caja);
+    }
+    const cont=document.createElement("div");cont.id="campo-"+c.id;
+    const label = document.createElement("label"); label.htmlFor = "dato-" + c.id; label.textContent = c.etiqueta + (c.id === "padronAtm" ? " (opcional)" : "");
+    const input = document.createElement(c.tipo === "textarea" ? "textarea" : c.opciones?"select":"input"); input.id = label.htmlFor; input.name = c.id;
+    if (c.tipo === "textarea") input.rows = 4;
+    else if(c.opciones){input.add(new Option("Elegí una opción…",""));for(const o of c.opciones)input.add(new Option(o.etiqueta||o,o.valor||o));}
+    else input.type = c.tipo;
+    if (c.tipo === "number") { input.min = c.id==="depositoAnterior"?"0":c.importe?"0.01":"1"; input.step = c.importe ? "0.01" : "1"; }
+    input.value=c.valorInicial||"";
+    input.addEventListener("input", () => { condicionesCampos();if(c.importe)letrasImporte(c);cambioDatos(); });
+    cont.append(label,input);
+    if(c.importe){const salida=document.createElement("output");salida.id="letras-"+c.id;salida.className="importe-letras";salida.setAttribute("aria-live","polite");cont.append(salida);}
+    caja.append(cont);
+  }
+  condicionesCampos();actualizarImportes();
+  construirControlFechas();
+  prepararPasos();
+}
+const uid = () => globalThis.crypto?.randomUUID?.() || Date.now()+"-"+Math.random();
+const grupos = {locadores:["Locadores","locador"],locatarios:["Locatarios","locatario"],garantes:["Garantes","garante"]};
+function nuevaPersona(ocupante=false) {
+  return {id:uid(),trato:"Sr.",nombre:"",dni:"",cuil:"",domicilio:"",cp:"",email:"",telefono:"",ocupante};
+}
+function cambioDatos() {pendiente=true;programarAutoguardado();controles();}
+function dibujarPartes() {
+  $("partes").replaceChildren();
+  for (const [grupo,[titulo,singular]] of Object.entries(grupos)) {
+    const caja=document.createElement("fieldset");caja.className="grupo";
+    const legend=document.createElement("legend");legend.textContent=titulo; caja.append(legend);
+    const contador=document.createElement("p");contador.className="contador";contador.textContent=partes[grupo].length+" integrante(s)";caja.append(contador);
+    partes[grupo].forEach((persona,index)=>{
+      const tarjeta=document.createElement("div");tarjeta.className="persona";
+      const h=document.createElement("h3");h.textContent=singular.charAt(0).toUpperCase()+singular.slice(1)+" "+(index+1);tarjeta.append(h);
+      agregarAgendaPersona(tarjeta,persona);
+      for(const [key,label]of [["trato","Tratamiento"],["nombre","Nombre completo"],["dni","DNI"],["cuil","CUIT / CUIL (opcional)"],["domicilio","Domicilio completo"],["cp","Código postal (opcional)"],["email","Correo electrónico (opcional)"],["telefono","Teléfono (opcional)"]]){
+        const l=document.createElement("label");l.textContent=label;l.htmlFor=grupo+"-"+persona.id+"-"+key;
+        const input=document.createElement(key==="trato"?"select":"input");input.id=l.htmlFor;
+        if(key==="trato")for(const t of ["Sr.","Sra."])input.add(new Option(t,t));
+        else input.type=key==="email"?"email":"text";
+        input.required=["trato","nombre","dni","domicilio"].includes(key);input.value=persona[key]||"";
+        input.addEventListener("input",()=>{persona[key]=input.value;cambioDatos();});tarjeta.append(l,input);
+      }
+      if(grupo==="locatarios"){
+        const l=document.createElement("label");l.className="fila-check";
+        const check=document.createElement("input");check.type="checkbox";check.checked=!!persona.ocupante;
+        check.addEventListener("change",()=>{persona.ocupante=check.checked;cambioDatos();});
+        l.append(check,document.createTextNode("Ocupa el inmueble"));tarjeta.append(l);
+      }
+      const quitar=document.createElement("button");quitar.type="button";quitar.className="quitar";quitar.textContent="Quitar "+singular;
+      quitar.addEventListener("click",()=>{
+        if((persona.nombre||persona.dni||persona.domicilio)&&!confirm("¿Quitar este "+singular+" y sus datos?"))return;
+        partes[grupo].splice(index,1);dibujarPartes();cambioDatos();
+      });tarjeta.append(quitar);caja.append(tarjeta);
+    });
+    const agregar=document.createElement("button");agregar.type="button";agregar.textContent="+ Agregar "+singular;
+    agregar.addEventListener("click",()=>{partes[grupo].push(nuevaPersona(false));dibujarPartes();cambioDatos();});
+    caja.append(agregar);$("partes").append(caja);
+  }
+}
+function dibujarLista(id,titulo,lista,campos,crear,singular,nota) {
+  const raiz=$(id);raiz.replaceChildren();
+  const caja=document.createElement("fieldset");caja.className="grupo";
+  const legend=document.createElement("legend");legend.textContent=titulo;caja.append(legend);
+  const ayuda=document.createElement("p");ayuda.className="nota";ayuda.textContent=nota;caja.append(ayuda);
+  lista.forEach((dato,i)=>{
+    const card=document.createElement("div");card.className="persona";
+    for(const [key,label,tipo,obligatorio]of campos){
+      const l=document.createElement("label");l.htmlFor=id+"-"+dato.id+"-"+key;l.textContent=label;
+      const input=document.createElement("input");input.id=l.htmlFor;input.type=tipo;input.value=dato[key]||"";input.required=obligatorio;
+      input.addEventListener("input",()=>{dato[key]=input.value;cambioDatos();});card.append(l,input);
+    }
+    const quitar=document.createElement("button");quitar.type="button";quitar.textContent="Quitar "+singular;
+    quitar.addEventListener("click",()=>{lista.splice(i,1);dibujarListas();cambioDatos();});card.append(quitar);caja.append(card);
+  });
+  const agregar=document.createElement("button");agregar.type="button";agregar.textContent="+ Agregar "+singular;
+  agregar.addEventListener("click",()=>{lista.push(crear());dibujarListas();cambioDatos();});caja.append(agregar);raiz.append(caja);
+}
+function dibujarListas(){
+  dibujarLista("ocupantes","Otros ocupantes",otrosOcupantes,[["nombre","Nombre completo","text",true],["dni","DNI (opcional)","text",false]],()=>({id:uid(),nombre:"",dni:""}),"ocupante","Marcá los locatarios que ocupan el inmueble y agregá aquí otras personas que también vivirán en él, aunque no firmen como locatarios.");
+  dibujarLista("servicios","Servicios y reparto",servicios,[["nombre","Servicio o concepto: luz, agua, gas, municipalidad, expensas, etc.","text",true],["empresa","Empresa u organismo (opcional)","text",false],["cuenta","Cuenta, padrón o NIC (opcional)","text",false],["parte","Parte a cargo del locatario: 100%, 25%, 1/3, monto o detalle","text",true],["vencimiento","Vencimiento (opcional)","date",false]],()=>({id:uid(),nombre:"",empresa:"",cuenta:"",parte:"",vencimiento:""}),"servicio","Agregá únicamente los conceptos particulares que correspondan e indicá el reparto de cada uno. Se conservan los ítems generales del modelo sobre otros servicios eventuales y multas.");
+}
+async function cargarEsquema(id) {
+  const nuevo=await(await pedir("/api/formulario-contratos/modelo?modelo="+encodeURIComponent(id))).json();
+  esquema=nuevo;$("modelo").value=nuevo.id;$("condiciones").textContent=nuevo.condiciones;construir();sincronizarTipo();
+}
+const basesGenerales={nuevo:{vivienda:"mutti",local:"local_nuevo"},renovacion:{vivienda:"tumbarello",local:"marotta"}};
+function sincronizarTipo(){
+  $("tipoContrato").value=esquema.operacion==="Nuevo"?"nuevo":"renovacion";
+  $("tipoInmueble").value=esquema.uso==="Comercio"?"local":"vivienda";
+}
+for(const id of ["tipoContrato","tipoInmueble"])$(id).addEventListener("change",()=>{
+  $("modelo").value=basesGenerales[$("tipoContrato").value][$("tipoInmueble").value];
+  $("modelo").dispatchEvent(new Event("change"));
+});
+$("modelo").addEventListener("change",()=>{
+  const nuevo=$("modelo").value,anterior=esquema.id;
+  if((sinGuardar||manual||$("editor").textContent.trim())&&!confirm("Cambiar el modelo reemplaza la vista previa. ¿Continuar?")){ $("modelo").value=anterior;sincronizarTipo();return; }
+  tarea(async()=>{
+    if(sinGuardar)guardarBorradorLocal(true);
+    const valoresAnteriores=datos();
+    try {await cargarEsquema(nuevo);}catch(e){$("modelo").value=anterior;sincronizarTipo();throw e;}
+    for(const c of esquema.campos)if(valoresAnteriores[c.id]&&!c.opciones)$("dato-"+c.id).value=valoresAnteriores[c.id];
+    condicionesCampos();actualizarImportes();
+    originalesClausulas={};ultimoCambioClausulas=null;clausulaActiva="";reiniciarCompartido();
+    $("editor").replaceChildren();manual=false;pendiente=true;sinGuardar=true;idActual=null;
+    estado("Modelo elegido. Completá los datos y generá la vista previa.");programarAutoguardado();
+  });
+});
+$("cargarPrueba").addEventListener("click", () => {
+  if (ocupado || !esquema) return;
+  if ((sinGuardar || $("editor").textContent.trim()) && !confirm("Se reemplazarán los datos actuales por un ejemplo. Los borradores guardados se conservarán. ¿Continuar?")) return;
+
+  const esLocal = esquema.uso === "Comercio";
+  const personaPrueba = (nombre, dni, ocupante = false) => ({
+    ...nuevaPersona(ocupante), nombre, dni,
+    domicilio: "Calle de Prueba 123, Guaymallén, Mendoza",
+    cp: "5521", email: "prueba@example.com", telefono: ""
+  });
+
+  partes = {
+    locadores: [personaPrueba("LOCADOR DE PRUEBA", "11111111")],
+    locatarios: [personaPrueba("LOCATARIO DE PRUEBA", "22222222", !esLocal)],
+    garantes: [
+      personaPrueba("GARANTE UNO DE PRUEBA", "33333333"),
+      personaPrueba("GARANTE DOS DE PRUEBA", "44444444"),
+      personaPrueba("GARANTE TRES DE PRUEBA", "55555555")
+    ]
+  };
+  otrosOcupantes = [];
+  servicios = [
+    {id:uid(), nombre:"Electricidad", empresa:"EDEMSA", cuenta:"", parte:"100%", vencimiento:""},
+    {id:uid(), nombre:"Agua", empresa:"AYSAM", cuenta:"", parte:"50%", vencimiento:""},
+    {id:uid(), nombre:"Tasas municipales", empresa:"Municipalidad de Guaymallén", cuenta:"", parte:"100%", vencimiento:""}
+  ];
+
+  const ejemplo = {
+    inmuebleDomicilio: "Calle de Prueba 456, Guaymallén, Mendoza",
+    padronAtm: "",
+    descripcion: esLocal ? "Local comercial con salón principal, baño y depósito." : "Departamento de dos dormitorios, cocina comedor, baño y patio.",
+    pintura: "Paredes interiores pintadas de color blanco.",
+    destino: esLocal ? "COMERCIO" : "VIVIENDA PERSONAL",
+    rubro: "Venta de artículos de librería",
+    meses: "24", inicio: "2026-11-01", fin: "2028-10-31", firma: "2026-10-30",
+    seguro: "2026-11-10", fechaOriginal: "2024-11-01", fechaCertificacion: "2024-11-01",
+    canonNumero: "650000", depositoNumero: "650000", depositoAnterior: "300000"
+  };
+
+  dibujarPartes(); dibujarListas();
+  for (const campo of esquema.campos) {
+    const input = $("dato-" + campo.id);
+    if (Object.prototype.hasOwnProperty.call(ejemplo, campo.id)) input.value = ejemplo[campo.id];
+    else if (campo.opciones) {
+      const primera = campo.opciones[0];
+      input.value = campo.valorInicial || (typeof primera === "string" ? primera : primera.valor);
+    } else input.value = campo.tipo === "date" ? "2026-10-30" : "DATO FICTICIO DE PRUEBA";
+  }
+  originalesClausulas={};ultimoCambioClausulas=null;clausulaActiva="";reiniciarCompartido();
+  clearTimeout(temporizadorAutoguardado);idActual = null; manual = false; pendiente = true; sinGuardar = true;
+  $("nombre").value = "PRUEBA - " + $("tipoContrato").selectedOptions[0].text + " - " + (esLocal ? "Local comercial" : "Vivienda");
+  $("editor").replaceChildren(); condicionesCampos(); actualizarImportes(); controles();
+  $("formulario").requestSubmit();
+});
+
+$("formulario").addEventListener("submit", e => {
+  e.preventDefault();
+  if (!validarFormulario()) return;
+  if (manual && !confirm("Volver a generar usa los datos del formulario y reemplaza tus correcciones manuales. ¿Continuar?")) return;
+  if (!confirmarFechasContrato()) return;
+  tarea(async () => {
+    estado("Generando contrato con las cláusulas completas…");
+    const html = await (await pedir("/api/formulario-contratos/borrador", { modelo: esquema.id, datos: datos(), partes, servicios, otrosOcupantes })).text();
+    $("editor").innerHTML = html; prepararClausulas(true); mostrarPaso(5); manual = false; pendiente = false; sinGuardar = true;
+    estado("Contrato generado. Ahora podés corregir el texto a mano y revisar el PDF.");
+    programarAutoguardado();
+  });
+});
+$("editor").addEventListener("input", () => { manual = true; sincronizarClausulas(); programarAutoguardado(); });
+$("editor").addEventListener("paste", e => { e.preventDefault(); document.execCommand("insertText", false, e.clipboardData.getData("text/plain")); });
+document.querySelectorAll("[data-formato]").forEach(b => {
+  b.addEventListener("mousedown", e => e.preventDefault());
+  b.addEventListener("click", () => { $("editor").focus(); document.execCommand(b.dataset.formato, false); manual = true; programarAutoguardado(); });
+});
+function lista() {
+  const v = JSON.parse(localStorage.getItem(clave) || "[]");
+  if (!Array.isArray(v)) throw new Error("No se pudo leer la lista de borradores.");
+  return v;
+}
+function listar() {
+  $("borradoresLocales").replaceChildren(new Option("Elegí un borrador local…", ""));
+  for (const b of lista()) $("borradoresLocales").add(new Option(b.nombre + " · " + new Date(b.fecha).toLocaleString("es-AR"), b.id));
+}
+function guardarBorradorLocal(automatico = false) {
+  if (!esquema) return;
+  clearTimeout(temporizadorAutoguardado);sincronizarClausulas();
+  const guardados = lista();
+  const id = idActual || uid();
+  const b = {
+    version: 4, id,
+    nombre: $("nombre").value || "Contrato",
+    modelo: esquema.id, partes, servicios, otrosOcupantes,
+    datos: datos(), html: $("editor").innerHTML,
+    manual, pendiente, originalesClausulas, inmuebleAgendaId, estado:estadoContrato, archivado:archivadoContrato, fecha: new Date().toISOString()
+  };
+  const i = guardados.findIndex(x => x.id === id);
+  if (i < 0) guardados.unshift(b); else guardados[i] = b;
+  localStorage.setItem(clave, JSON.stringify(guardados));
+  idActual = id;
+  sinGuardar = false;
+  listar(); $("borradoresLocales").value = id;
+  $("guardadoAutomatico").textContent = automatico
+    ? "Guardado automáticamente · " + new Date().toLocaleTimeString("es-AR", {hour:"2-digit", minute:"2-digit"})
+    : "";
+}
+let temporizadorAutoguardado;
+function programarAutoguardado() {
+  sinGuardar = true;versionCambios++;
+  clearTimeout(temporizadorAutoguardado);
+  $("guardadoAutomatico").textContent = "Cambios pendientes de guardar…";
+  temporizadorAutoguardado = setTimeout(ejecutarAutoguardado, 1200);
+}
+function ejecutarAutoguardado(){
+  if(!sinGuardar||!esquema)return;
+  if(ocupado||guardandoCompartido){temporizadorAutoguardado=setTimeout(ejecutarAutoguardado,500);return;}
+  guardarCompartido().catch(e=>estado(e.message,true));
+
+}
+$("nombre").addEventListener("input", programarAutoguardado);
+$("guardar").addEventListener("click", () => tarea(async () => {
+  await guardarCompartido();
+}));
+$("borradores").addEventListener("change", controles);
+$("abrir").addEventListener("click", () => {
+  if (sinGuardar && !confirm("Hay cambios pendientes. ¿Recuperar la versión compartida? Tus cambios quedarán en una copia local.")) return;
+  tarea(async () => {
+    const elegido=$("borradores").value;
+    if(guardandoCompartido)throw new Error("Esperá a que termine el guardado actual.");
+    if(sinGuardar)guardarBorradorLocal(true);
+    const b=await gestion("/borradores/"+encodeURIComponent(elegido));
+    await aplicarBorrador(b,true);estado("Contrato compartido recuperado.");
+  });
+});
+$("vistaPdf").addEventListener("click", () => tarea(async () => {
+  estado("Preparando las páginas del PDF…");
+  const r = await pedir("/api/contratos/vista-pdf", { htmlEditado:$("editor").innerHTML });
+  if (urlPdf) URL.revokeObjectURL(urlPdf); urlPdf = URL.createObjectURL(await r.blob());
+  $("pdf").src = urlPdf; $("dialogo").showModal(); estado("Vista del PDF lista.");
+}));
+$("cerrar").addEventListener("click", () => $("dialogo").close());
+$("dialogo").addEventListener("close", () => { $("pdf").removeAttribute("src"); if (urlPdf) URL.revokeObjectURL(urlPdf); urlPdf = null; });
+$("descargar").addEventListener("click", () => tarea(async () => {
+  estado("Generando PDF con el texto editado…");
+  const nombre = $("nombre").value || "Contrato";
+  const r = await (await pedir("/api/contratos/generar-pdf", { htmlEditado:$("editor").innerHTML, nombreArchivo:nombre })).json();
+  if (!r.url?.startsWith("/api/contratos/descargar-pdf/")) throw new Error("No se recibió la dirección del PDF.");
+  const pdf = await pedir(r.url); const url = URL.createObjectURL(await pdf.blob());
+  const a = document.createElement("a"); a.href = url; a.download = (nombre.replace(/[^a-zA-Z0-9_-]/g, "_").slice(0,90) || "Contrato") + ".pdf";
+  document.body.append(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(url), 30000);
+  estado("PDF descargado con el texto final del editor.");
+}));
+window.addEventListener("beforeunload", e => { if(sinGuardar&&!ocupado){try{guardarBorradorLocal(true);}catch{}} if (sinGuardar) { e.preventDefault(); e.returnValue = ""; } });
+// Control de fechas: no reemplaza datos ni texto del contrato sin una acción.
+function leerFechaContrato(valor) {
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(valor)) return null;
+  const [anio, mes, dia] = valor.split("-").map(Number);
+  if (anio < 1000 || anio > 9999) return null;
+  const fecha = new Date(Date.UTC(anio, mes - 1, dia));
+  return fecha.getUTCFullYear() === anio &&
+    fecha.getUTCMonth() === mes - 1 && fecha.getUTCDate() === dia
+    ? fecha : null;
+}
+function fechaISOContrato(fecha) {
+  return fecha.toISOString().slice(0, 10);
+}
+function fechaFinContrato(inicio, meses) {
+  const fecha = leerFechaContrato(inicio);
+  if (!fecha || !/^\d+$/.test(String(meses)) ||
+      Number(meses) < 1 || Number(meses) > 120) return null;
+  const anio = fecha.getUTCFullYear(), mes = fecha.getUTCMonth();
+  const dia = fecha.getUTCDate();
+  const ultimo = new Date(Date.UTC(anio, mes + Number(meses) + 1, 0));
+  if (ultimo.getUTCFullYear() > 9999) return null;
+  // Termina el día anterior al aniversario. Si ese día no existe,
+  // se toma el último día del mes de finalización.
+  const fin = new Date(Date.UTC(
+    anio, mes + Number(meses), Math.min(dia - 1, ultimo.getUTCDate())
+  ));
+  return fechaISOContrato(fin);
+}
+function fechaLegibleContrato(valor) {
+  return valor.split("-").reverse().join("/");
+}
+function revisarFechasContrato() {
+  const inicio = $("dato-inicio"), fin = $("dato-fin");
+  const meses = $("dato-meses");
+  if (!inicio || !fin || !meses) return { esperado: null, error: "" };
+  const esperado = fechaFinContrato(inicio.value, meses.value);
+  let error = "";
+  if (meses.value && (!/^\d+$/.test(meses.value) ||
+      Number(meses.value) < 1 || Number(meses.value) > 120)) {
+    error = "La duración debe ser un entero entre 1 y 120 meses.";
+  }
+  meses.setCustomValidity(error);
+  if (!error && inicio.value && !leerFechaContrato(inicio.value)) {
+    error = "Ingresá una fecha de inicio válida.";
+  }
+  inicio.setCustomValidity(
+    inicio.value && !leerFechaContrato(inicio.value)
+      ? "Ingresá una fecha de inicio válida." : ""
+  );
+  let errorFin = "";
+  if (fin.value && !leerFechaContrato(fin.value)) {
+    errorFin = "Ingresá una fecha de finalización válida.";
+  } else if (leerFechaContrato(inicio.value) && fin.value &&
+             fin.value <= inicio.value) {
+    errorFin = "La fecha final debe ser posterior al inicio.";
+  }
+  fin.setCustomValidity(errorFin);
+  return {
+    esperado,
+    error: error || errorFin,
+    diferente: !!esperado && !!fin.value && fin.value !== esperado
+  };
+}
+function actualizarControlFechas() {
+  const aviso = $("avisoFechasContrato");
+  if (!aviso) return;
+  const revision = revisarFechasContrato();
+  const boton = $("usarFinCalculado");
+  boton.disabled = ocupado || !revision.esperado;
+  aviso.style.color = revision.error || revision.diferente ? "#a51d2d" : "";
+  if (revision.error) {
+    aviso.textContent = revision.error;
+  } else if (!revision.esperado) {
+    aviso.textContent = "Completá el inicio y el plazo para calcular la finalización.";
+  } else if (!$("dato-fin").value) {
+    aviso.textContent = "Finalización calculada: " +
+      fechaLegibleContrato(revision.esperado) + ". Podés aplicarla con el botón.";
+  } else if (revision.diferente) {
+    aviso.textContent = "Revisá las fechas: con ese inicio y plazo, la finalización " +
+      "calculada es " + fechaLegibleContrato(revision.esperado) +
+      ". La fecha cargada es " + fechaLegibleContrato($("dato-fin").value) + ".";
+  } else {
+    aviso.textContent = "Inicio, plazo y finalización coinciden: " +
+      fechaLegibleContrato(revision.esperado) + ".";
+  }
+}
+function construirControlFechas() {
+  const cont = $("campo-fin");
+  if (!cont || !$("dato-inicio") || !$("dato-meses")) return;
+  const aviso = document.createElement("p");
+  aviso.id = "avisoFechasContrato";
+  aviso.className = "nota";
+  aviso.setAttribute("role", "status");
+  aviso.setAttribute("aria-live", "polite");
+  const boton = document.createElement("button");
+  boton.id = "usarFinCalculado";
+  boton.type = "button";
+  boton.textContent = "Usar fecha de finalización calculada";
+  boton.addEventListener("click", () => {
+    const esperado = fechaFinContrato($("dato-inicio").value, $("dato-meses").value);
+    if (!esperado) return;
+    if ($("dato-fin").value && $("dato-fin").value !== esperado &&
+        !confirm("¿Reemplazar la finalización por " + fechaLegibleContrato(esperado) + "?")) return;
+    $("dato-fin").value = esperado;
+    $("dato-fin").dispatchEvent(new Event("input", { bubbles: true }));
+  });
+  const nota = document.createElement("p");
+  nota.className = "nota";
+  nota.textContent = "Cálculo: día anterior al mismo día de inicio, después del plazo indicado. " +
+    "Si no existe ese día, usa el último día del mes. Podés conservar una fecha distinta al generar.";
+  cont.append(aviso, boton, nota);
+  $("dato-meses").max = "120";
+  actualizarControlFechas();
+}
+function confirmarFechasContrato() {
+  const revision = revisarFechasContrato();
+  actualizarControlFechas();
+  if (revision.error) {
+    $("formulario").reportValidity();
+    estado(revision.error, true);
+    return false;
+  }
+  if (revision.diferente) {
+    return confirm(
+      "El plazo y las fechas no coinciden.\n\n" +
+      "Finalización calculada: " + fechaLegibleContrato(revision.esperado) +
+      "\nFinalización cargada: " + fechaLegibleContrato($("dato-fin").value) +
+      "\n\n¿Generar el contrato conservando la fecha cargada?"
+    );
+  }
+  return true;
+}
+
+// Herramientas de cláusulas: los controles viven fuera del documento exportado.
+let originalesClausulas = {}, ultimoCambioClausulas = null, clausulaActiva = "";
+let observadorClausulas;
+const patronTitulo = /^\s*CL[ÁA]USULA\s+(\d+)\s*[:.\-–—]/i;
+function numeroTexto(n) {
+  const u=["cero","uno","dos","tres","cuatro","cinco","seis","siete","ocho","nueve","diez","once","doce","trece","catorce","quince","dieciséis","diecisiete","dieciocho","diecinueve","veinte","veintiuno","veintidós","veintitrés","veinticuatro","veinticinco","veintiséis","veintisiete","veintiocho","veintinueve"];
+  if(n<30)return u[n];
+  if(n<100)return ["","","","treinta","cuarenta","cincuenta","sesenta","setenta","ochenta","noventa"][Math.floor(n/10)]+(n%10?" y "+u[n%10]:"");
+  return String(n);
+}
+function ordinalTexto(n){
+  const u=["","primera","segunda","tercera","cuarta","quinta","sexta","séptima","octava","novena"];
+  if(n<10)return u[n];
+  return ["","décima","vigésima","trigésima","cuadragésima","quincuagésima","sexagésima","septuagésima","octogésima","nonagésima"][Math.floor(n/10)]+(n%10?" "+u[n%10]:"");
+}
+const quitarAcentos=t=>t.normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase().trim().replace(/\s+/g," ");
+const numerosPalabra=Object.fromEntries(Array.from({length:99},(_,i)=>[numeroTexto(i+1),String(i+1)]));
+const numerosOrdinales=Object.fromEntries(Array.from({length:99},(_,i)=>[quitarAcentos(ordinalTexto(i+1)),String(i+1)]));
+for(let n=1;n<100;n++){const t=ordinalTexto(n);numerosPalabra[t]=String(n);numerosPalabra[quitarAcentos(t)]=String(n);}
+const patronReferencia=new RegExp("\\bcl[áa]usula\\s+(?:n[°º.]\\s*)?(\\d+(?:[ªº°])?|"+Object.keys(numerosPalabra).sort((a,b)=>b.length-a.length).join("|")+")(?![\\p{L}\\p{N}])","giu");
+function normalizarTitulosOrdinales(){
+  for(const el of $("editor").querySelectorAll("p,h1,h2,h3,h4")){
+    if(el.querySelector("p,h1,h2,h3,h4"))continue;
+    const m=el.textContent.match(/^(\s*)([^:.\-–—]+)(\s*[:.\-–—])/);
+    const n=m&&numerosOrdinales[quitarAcentos(m[2])];if(!n)continue;
+    const r=rangoTexto(el,m[1].length,m[1].length+m[2].length);r.deleteContents();r.insertNode(document.createTextNode("CLÁUSULA "+n));
+  }
+}
+function rangoTexto(el,desde,hasta){
+  const walk=document.createTreeWalker(el,NodeFilter.SHOW_TEXT),r=document.createRange();let n,p=0,inicio=false;
+  while((n=walk.nextNode())){const fin=p+n.length;if(!inicio&&desde<fin){r.setStart(n,desde-p);inicio=true;}if(inicio&&hasta<=fin){r.setEnd(n,hasta-p);return r;}p=fin;}return null;
+}
+function bloquesClausulas(){return [...$("editor").querySelectorAll("[data-bloque-clausula]")];}
+function tituloClausula(b){return [...b.children].find(el=>patronTitulo.test(el.textContent))||b.firstElementChild;}
+function envolverClausulas(){
+  // Si el borrador ya tiene bloques, mantiene sus identidades.
+  if(bloquesClausulas().length)return;
+  const editor=$("editor"),nodos=[...editor.childNodes];let bloque=null;
+  const titulos=nodos.filter(n=>n.nodeType===1&&patronTitulo.test(n.textContent));const ultimo=titulos.at(-1);
+  let final=false;
+  for(const n of nodos){
+    if(n.nodeType===1&&patronTitulo.test(n.textContent)){
+      bloque=document.createElement("div");bloque.dataset.bloqueClausula=n.dataset.clausulaId||uid();editor.insertBefore(bloque,n);final=n===ultimo;
+    }else if(final&&n.nodeType===1&&/^(?:Las partes.*(?:declaran expresamente|manifiestan su expreso consentimiento)|Prestando conformidad)/i.test(n.textContent.trim()))bloque=null;
+    if(bloque)bloque.append(n);
+  }
+}
+function actualizarClausulas(){
+  const editor=$("editor");normalizarTitulosOrdinales();envolverClausulas();const bloques=bloquesClausulas();
+  const porNumero=new Map(),porId=new Map();
+  bloques.forEach((b,i)=>{const t=tituloClausula(b),m=t?.textContent.match(patronTitulo);if(m)porNumero.set(m[1],b.dataset.bloqueClausula);porId.set(b.dataset.bloqueClausula,String(i+1));});
+  for(const span of editor.querySelectorAll("[data-referencia-clausula]")){
+    if(span.dataset.prefijo!==undefined)continue;
+    const texto=span.textContent.replace(/\s*\[REVISAR REFERENCIA\]/g,""),m=[...texto.matchAll(patronReferencia)][0];
+    if(!m){span.replaceWith(...span.childNodes);continue;}
+    span.dataset.prefijo=m[0].slice(0,m[0].length-m[1].length);span.dataset.estilo=/^\d/.test(m[1])?"digitos":numerosOrdinales[quitarAcentos(m[1])]?"ordinal":"palabras";span.dataset.sufijo=m[1].match(/[ªº°]$/)?.[0]||"";span.dataset.original=m[0];
+  }
+  for(const span of editor.querySelectorAll("[data-referencia-clausula]"))if(span.dataset.ultimoTexto&&span.textContent!==span.dataset.ultimoTexto)span.replaceWith(...span.childNodes);
+  const hojas=[...editor.querySelectorAll("p,li,td,th,h1,h2,h3,h4")].filter(el=>!el.querySelector("p,li,td,th,h1,h2,h3,h4")&&!patronTitulo.test(el.textContent));
+  for(const el of hojas)for(const m of [...el.textContent.matchAll(patronReferencia)].reverse()){
+    const r=rangoTexto(el,m.index,m.index+m[0].length);if(!r||r.startContainer.parentElement.closest("[data-referencia-clausula]"))continue;
+    const textoNumero=m[1],numero=/^\d/.test(textoNumero)?textoNumero.match(/^\d+/)[0]:numerosPalabra[textoNumero.toLowerCase()];
+    const span=document.createElement("span");span.dataset.referenciaClausula=porNumero.get(numero)||"sin-destino";span.dataset.prefijo=m[0].slice(0,m[0].length-textoNumero.length);span.dataset.estilo=/^\d/.test(textoNumero)?"digitos":numerosOrdinales[quitarAcentos(textoNumero)]?"ordinal":"palabras";span.dataset.sufijo=textoNumero.match(/[ªº°]$/)?.[0]||"";span.dataset.original=m[0];span.append(r.extractContents());r.insertNode(span);
+  }
+  bloques.forEach((b,i)=>{const t=tituloClausula(b),m=t?.textContent.match(/^(\s*CL[ÁA]USULA\s+)(\d+)/i);if(m&&m[2]!==String(i+1)){const r=rangoTexto(t,m[1].length,m[1].length+m[2].length);r.deleteContents();r.insertNode(document.createTextNode(String(i+1)));}});
+  for(const span of editor.querySelectorAll("[data-referencia-clausula]")){
+    const n=porId.get(span.dataset.referenciaClausula),valor=n?(span.dataset.estilo==="palabras"?numeroTexto(Number(n)):span.dataset.estilo==="ordinal"?ordinalTexto(Number(n)):n):null;
+    const texto=n?span.dataset.prefijo+valor+span.dataset.sufijo:span.dataset.original+" [REVISAR REFERENCIA]";
+    if(span.textContent!==texto)span.textContent=texto;span.dataset.ultimoTexto=texto;span.toggleAttribute("data-referencia-pendiente",!n);
+  }
+  dibujarSelectorClausulas();
+}
+function sincronizarClausulas(){
+  observadorClausulas?.disconnect();try{actualizarClausulas();}finally{observadorClausulas?.observe($("editor"),{childList:true,subtree:true,characterData:true});}
+}
+function prepararClausulas(capturarOriginal=false){
+  sincronizarClausulas();
+  if(capturarOriginal){originalesClausulas={};bloquesClausulas().forEach((b,i)=>originalesClausulas[b.dataset.bloqueClausula]={orden:i,html:b.outerHTML,titulo:tituloClausula(b)?.textContent||"Cláusula"});}
+  ultimoCambioClausulas=null;dibujarSelectorClausulas();
+}
+function dibujarSelectorClausulas(){
+  const selector=$("clausulaElegida"),valor=clausulaActiva||selector.value;selector.replaceChildren(new Option("Elegí una cláusula…",""));
+  const presentes=new Set();for(const b of bloquesClausulas()){const id=b.dataset.bloqueClausula;presentes.add(id);selector.add(new Option(tituloClausula(b)?.textContent||"Cláusula sin título",id));}
+  for(const [id,o]of Object.entries(originalesClausulas))if(!presentes.has(id))selector.add(new Option("Eliminada · "+o.titulo,id));
+  selector.value=[...selector.options].some(o=>o.value===valor)?valor:"";clausulaActiva=selector.value;controlesClausulas();
+}
+function bloqueElegido(){return bloquesClausulas().find(b=>b.dataset.bloqueClausula===$("clausulaElegida").value);}
+function controlesClausulas(){
+  const b=bloqueElegido(),lista=bloquesClausulas(),i=lista.indexOf(b),id=$("clausulaElegida").value;
+  $("clausulaElegida").disabled=ocupado||!esquema||(!lista.length&&!Object.keys(originalesClausulas).length);
+  for(const op of ["editarClausula","eliminarClausula"])$(op).disabled=ocupado||!b;
+  $("subirClausula").disabled=ocupado||!b||i<=0;$("bajarClausula").disabled=ocupado||!b||i===lista.length-1;
+  $("restaurarClausula").disabled=ocupado||!originalesClausulas[id];$("deshacerClausula").disabled=ocupado||!ultimoCambioClausulas;
+}
+function recordarCambio(){ultimoCambioClausulas=$("editor").innerHTML;}
+function terminarCambio(){manual=true;sincronizarClausulas();programarAutoguardado();controles();}
+$("clausulaElegida").addEventListener("change",()=>{clausulaActiva=$("clausulaElegida").value;controlesClausulas();const b=bloqueElegido();b?.scrollIntoView({block:"center",behavior:"smooth"});});
+$("editarClausula").addEventListener("click",()=>{
+  const b=bloqueElegido();if(!b)return;const t=[...b.children].find(el=>el!==tituloClausula(b))||tituloClausula(b);$("editor").focus();const r=document.createRange();r.selectNodeContents(t);r.collapse(true);const s=window.getSelection();s.removeAllRanges();s.addRange(r);t.scrollIntoView({block:"center"});estado("Editá el texto de la cláusula seleccionada en la vista previa.");
+});
+$("eliminarClausula").addEventListener("click",()=>{const b=bloqueElegido();if(!b||!confirm("¿Eliminar la cláusula completa, incluido su texto? Podés restaurarla después."))return;recordarCambio();b.remove();terminarCambio();});
+for(const [id,direccion]of [["subirClausula",-1],["bajarClausula",1]])$(id).addEventListener("click",()=>{const b=bloqueElegido(),lista=bloquesClausulas(),otro=lista[lista.indexOf(b)+direccion];if(!b||!otro)return;recordarCambio();if(direccion<0)otro.before(b);else otro.after(b);terminarCambio();});
+$("restaurarClausula").addEventListener("click",()=>{
+  const id=$("clausulaElegida").value,o=originalesClausulas[id];if(!o||!confirm("¿Restaurar el texto que tenía esta cláusula al generar el contrato? Se reemplazan sus correcciones manuales."))return;
+  recordarCambio();const t=document.createElement("template");t.innerHTML=o.html;const restaurado=t.content.firstElementChild,b=bloqueElegido();
+  if(b)b.replaceWith(restaurado);else{const siguientes=bloquesClausulas().find(x=>originalesClausulas[x.dataset.bloqueClausula]?.orden>o.orden);if(siguientes)siguientes.before(restaurado);else{const ultimo=bloquesClausulas().at(-1);if(ultimo)ultimo.after(restaurado);else{const cierre=[...$("editor").children].find(el=>/^(?:Las partes.*(?:declaran expresamente|manifiestan su expreso consentimiento)|Prestando conformidad)/i.test(el.textContent.trim()));if(cierre)cierre.before(restaurado);else $("editor").append(restaurado);}}}
+  terminarCambio();
+});
+$("deshacerClausula").addEventListener("click",()=>{if(!ultimoCambioClausulas)return;$("editor").innerHTML=ultimoCambioClausulas;ultimoCambioClausulas=null;terminarCambio();});
+observadorClausulas=new MutationObserver(()=>sincronizarClausulas());
+for(const id of ["vistaPdf","descargar"])$(id).addEventListener("click",e=>{
+  sincronizarClausulas();const ref=$("editor").querySelector("[data-referencia-pendiente]");if(!ref)return;e.preventDefault();e.stopImmediatePropagation();ref.scrollIntoView({block:"center"});estado("Corregí o eliminá la referencia resaltada antes de generar el PDF.",true);
+},true);
+
+
+let contratosTabla=[];
+let estadoContrato="borrador", archivadoContrato=false;
+const nombresEstados={borrador:"Borrador",revision:"En revisión",finalizado:"Finalizado"};
+function normalizarBusquedaContrato(t){return String(t||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();}
+function dibujarTablaContratos(){
+  const cuerpo=$("filasContratos"),buscar=normalizarBusquedaContrato($("buscarContrato").value);
+  const filtro=$("filtrarEstadoContrato").value,archivo=$("filtrarArchivoContrato").value;
+  const visibles=contratosTabla.filter(c=>
+    (!buscar||normalizarBusquedaContrato([c.nombre,c.locatarios,c.direccion].join(" ")).includes(buscar))&&
+    (!filtro||c.estado===filtro)&&
+    (archivo==="todos"||!!c.archivado===(archivo==="archivados")));
+  cuerpo.replaceChildren();
+  $("cantidadContratos").textContent=visibles.length+" de "+contratosTabla.length+" contrato(s)";
+  for(const c of visibles){
+    const tr=document.createElement("tr");tr.dataset.contratoId=c.id;
+    for(const texto of [c.nombre+(c.archivado?" · Archivado":""),c.locatarios||"Sin cargar",c.direccion||"Sin cargar"]){const td=document.createElement("td");td.textContent=texto;tr.append(td);}
+    const estado=document.createElement("td"),select=document.createElement("select");
+    select.dataset.estadoContrato=c.id;select.setAttribute("aria-label","Estado de "+c.nombre);
+    for(const [valor,nombre]of Object.entries(nombresEstados))select.add(new Option(nombre,valor));select.value=c.estado||"borrador";select.disabled=ocupado;estado.append(select);tr.append(estado);
+    const fecha=document.createElement("td");fecha.textContent=new Date(c.fecha).toLocaleString("es-AR");tr.append(fecha);
+    const acciones=document.createElement("td");acciones.className="acciones-contrato";
+    for(const [accion,nombre]of [["abrir","Abrir"],["duplicar","Duplicar"],["archivar",c.archivado?"Desarchivar":"Archivar"],["eliminar","Eliminar"]]){
+      const b=document.createElement("button");b.type="button";b.dataset.accionContrato=accion;b.dataset.idContrato=c.id;b.textContent=nombre;b.disabled=ocupado;if(accion==="eliminar")b.className="eliminar-contrato";acciones.append(b);
+    }
+    tr.append(acciones);cuerpo.append(tr);
+  }
+  if(!visibles.length){const tr=document.createElement("tr"),td=document.createElement("td");td.colSpan=6;td.textContent=contratosTabla.length?"No hay contratos que coincidan con los filtros.":"Todavía no hay contratos compartidos.";tr.append(td);cuerpo.append(tr);}
+}
+for(const id of ["buscarContrato","filtrarEstadoContrato","filtrarArchivoContrato"])$(id).addEventListener(id==="buscarContrato"?"input":"change",dibujarTablaContratos);
+$("actualizarTablaContratos").addEventListener("click",()=>tarea(async()=>{await listarCompartidos();estado("Tabla actualizada.");}));
+$("estadoContratoActual").addEventListener("change",()=>{estadoContrato=$("estadoContratoActual").value;programarAutoguardado();});
+function actualizarMetadatosActual(){
+  $("estadoContratoActual").value=estadoContrato;
+  $("archivoContratoActual").textContent=archivadoContrato?"Este contrato está archivado. Podés desarchivarlo desde la tabla.":"";
+}
+function limpiarContratoActual(){
+  clearTimeout(temporizadorAutoguardado);reiniciarCompartido();idActual=null;
+  originalesClausulas={};ultimoCambioClausulas=null;clausulaActiva="";
+  partes={locadores:[nuevaPersona()],locatarios:[nuevaPersona(false)],garantes:[nuevaPersona()]};
+  servicios=[];otrosOcupantes=[];manual=false;pendiente=true;sinGuardar=false;
+  $("editor").replaceChildren();$("nombre").value="Contrato";$("guardadoAutomatico").textContent="";
+  construir();dibujarPartes();dibujarListas();sincronizarClausulas();mostrarPaso(1);
+}
+async function prepararAccionContrato(id){
+  if(guardandoCompartido)throw new Error("Esperá a que termine el guardado actual.");
+  if(id===idActual&&sinGuardar){
+    await guardarCompartido();
+    if(sinGuardar||conflictoCompartido)throw new Error("Primero resolvé el guardado pendiente. Tus cambios siguen en el formulario.");
+  }
+}
+async function modificarEstadoContrato(id,cambios){
+  await prepararAccionContrato(id);
+  const c=contratosTabla.find(c=>c.id===id);if(!c)throw new Error("Actualizá la tabla y volvé a intentar.");
+  const actualizado=await gestion("/borradores/"+encodeURIComponent(id),"PATCH",{revision:c.revision,...cambios});
+  if(id===idActual){revisionCompartida=actualizado.revision;estadoContrato=actualizado.estado;archivadoContrato=actualizado.archivado;actualizarMetadatosActual();try{guardarBorradorLocal(true);}catch{}}
+  await listarCompartidos();
+}
+$("filasContratos").addEventListener("change",e=>{
+  const select=e.target.closest("[data-estado-contrato]");if(!select||ocupado)return;
+  const id=select.dataset.estadoContrato,nuevo=select.value;
+  tarea(async()=>{try{await modificarEstadoContrato(id,{estado:nuevo});estado("Estado del contrato actualizado.");}catch(e){dibujarTablaContratos();throw e;}});
+});
+$("filasContratos").addEventListener("click",e=>{
+  const boton=e.target.closest("[data-accion-contrato]");if(!boton||ocupado)return;
+  const id=boton.dataset.idContrato,accion=boton.dataset.accionContrato;
+  tarea(async()=>{
+    if(guardandoCompartido)throw new Error("Esperá a que termine el guardado actual.");
+    if(accion==="abrir"){
+      if(sinGuardar&&!confirm("¿Abrir este contrato? Los cambios actuales quedarán en una copia local."))return;
+      if(sinGuardar)guardarBorradorLocal(true);
+      const b=await gestion("/borradores/"+encodeURIComponent(id));await aplicarBorrador(b,true);estado("Contrato recuperado.");$("nombre").scrollIntoView({block:"center"});
+    }else if(accion==="duplicar"){
+      await prepararAccionContrato(id);
+      if(id!==idActual&&sinGuardar&&!confirm("¿Abrir el duplicado? Los cambios actuales quedarán en una copia local."))return;
+      if(sinGuardar)guardarBorradorLocal(true);
+      const original=await gestion("/borradores/"+encodeURIComponent(id));
+      const copia=await gestion("/borradores","POST",{...original,id:uid(),revision:0,nombre:original.nombre+" — copia",estado:"borrador",archivado:false});
+      await aplicarBorrador(copia,true);await listarCompartidos();estado("Copia creada como un contrato independiente.");
+    }else if(accion==="archivar"){
+      const c=contratosTabla.find(c=>c.id===id);if(!c)return;
+      await modificarEstadoContrato(id,{archivado:!c.archivado});estado(c.archivado?"Contrato desarchivado.":"Contrato archivado.");
+    }else if(accion==="eliminar"){
+      const c=contratosTabla.find(c=>c.id===id);if(!c)return;
+      if(!confirm("¿Eliminar “"+c.nombre+"” del servidor y su copia local de este navegador?"+(id===idActual?" Se limpiará el formulario actual.":"")+" Esta acción no se puede deshacer."))return;
+      clearTimeout(temporizadorAutoguardado);
+      try{await gestion("/borradores/"+encodeURIComponent(id),"DELETE",{revision:c.revision});}
+      catch(e){if(sinGuardar&&!conflictoCompartido)programarAutoguardado();throw e;}
+      let aviso="";try{localStorage.setItem(clave,JSON.stringify(lista().filter(b=>b.id!==id)));listar();}catch{aviso=" No se pudo quitar la copia local.";}
+      if(id===idActual)limpiarContratoActual();else if(sinGuardar&&!conflictoCompartido)programarAutoguardado();
+      await listarCompartidos();estado("Contrato eliminado."+aviso,!!aviso);
+    }
+  });
+});
+
+const apiGestion = "/api/gestion-contratos";
+let revisionCompartida=0, versionCambios=0, tokenBorrador=0;
+let guardandoCompartido=false, conflictoCompartido=false;
+let agendaPersonas=[], agendaInmuebles=[], inmuebleAgendaId="";
+let pasoActual=1;
+async function gestion(ruta, metodo="GET", cuerpo) {
+  const r=await fetch(apiGestion+ruta,{method:metodo,headers:cuerpo?{"Content-Type":"application/json"}:{},body:cuerpo?JSON.stringify(cuerpo):undefined});
+  const d=await r.json().catch(()=>({}));
+  if(!r.ok)throw Object.assign(new Error(d.error||"No se pudo conectar con el guardado compartido."),{status:r.status});
+  return d;
+}
+function reiniciarCompartido(){tokenBorrador++;revisionCompartida=0;conflictoCompartido=false;inmuebleAgendaId="";estadoContrato="borrador";archivadoContrato=false;actualizarMetadatosActual();}
+async function listarCompartidos(){
+  const guardados=await gestion("/borradores"),seleccion=$("borradores").value;
+  $("borradores").replaceChildren(new Option("Elegí un contrato compartido…",""));
+  for(const b of guardados)$("borradores").add(new Option(b.nombre+" · "+new Date(b.fecha).toLocaleString("es-AR"),b.id));
+  $("borradores").value=guardados.some(b=>b.id===(idActual||seleccion))?(idActual||seleccion):"";
+  $("abrir").disabled=ocupado||!$("borradores").value;
+  contratosTabla=guardados;dibujarTablaContratos();
+}
+async function guardarCompartido(){
+  if(guardandoCompartido||!esquema||conflictoCompartido)return;
+  clearTimeout(temporizadorAutoguardado);
+  sincronizarClausulas();idActual=idActual||uid();
+  const b={version:4,id:idActual,nombre:$("nombre").value||"Contrato",modelo:esquema.id,partes,servicios,otrosOcupantes,datos:datos(),html:$("editor").innerHTML,manual,pendiente,originalesClausulas,inmuebleAgendaId,estado:estadoContrato,archivado:archivadoContrato};
+  const version=versionCambios,token=tokenBorrador;let copiaLocal=true;
+  try{guardarBorradorLocal(true);}catch{copiaLocal=false;}
+  sinGuardar=true;guardandoCompartido=true;
+  $("guardadoAutomatico").textContent="Guardando en el servidor…";
+  try{
+    const guardado=await gestion("/borradores","POST",{...b,revision:revisionCompartida});
+    if(token!==tokenBorrador)return;
+    revisionCompartida=guardado.revision;
+    sinGuardar=versionCambios!==version;
+    $("guardadoAutomatico").textContent=sinGuardar?"Hay cambios nuevos pendientes…":"Compartido · "+new Date(guardado.fecha).toLocaleTimeString("es-AR",{hour:"2-digit",minute:"2-digit"});
+    if(!copiaLocal)$("guardadoAutomatico").textContent+=" · No se pudo guardar la copia local.";
+    await listarCompartidos();
+  }catch(e){
+    if(token!==tokenBorrador)return;
+    sinGuardar=true;conflictoCompartido=e.status===409;
+    $("guardadoAutomatico").textContent=conflictoCompartido?"Hay otra versión. Recuperala o guardá una copia.":(copiaLocal?"Copia local guardada; falta guardar en el servidor.":"No se pudieron guardar los cambios. Conservá esta pestaña abierta.");
+    estado(e.message,true);
+  }finally{
+    guardandoCompartido=false;
+    if(sinGuardar&&!conflictoCompartido&&token===tokenBorrador)temporizadorAutoguardado=setTimeout(ejecutarAutoguardado,5000);
+  }
+}
+async function aplicarBorrador(b,compartido){
+  clearTimeout(temporizadorAutoguardado);reiniciarCompartido();
+  await cargarEsquema(b.modelo);
+  partes=b.partes;servicios=b.servicios||[];otrosOcupantes=b.otrosOcupantes||[];dibujarPartes();dibujarListas();
+  for(const c of esquema.campos)$("dato-"+c.id).value=b.datos[c.id]??c.valorInicial??"";
+  condicionesCampos();actualizarImportes();originalesClausulas=b.originalesClausulas||{};clausulaActiva="";
+  $("editor").innerHTML=b.html||"";prepararClausulas(false);$("nombre").value=b.nombre;
+  manual=!!b.manual;pendiente=b.version!==4||!!b.pendiente;idActual=compartido?b.id:null;
+  revisionCompartida=compartido?b.revision:0;sinGuardar=false;estadoContrato=b.estado||"borrador";archivadoContrato=!!b.archivado;actualizarMetadatosActual();inmuebleAgendaId=b.inmuebleAgendaId||"";dibujarOpcionesInmuebles();
+  mostrarPaso($("editor").textContent.trim()?5:1);
+  $("guardadoAutomatico").textContent=compartido?"Versión compartida recuperada.":"Borrador local abierto. Guardalo para compartirlo como una copia.";
+}
+$("borrarTodosBorradores").addEventListener("click", () => {
+  if (ocupado) return;
+  if (guardandoCompartido) {
+    estado("Esperá a que termine el guardado actual y volvé a intentar.", true);
+    return;
+  }
+  if (!confirm(
+    "¿Eliminar TODOS los borradores y contratos duplicados?\n\n" +
+    "Se borrarán del servidor para todas las computadoras y también " +
+    "se eliminarán las copias locales de este navegador. " +
+    "El formulario actual quedará vacío.\n\n" +
+    "Esta acción no se puede deshacer."
+  )) return;
+  tarea(async () => {
+    clearTimeout(temporizadorAutoguardado);
+    let respuesta;
+    try { respuesta = await gestion("/borradores", "DELETE", { confirmar: true }); }
+    catch (e) {
+      if (sinGuardar && !conflictoCompartido) programarAutoguardado();
+      throw e;
+    }
+    let errorLocal = "";
+    try { localStorage.removeItem(clave); }
+    catch { errorLocal = " No se pudieron eliminar las copias locales de este navegador."; }
+    reiniciarCompartido();
+    idActual = null;
+    originalesClausulas = {};
+    ultimoCambioClausulas = null;
+    clausulaActiva = "";
+    partes = {
+      locadores: [nuevaPersona()],
+      locatarios: [nuevaPersona(false)],
+      garantes: [nuevaPersona()]
+    };
+    servicios = [];
+    otrosOcupantes = [];
+    manual = false;
+    pendiente = true;
+    sinGuardar = false;
+    $("editor").replaceChildren();
+    $("nombre").value = "Contrato";
+    $("guardadoAutomatico").textContent = "";
+    construir();
+    dibujarPartes();
+    dibujarListas();
+    sincronizarClausulas();
+    $("borradores").replaceChildren(new Option("Elegí un contrato compartido…", ""));
+    $("borradoresLocales").replaceChildren(new Option("Elegí un borrador local…", ""));
+    contratosTabla=[];dibujarTablaContratos();
+    if (errorLocal) { try { listar(); } catch {} }
+    mostrarPaso(1);
+    estado(respuesta.eliminados + " borrador(es) compartido(s) eliminados." + errorLocal, !!errorLocal);
+  });
+});
+
+$("actualizarCompartidos").addEventListener("click",()=>tarea(async()=>{await listarCompartidos();await cargarAgenda();estado("Contratos y agenda actualizados.");}));
+$("guardarCopia").addEventListener("click",()=>tarea(async()=>{
+  if(guardandoCompartido)throw new Error("Esperá a que termine el guardado actual.");
+  reiniciarCompartido();idActual=null;$("nombre").value+=" — copia";sinGuardar=true;
+  await guardarCompartido();
+}));
+$("abrirLocal").addEventListener("click",()=>tarea(async()=>{
+  if(sinGuardar&&!confirm("¿Abrir el borrador local? Se conserva una copia local de los cambios actuales."))return;
+  const b=lista().find(x=>x.id===$("borradoresLocales").value);if(!b)throw new Error("Elegí un borrador local.");
+  if(sinGuardar)guardarBorradorLocal(true);await aplicarBorrador(b,false);estado("Borrador local recuperado. Usá Guardar para compartirlo.");
+}));
+function prepararPasos(){
+  document.querySelectorAll("#campos > fieldset").forEach(c=>{
+    const nombre=c.querySelector("legend")?.textContent||"";
+    c.dataset.paso=["Inmueble","Ocupación","Pintura"].includes(nombre)?"2":"3";
+  });
+  actualizarPasos();
+}
+function actualizarPasos(){
+  document.querySelectorAll("[data-paso]").forEach(el=>el.classList.toggle("paso-oculto",Number(el.dataset.paso)!==pasoActual));
+  document.querySelectorAll("[data-ir-paso]").forEach(b=>{b.classList.toggle("principal",Number(b.dataset.irPaso)===pasoActual);b.setAttribute("aria-current",Number(b.dataset.irPaso)===pasoActual?"step":"false");});
+  $("pasoAnterior").disabled=ocupado||pasoActual===1;$("pasoSiguiente").disabled=ocupado||pasoActual===5;
+  $("tituloPaso").textContent="Paso "+pasoActual+" de 5 · "+["Personas","Inmueble y ocupantes","Condiciones","Servicios","Revisión y contrato"][pasoActual-1];
+  if(pasoActual===5)dibujarResumen();
+}
+function mostrarPaso(n){pasoActual=Math.max(1,Math.min(5,n));actualizarPasos();}
+function validarFormulario(paso=null){
+  revisarFechasContrato();
+  const entradas=[...$("formulario").querySelectorAll("input,select,textarea")].filter(e=>!e.disabled&&!e.closest("[hidden]")&&(paso===null||Number(e.closest("[data-paso]")?.dataset.paso)===paso));
+  const invalido=entradas.find(e=>!e.checkValidity());
+  if(invalido){mostrarPaso(Number(invalido.closest("[data-paso]")?.dataset.paso)||1);invalido.reportValidity();return false;}
+  return true;
+}
+$("pasoAnterior").addEventListener("click",()=>mostrarPaso(pasoActual-1));
+$("pasoSiguiente").addEventListener("click",()=>{if(validarFormulario(pasoActual))mostrarPaso(pasoActual+1);});
+document.querySelectorAll("[data-ir-paso]").forEach(b=>b.addEventListener("click",()=>mostrarPaso(Number(b.dataset.irPaso))));
+function dibujarResumen(){
+  const raiz=$("resumenContrato");raiz.replaceChildren();if(!esquema)return;
+  const d=datos(),filas=[
+    ["Contrato",$("tipoContrato").selectedOptions[0].text+" · "+$("tipoInmueble").selectedOptions[0].text],
+    ...Object.entries(grupos).map(([k,[nombre]])=>[nombre,partes[k].map(p=>p.nombre||"Sin nombre").join("; ")||"Sin cargar"]),
+    ["Inmueble",d.inmuebleDomicilio||"Sin cargar"],["Plazo",(d.meses||"—")+" meses · "+(d.inicio||"—")+" al "+(d.fin||"—")],
+    ["Alquiler",$("letras-canonNumero")?.textContent||d.canonNumero||"Sin cargar"],
+    ["Ajuste",$("dato-ajuste")?.selectedOptions[0]?.text||"—"],
+    ["Depósito / pagaré",$("dato-garantia")?.selectedOptions[0]?.text||"—"],
+    ["Monto del depósito",$("letras-depositoNumero")?.textContent||d.depositoNumero||"Sin cargar"],
+    ["Servicios",servicios.map(s=>s.nombre+": "+s.parte).join("; ")||"Sin servicios particulares"]
+  ];
+  const tabla=document.createElement("table");for(const [nombre,valor]of filas){const tr=document.createElement("tr"),th=document.createElement("th"),td=document.createElement("td");th.textContent=nombre;td.textContent=valor;tr.append(th,td);tabla.append(tr);}raiz.append(tabla);
+}
+async function cargarAgenda(){
+  const [personas,inmuebles]=await Promise.all([gestion("/personas"),gestion("/inmuebles")]);agendaPersonas=personas;agendaInmuebles=inmuebles;dibujarOpcionesInmuebles();
+  document.querySelectorAll("[data-selector-persona]").forEach(select=>llenarPersonas(select));
+}
+function llenarPersonas(select,filtro=""){
+  select.replaceChildren(new Option("Elegí una persona guardada…",""));
+  for(const p of agendaPersonas.filter(p=>(p.nombre+" "+p.dni).toLowerCase().includes(filtro.toLowerCase())))select.add(new Option(p.nombre+(p.dni?" · DNI "+p.dni:""),p.id));
+}
+function agregarAgendaPersona(tarjeta,persona){
+  const caja=document.createElement("div"),busqueda=document.createElement("input"),select=document.createElement("select");
+  busqueda.placeholder="Buscar persona por nombre o DNI";busqueda.setAttribute("aria-label","Buscar persona en agenda");select.dataset.selectorPersona="";select.setAttribute("aria-label","Persona guardada");llenarPersonas(select);
+  busqueda.addEventListener("input",()=>llenarPersonas(select,busqueda.value));
+  select.addEventListener("change",()=>{
+    const p=agendaPersonas.find(p=>p.id===select.value);if(!p)return;
+    if((persona.nombre||persona.dni)&&!confirm("¿Reemplazar los datos de esta persona por los de la agenda?"))return;
+    for(const k of ["trato","nombre","dni","cuil","domicilio","cp","email","telefono"])persona[k]=p[k]||"";
+    persona.trato=persona.trato||"Sr.";persona.agendaId=p.id;dibujarPartes();cambioDatos();
+  });
+  const guardar=document.createElement("button");guardar.type="button";guardar.textContent="Guardar persona en agenda";
+  guardar.addEventListener("click",()=>tarea(async()=>{
+    if(!persona.nombre.trim())throw new Error("Ingresá el nombre de la persona.");
+    const actual=agendaPersonas.find(p=>p.id===persona.agendaId);
+    if(actual&&!confirm("¿Actualizar los datos de esta persona en la agenda? Los contratos anteriores conservan su propia copia."))return;
+    const p=await gestion("/personas","POST",{...persona,id:actual?.id,revision:actual?.revision||0});persona.agendaId=p.id;await cargarAgenda();cambioDatos();estado("Persona guardada en la agenda compartida.");
+  }));
+  caja.className="agenda-en-persona";caja.append(busqueda,select,guardar);tarjeta.append(caja);
+}
+function dibujarOpcionesInmuebles(){
+  const select=$("inmuebleGuardado"),buscar=$("buscarInmueble").value.toLowerCase();select.replaceChildren(new Option("Elegí un inmueble guardado…",""));
+  for(const i of agendaInmuebles.filter(i=>(i.referencia+" "+i.inmuebleDomicilio).toLowerCase().includes(buscar)))select.add(new Option((i.referencia?i.referencia+" · ":"")+i.inmuebleDomicilio,i.id));
+  select.value=inmuebleAgendaId;
+}
+$("buscarInmueble").addEventListener("input",dibujarOpcionesInmuebles);
+$("inmuebleGuardado").addEventListener("change",()=>{
+  const i=agendaInmuebles.find(i=>i.id===$("inmuebleGuardado").value);if(!i)return;
+  if(!confirm("¿Cargar el inmueble y sus servicios guardados? Se reemplazan los datos de inmueble y servicios de este formulario."))return;
+  for(const k of ["inmuebleDomicilio","padronAtm","descripcion","pintura"])if($("dato-"+k))$("dato-"+k).value=i[k]||"";
+  servicios=(i.servicios||[]).map(s=>({...s,id:uid(),vencimiento:""}));inmuebleAgendaId=i.id;dibujarListas();cambioDatos();
+});
+$("guardarInmueble").addEventListener("click",()=>tarea(async()=>{
+  const d=datos(),actual=agendaInmuebles.find(i=>i.id===inmuebleAgendaId);
+  if(actual&&!confirm("¿Actualizar este inmueble y sus servicios en la agenda? Los contratos anteriores conservan su propia copia."))return;
+  const i=await gestion("/inmuebles","POST",{...d,referencia:actual?.referencia||d.inmuebleDomicilio,servicios,id:actual?.id,revision:actual?.revision||0});
+  inmuebleAgendaId=i.id;await cargarAgenda();programarAutoguardado();estado("Inmueble y servicios guardados en la agenda compartida.");
+}));
+// Administración de agenda; cada cambio se guarda de manera explícita.
+let tipoAgenda="personas", registroAgenda=null;
+const camposAgenda={personas:[["trato","Tratamiento"],["nombre","Nombre completo"],["dni","DNI"],["cuil","CUIT / CUIL"],["domicilio","Domicilio"],["cp","Código postal"],["email","Correo electrónico"],["telefono","Teléfono"]],inmuebles:[["referencia","Nombre o referencia"],["inmuebleDomicilio","Domicilio del inmueble"],["padronAtm","Padrón ATM (opcional)"],["descripcion","Descripción"],["pintura","Pintura"]]};
+function editarAgenda(r=null){
+  registroAgenda=r;$("camposAgenda").replaceChildren();
+  for(const [id,nombre]of camposAgenda[tipoAgenda]){const l=document.createElement("label"),input=document.createElement(id==="descripcion"?"textarea":"input");l.textContent=nombre;l.htmlFor="agenda-"+id;input.id=l.htmlFor;input.value=r?.[id]||(id==="trato"?"Sr.":"");if(id==="email")input.type="email";input.required=tipoAgenda==="personas"?id==="nombre":id==="inmuebleDomicilio";$("camposAgenda").append(l,input);}
+  $("eliminarAgenda").disabled=!r;$("notaAgenda").textContent=tipoAgenda==="inmuebles"?"Servicios guardados: "+(r?.servicios?.length||0)+". Para cambiarlos, cargá el inmueble en el formulario, editá Servicios y usá Guardar inmueble en agenda.":"Los cambios en la agenda se aplican únicamente cuando volvés a seleccionar la persona en un contrato.";
+}
+function listarAgenda(){
+  const select=$("listaAgenda"),f=$("buscarAgenda").value.toLowerCase();select.replaceChildren(new Option("Elegí un registro…",""));
+  for(const r of (tipoAgenda==="personas"?agendaPersonas:agendaInmuebles).filter(r=>JSON.stringify([r.nombre,r.dni,r.referencia,r.inmuebleDomicilio]).toLowerCase().includes(f)))select.add(new Option(tipoAgenda==="personas"?r.nombre+" · "+r.dni:(r.referencia||r.inmuebleDomicilio),r.id));
+}
+$("abrirAgenda").addEventListener("click",()=>tarea(async()=>{await cargarAgenda();listarAgenda();editarAgenda();$("dialogoAgenda").showModal();}));
+$("cerrarAgenda").addEventListener("click",()=>$("dialogoAgenda").close());
+$("tipoAgenda").addEventListener("change",()=>{tipoAgenda=$("tipoAgenda").value;listarAgenda();editarAgenda();});
+$("buscarAgenda").addEventListener("input",listarAgenda);
+$("listaAgenda").addEventListener("change",()=>editarAgenda((tipoAgenda==="personas"?agendaPersonas:agendaInmuebles).find(r=>r.id===$("listaAgenda").value)));
+$("nuevoAgenda").addEventListener("click",()=>{editarAgenda();$("listaAgenda").value="";});
+$("formAgenda").addEventListener("submit",e=>{e.preventDefault();tarea(async()=>{
+  const datos=Object.fromEntries(camposAgenda[tipoAgenda].map(([id])=>[id,$("agenda-"+id).value]));
+  try{const r=await gestion("/"+tipoAgenda,"POST",{...datos,id:registroAgenda?.id,revision:registroAgenda?.revision||0,...(tipoAgenda==="inmuebles"?{servicios:registroAgenda?.servicios||[]}: {})});await cargarAgenda();listarAgenda();editarAgenda(r);$("listaAgenda").value=r.id;$("mensajeAgenda").textContent="Registro guardado.";}catch(e){$("mensajeAgenda").textContent=e.message;throw e;}
+});});
+$("eliminarAgenda").addEventListener("click",()=>tarea(async()=>{
+  if(!registroAgenda||!confirm("¿Eliminar este registro de la agenda? Los contratos ya guardados conservan sus datos."))return;
+  try{await gestion("/"+tipoAgenda+"/"+registroAgenda.id,"DELETE",{revision:registroAgenda.revision});await cargarAgenda();listarAgenda();editarAgenda();$("mensajeAgenda").textContent="Registro eliminado.";}catch(e){$("mensajeAgenda").textContent=e.message;throw e;}
+}));
+
+
+tarea(async () => {
+  const modelos=await(await pedir("/api/formulario-contratos/modelos")).json();
+  if(!modelos.length)throw new Error("No se encontraron modelos en modelosContratos.json.");
+  for(const m of modelos)$("modelo").add(new Option(m.operacion+" · "+m.uso,m.id));
+  await cargarEsquema(modelos[0].id);
+  partes={locadores:[nuevaPersona()],locatarios:[nuevaPersona(false)],garantes:[nuevaPersona()]};
+  dibujarPartes();dibujarListas();listar();
+  const resultados=await Promise.allSettled([listarCompartidos(),cargarAgenda()]);
+  const fallo=resultados.find(r=>r.status==="rejected");
+  estado(fallo?"El formulario está listo, pero falta conectar el guardado compartido: "+fallo.reason.message:"Agregá las personas necesarias y completá los datos del contrato.",!!fallo);
+});
+</script>
+</body>
+</html>

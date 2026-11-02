@@ -1,393 +1,944 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <title>Generador de Contratos Avanzado</title>
-    <!-- CKEditor 5 desde CDN -->
-    <script src="https://cdn.ckeditor.com/ckeditor5/39.0.1/classic/ckeditor.js"></script>
-    <style>
-      body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        background: #f0f2f5;
-        margin: 0;
-        padding: 20px;
-      }
-      .header {
-        text-align: center;
-        margin-bottom: 20px;
-      }
-      .container {
-        display: flex;
-        gap: 20px;
-        height: 85vh;
-      }
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contratos de locación</title>
 
-      /* Panel Izquierdo: Formulario */
-      .panel-form {
-        flex: 1;
-        background: white;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        overflow-y: auto;
-      }
-      .panel-form h3 {
-        margin-top: 0;
-        color: #333;
-        border-bottom: 2px solid #007bff;
-        padding-bottom: 5px;
-      }
-      .form-group {
-        margin-bottom: 15px;
-      }
-      .form-group label {
-        display: block;
-        font-weight: bold;
-        margin-bottom: 5px;
-        font-size: 13px;
-        color: #555;
-      }
-      .form-group input,
-      .form-group select,
-      .form-group textarea {
-        width: 100%;
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
+    <style>
+      * {
         box-sizing: border-box;
       }
 
-      /* Panel Derecho: Editor */
-      .panel-editor {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        background: white;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      }
-      .ck-editor__editable_inline {
-        flex-grow: 1;
-        min-height: 500px;
+      body {
+        margin: 0;
+        background: #eef2f5;
+        color: #263543;
+        font:
+          14px Arial,
+          sans-serif;
       }
 
-      /* Botones */
-      .btn {
-        padding: 12px 20px;
-        font-size: 16px;
-        font-weight: bold;
+      header {
+        background: #17344a;
         color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
+        padding: 20px;
+      }
+
+      header h1 {
+        margin: 10px 0;
+        font-size: 25px;
+      }
+
+      header a {
+        color: white;
+      }
+
+      main {
+        display: grid;
+        grid-template-columns: 340px minmax(0, 1fr);
+        gap: 18px;
+        padding: 18px;
+      }
+
+      .panel {
+        background: white;
+        border-radius: 8px;
+        padding: 18px;
+        margin-bottom: 16px;
+      }
+
+      h2 {
+        font-size: 17px;
+        margin: 0 0 14px;
+      }
+
+      label {
+        display: block;
+        font-weight: bold;
+        margin: 12px 0 6px;
+      }
+
+      input,
+      select,
+      textarea {
         width: 100%;
-        margin-top: 15px;
+        padding: 9px;
+        border: 1px solid #bdcbd6;
+        border-radius: 5px;
+        font: inherit;
       }
-      .btn-primary {
-        background: #007bff;
+
+      textarea {
+        resize: vertical;
       }
-      .btn-primary:hover {
-        background: #0056b3;
+
+      button {
+        padding: 9px 12px;
+        margin: 6px 4px 0 0;
+        border: 1px solid #bdcbd6;
+        border-radius: 5px;
+        background: white;
+        color: #24495f;
+        font: inherit;
+        cursor: pointer;
       }
-      .btn-success {
-        background: #28a745;
+
+      button:disabled {
+        opacity: 0.5;
+        cursor: default;
       }
-      .btn-success:hover {
-        background: #218838;
+
+      .principal {
+        background: #14617e;
+        color: white;
+        border-color: #14617e;
+      }
+
+      .nota {
+        font-size: 12px;
+        color: #637787;
+        line-height: 1.5;
+      }
+
+      #estado {
+        padding: 12px 20px;
+        background: #e3edf4;
+      }
+
+      #estado.error {
+        background: #fde7e7;
+        color: #8e2222;
+      }
+
+      .campo {
+        border-bottom: 1px solid #e2e8ed;
+        padding: 12px 0;
+      }
+
+      .campo small {
+        display: block;
+        margin-bottom: 6px;
+        color: #637787;
+        overflow-wrap: anywhere;
+      }
+
+      .campo textarea {
+        margin-top: 6px;
+      }
+
+      .scroll {
+        overflow: auto;
+        max-height: 68vh;
+        background: #dce4ea;
+        padding: 20px;
+      }
+
+      #editor {
+        width: 210mm;
+        min-height: 297mm;
+        margin: auto;
+        background: white;
+        padding: 25mm 20mm;
+        outline: none;
+        font-family: Arial, sans-serif;
+        font-size: 11pt;
+        line-height: 1.4;
+        text-align: justify;
+        overflow-wrap: break-word;
+        color: black;
+      }
+
+      #editor p {
+        margin: 0 0 8pt;
+        white-space: pre-wrap;
+      }
+
+      #editor table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      #editor td,
+      #editor th {
+        border: 1px solid #aaa;
+        padding: 6pt;
+      }
+
+      .herramientas {
+        padding: 8px;
+        background: #f5f8fa;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+      }
+
+      .herramientas button {
+        margin: 0;
+        font-size: 12px;
+      }
+
+      .cabecera-editor {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        padding: 18px;
+      }
+
+      .cabecera-editor h2 {
+        margin: 0;
+      }
+
+      .panel-editor {
+        padding: 0;
+        overflow: hidden;
+      }
+
+      dialog {
+        border: 0;
+        border-radius: 8px;
+        width: 90vw;
+        height: 90vh;
+        padding: 0;
+      }
+
+      dialog::backdrop {
+        background: #172c40b8;
+      }
+
+      .cabecera-pdf {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 16px;
+      }
+
+      #pdfFrame {
+        border: 0;
+        width: 100%;
+        height: calc(100% - 65px);
+      }
+
+      [hidden] {
+        display: none !important;
+      }
+
+      @media (min-width: 801px) {
+        aside {
+          max-height: calc(100vh - 190px);
+          overflow: auto;
+          padding-right: 5px;
+        }
+      }
+
+      @media (max-width: 800px) {
+        main {
+          display: block;
+          padding: 12px;
+        }
+
+        aside {
+          max-height: 55vh;
+          overflow: auto;
+          margin-bottom: 15px;
+        }
+
+        #editor {
+          margin: 0;
+        }
+        .scroll {
+          padding: 10px;
+        }
       }
     </style>
   </head>
+
   <body>
-    <div class="header">
-      <h1>Gestor de Contratos de Locación</h1>
-    </div>
+    <header>
+      <a href="/">← Volver al panel</a>
+      <h1>Generador de contratos</h1>
+      <div>Modelo completo → datos → revisión editable → PDF final</div>
+    </header>
 
-    <div class="container">
-      <!-- FORMULARIO DE PARÁMETROS -->
-      <div class="panel-form">
-        <form id="contratoForm">
-          <h3>1. Datos de la Operación</h3>
-          <div class="form-group">
-            <label>Tipo de Contrato</label>
-            <select name="tipo_operacion">
-              <option value="nuevo">Nuevo Contrato</option>
-              <option value="renovacion">Renovación</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Destino</label>
-            <select name="destino">
-              <option value="vivienda">Vivienda (Familiar/Personal)</option>
-              <option value="comercial">
-                Comercial (Local, Kiosco, Rotisería)
-              </option>
-            </select>
-          </div>
+    <div id="estado" role="status" aria-live="polite">Cargando modelos…</div>
 
-          <h3>2. Locador</h3>
-          <div class="form-group">
-            <label>Nombre</label
-            ><input
-              type="text"
-              name="locador_nombre"
-              value="Carlos Roque Britos"
-            />
-          </div>
-          <div class="form-group">
-            <label>DNI / CUIT</label
-            ><input type="text" name="locador_dni" value="05.273.345" />
-          </div>
-          <div class="form-group">
-            <label>Domicilio</label
-            ><input
-              type="text"
-              name="locador_domicilio"
-              value="Bandera de Los Andes 4701, Villa Nueva"
-            />
-          </div>
-          <div class="form-group">
-            <label>Email</label
-            ><input
-              type="text"
-              name="locador_email"
-              value="lgpropiedades.inmo@gmail.com"
-            />
-          </div>
-          <div class="form-group">
-            <label>Teléfono</label
-            ><input type="text" name="locador_tel" value="2615255295" />
-          </div>
+    <main>
+      <aside>
+        <section class="panel">
+          <h2>1. Elegir modelo</h2>
 
-          <h3>3. Locatario</h3>
-          <div class="form-group">
-            <label>Nombre</label
-            ><input
-              type="text"
-              name="locatario_nombre"
-              value="Romina Janet Tumbarello"
-            />
-          </div>
-          <div class="form-group">
-            <label>DNI / CUIT</label
-            ><input type="text" name="locatario_dni" value="34.063.767" />
-          </div>
-          <div class="form-group">
-            <label>Domicilio</label
-            ><input
-              type="text"
-              name="locatario_domicilio"
-              value="Corrientes Sur 1140, Guaymallén"
-            />
-          </div>
-          <div class="form-group">
-            <label>Email</label
-            ><input
-              type="text"
-              name="locatario_email"
-              value="negramendocina14@gmail.com"
-            />
-          </div>
-          <div class="form-group">
-            <label>Teléfono</label
-            ><input type="text" name="locatario_tel" value="2615155989" />
-          </div>
-          <div class="form-group">
-            <label>Personas que conviven (Si es vivienda)</label
-            ><textarea name="personas_convivientes" rows="2">
-Gael Ignacio Salinas y Santino Francesco Salinas.</textarea
-            >
-          </div>
+          <label for="modelo">Contrato Word</label>
+          <select id="modelo"></select>
 
-          <h3>4. Inmueble</h3>
-          <div class="form-group">
-            <label>Dirección del Inmueble</label
-            ><input
-              type="text"
-              name="inmueble_direccion"
-              value="Corrientes Sur 1140, Complejo La Esquina, Depto 1"
-            />
-          </div>
-          <div class="form-group">
-            <label>N° Padrón ATM</label
-            ><input type="text" name="inmueble_padron" value="04-628897" />
-          </div>
-          <div class="form-group">
-            <label>Detalle / Inventario</label
-            ><textarea name="inmueble_detalle" rows="3">
-Living, Cocina-Comedor, Baño completo, 2 dormitorios, Patio.</textarea
-            >
-          </div>
-
-          <h3>5. Condiciones Económicas</h3>
-          <div class="form-group">
-            <label>Plazo</label
-            ><input type="text" name="plazo" value="24 Meses" />
-          </div>
-          <div class="form-group">
-            <label>Fecha Inicio</label
-            ><input
-              type="text"
-              name="fecha_inicio"
-              value="1 de Agosto de 2026"
-            />
-          </div>
-          <div class="form-group">
-            <label>Fecha Fin</label
-            ><input type="text" name="fecha_fin" value="31 de Julio de 2028" />
-          </div>
-          <div class="form-group">
-            <label>Canon Inicial Mensual</label
-            ><input
-              type="text"
-              name="monto"
-              value="PESOS QUINIENTOS SETENTA MIL ($570.000)"
-            />
-          </div>
-          <div class="form-group">
-            <label>Índice de Ajuste</label>
-            <select name="indice_ajuste">
-              <option value="IPC (INDEC)">IPC (INDEC)</option>
-              <option value="ICL (BCRA)">ICL (BCRA)</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Frecuencia de Ajuste</label>
-            <select name="frecuencia_ajuste">
-              <option value="Cuatrimestral">Cuatrimestral</option>
-              <option value="Trimestral">Trimestral</option>
-              <option value="Semestral">Semestral</option>
-            </select>
-          </div>
-
-          <h3>6. Servicios compartidos / NICs</h3>
-          <div class="form-group">
-            <label>Edemsa (Luz)</label
-            ><input
-              type="text"
-              name="servicios_edemsa"
-              value="NIC 3236786 - 100%"
-            />
-          </div>
-          <div class="form-group">
-            <label>Ecogas (Gas)</label
-            ><input
-              type="text"
-              name="servicios_ecogas"
-              value="Cuenta 22174358 - 100%"
-            />
-          </div>
-          <div class="form-group">
-            <label>Aysam (Agua)</label
-            ><input
-              type="text"
-              name="servicios_aysam"
-              value="Cliente 059-3130743-000-7 - 25% incluido en expensas"
-            />
-          </div>
-          <div class="form-group">
-            <label>Municipalidad</label
-            ><input
-              type="text"
-              name="servicios_muni"
-              value="Padrón 111472 - 25% incluido en expensas"
-            />
-          </div>
-
-          <h3>7. Garantías y Codeudores</h3>
-          <div class="form-group">
-            <label>Modalidad de Depósito</label>
-            <select name="tipo_deposito">
-              <option value="Efectivo">Efectivo</option>
-              <option value="Pagaré a la vista">Pagaré a la Vista</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Monto del Depósito / Pagaré</label
-            ><input
-              type="text"
-              name="monto_deposito"
-              value="PESOS TRESCIENTOS VEINTE MIL ($320.000)"
-            />
-          </div>
-          <div class="form-group">
-            <label>Datos de los Codeudores</label
-            ><textarea name="codeudores" rows="4">
-1) SRA. EVELYN AYELÉN SALINAS, DNI 41.367.228, Alberdi 207, Cdad.
-2) SRA. MARIA ROSA MOLINA, DNI 27.757.585, Tte. Olivera 1459, Maipu.</textarea
-            >
-          </div>
-
-          <button type="submit" class="btn btn-primary">
-            1. Generar Borrador del Contrato >>
+          <button id="cargar" class="principal" type="button">
+            Cargar modelo completo
           </button>
-        </form>
+
+          <p class="nota">
+            El modelo conserva sus cláusulas y sus datos anteriores hasta que
+            los reemplaces. Revisá también fechas, servicios y garantes.
+          </p>
+
+          <label for="nombreArchivo">Nombre del contrato</label>
+          <input id="nombreArchivo" value="Contrato" />
+        </section>
+
+        <section class="panel">
+          <h2>2. Reemplazar datos</h2>
+
+          <p class="nota">
+            Se sugieren algunos campos del modelo. Podés agregar los que falten
+            o corregirlos directamente en el editor. Cada reemplazo se aplica a
+            todas las apariciones del mismo texto original.
+          </p>
+
+          <div id="campos"></div>
+
+          <details>
+            <summary>Agregar otro dato</summary>
+
+            <label for="buscar">Texto exacto del modelo</label>
+            <textarea id="buscar" rows="2"></textarea>
+
+            <label for="reemplazar">Nuevo texto</label>
+            <textarea id="reemplazar" rows="2"></textarea>
+
+            <button id="agregar" type="button">Agregar reemplazo</button>
+          </details>
+
+          <button id="aplicar" class="principal" type="button">
+            Aplicar datos al borrador
+          </button>
+
+          <p id="pendientes" class="nota" hidden>
+            Hay datos modificados que todavía no se aplicaron. El PDF usa el
+            texto visible del editor.
+          </p>
+        </section>
+
+        <section class="panel">
+          <h2>Borradores guardados</h2>
+
+          <select id="borradores" aria-label="Borradores guardados"></select>
+
+          <button id="abrir" type="button">Abrir borrador</button>
+
+          <p class="nota">
+            Los borradores se guardan en este navegador y computadora. El PDF
+            final también se guarda en contratos_generados.
+          </p>
+        </section>
+      </aside>
+
+      <div>
+        <section class="panel panel-editor">
+          <div class="cabecera-editor">
+            <h2>3. Vista previa editable</h2>
+
+            <button id="guardar" type="button">Guardar borrador</button>
+          </div>
+
+          <div
+            class="herramientas"
+            role="toolbar"
+            aria-label="Formato del contrato"
+          >
+            <button type="button" data-formato="undo">Deshacer</button>
+            <button type="button" data-formato="redo">Rehacer</button>
+            <button type="button" data-formato="bold">
+              <b>Negrita</b>
+            </button>
+            <button type="button" data-formato="italic">
+              <i>Cursiva</i>
+            </button>
+            <button type="button" data-formato="underline">
+              <u>Subrayado</u>
+            </button>
+            <button type="button" data-formato="justifyLeft">Izquierda</button>
+            <button type="button" data-formato="justifyCenter">Centrar</button>
+            <button type="button" data-formato="justifyFull">Justificar</button>
+          </div>
+
+          <div class="scroll">
+            <article
+              id="editor"
+              contenteditable="false"
+              spellcheck="true"
+              role="textbox"
+              aria-label="Texto completo del contrato"
+              aria-multiline="true"
+            ></article>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>4. Revisar y descargar</h2>
+
+          <p class="nota">
+            La vista del PDF muestra las páginas antes de descargarlo. Se
+            conserva el texto completo; la distribución visual puede variar
+            respecto del Word original.
+          </p>
+
+          <button id="verPdf" type="button">Ver PDF con páginas</button>
+
+          <button id="descargar" class="principal" type="button">
+            Descargar PDF final
+          </button>
+        </section>
+      </div>
+    </main>
+
+    <dialog id="dialogoPdf">
+      <div class="cabecera-pdf">
+        <strong>Vista previa del PDF</strong>
+
+        <button id="cerrarPdf" type="button">Cerrar y seguir editando</button>
       </div>
 
-      <!-- EDITOR DE TEXTO (VISTA PREVIA) -->
-      <div class="panel-editor">
-        <h3 style="margin-top: 0">Vista Previa (Editor)</h3>
-        <textarea id="editor"></textarea>
-        <button id="btn-pdf" class="btn btn-success">
-          2. Guardar y Exportar a PDF
-        </button>
-      </div>
-    </div>
+      <iframe id="pdfFrame" title="Vista previa del contrato en PDF"></iframe>
+    </dialog>
 
     <script>
-      let myEditor;
+      const $ = (id) => document.getElementById(id);
 
-      ClassicEditor.create(document.querySelector("#editor"))
-        .then((editor) => {
-          myEditor = editor;
-          editor.setData(
-            '<p><em>Completa el formulario de la izquierda y haz clic en "Generar Borrador" para ver el contrato aquí.</em></p>',
-          );
-        })
-        .catch((error) => {
-          console.error(error);
-        });
+      let modeloActual = "";
+      let campos = [];
+      let borradorId = null;
+      let cambiosManuales = false;
+      let sinGuardar = false;
+      let ocupado = false;
+      let datosPendientes = false;
+      let pdfUrl = null;
 
-      // Evento al enviar el formulario
-      document
-        .getElementById("contratoForm")
-        .addEventListener("submit", async (e) => {
-          e.preventDefault();
-          const formData = new FormData(e.target);
-          const data = Object.fromEntries(formData.entries());
+      const claveBorradores = "contratos-borradores-v1";
 
-          // Si cambiaste la ruta en tu index.js, asegúrate que esto apunte a la correcta
-          const res = await fetch("/api/contratos/generar-vista-previa", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(data),
+      function estado(texto, error = false) {
+        $("estado").textContent = texto;
+        $("estado").className = error ? "error" : "";
+      }
+
+      function controles() {
+        document
+          .querySelectorAll("button,input,select,textarea")
+          .forEach((elemento) => {
+            elemento.disabled = ocupado;
           });
 
-          const htmlCompilado = await res.text();
-          myEditor.setData(htmlCompilado);
+        for (const id of ["aplicar", "guardar", "verPdf", "descargar"]) {
+          $(id).disabled = ocupado || !modeloActual;
+        }
+
+        $("abrir").disabled = ocupado || !$("borradores").value;
+
+        $("cargar").disabled = ocupado || !$("modelo").value;
+
+        $("editor").contentEditable =
+          !ocupado && !!modeloActual ? "true" : "false";
+      }
+
+      async function ejecutar(funcion) {
+        if (ocupado) return;
+
+        ocupado = true;
+        controles();
+
+        try {
+          await funcion();
+        } catch (error) {
+          estado(error.message, true);
+        } finally {
+          ocupado = false;
+          controles();
+        }
+      }
+
+      async function api(ruta, datos) {
+        const opciones =
+          datos === undefined
+            ? {}
+            : {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(datos),
+              };
+
+        const respuesta = await fetch("/api/contratos" + ruta, opciones);
+
+        if (!respuesta.ok) {
+          const error = await respuesta.json().catch(() => ({}));
+
+          throw new Error(
+            error.error ||
+              "No se pudo completar la operación. Revisá la terminal del servidor.",
+          );
+        }
+
+        return respuesta;
+      }
+
+      function pendientes(valor) {
+        datosPendientes = valor;
+        $("pendientes").hidden = !valor;
+      }
+
+      // Detectar algunos datos para facilitar su reemplazo.
+      // El texto completo sigue disponible en el editor.
+
+      function sugerirCampos(html) {
+        const documento = new DOMParser().parseFromString(html, "text/html");
+
+        const texto = documento.body.textContent;
+        const sugeridos = [];
+        const usados = new Set();
+
+        function agregar(valor, etiqueta) {
+          valor = valor.trim();
+
+          if (!valor || usados.has(valor)) return;
+
+          usados.add(valor);
+
+          sugeridos.push({
+            buscar: valor,
+            reemplazar: valor,
+            etiqueta,
+          });
+        }
+
+        const nombres =
+          /(?:SRAS\.?|SRES\.?|SRA\.?|SR\.?)\s*:?\s*([^,;\n]{3,100}?)\s*,?\s*DNI/gi;
+
+        for (const coincidencia of texto.matchAll(nombres)) {
+          agregar(coincidencia[1], "Nombre");
+        }
+
+        const documentos =
+          /DNI\.?\s*(?:N\s*[°ºo]?\s*)?[º°]?\s*(\d{1,2}(?:\.\d{3}){2}|\d{7,8})/gi;
+
+        for (const coincidencia of texto.matchAll(documentos)) {
+          agregar(coincidencia[1], "DNI");
+        }
+
+        const importes = /PESOS\s+[^()$.;\d]{3,100}\(\s*\$\s*[\d.,]+\s*\)/gi;
+
+        for (const coincidencia of texto.matchAll(importes)) {
+          agregar(coincidencia[0], "Importe en letras y números");
+        }
+
+        const correos = /[\w.+-]+@[\w.-]+\.[a-zA-Z]{2,}/g;
+
+        for (const coincidencia of texto.matchAll(correos)) {
+          agregar(coincidencia[0], "Correo electrónico");
+        }
+
+        for (const coincidencia of texto.matchAll(/\b261\d{7}\b/g)) {
+          agregar(coincidencia[0], "Teléfono");
+        }
+
+        return sugeridos;
+      }
+
+      function mostrarCampos() {
+        $("campos").replaceChildren();
+
+        campos.forEach((campo, indice) => {
+          const contenedor = document.createElement("div");
+          contenedor.className = "campo";
+
+          const etiqueta = document.createElement("label");
+          etiqueta.textContent = campo.etiqueta || "Dato personalizado";
+
+          const original = document.createElement("small");
+          original.textContent = "Buscar: " + campo.buscar;
+
+          const nuevo = document.createElement("textarea");
+          nuevo.rows = campo.buscar.length > 65 ? 3 : 2;
+          nuevo.value = campo.reemplazar;
+
+          nuevo.setAttribute(
+            "aria-label",
+            etiqueta.textContent + " — nuevo valor",
+          );
+
+          nuevo.addEventListener("input", () => {
+            campo.reemplazar = nuevo.value;
+            pendientes(true);
+            sinGuardar = true;
+          });
+
+          const quitar = document.createElement("button");
+          quitar.type = "button";
+          quitar.textContent = "Quitar campo";
+
+          quitar.addEventListener("click", () => {
+            campos.splice(indice, 1);
+            mostrarCampos();
+            pendientes(true);
+            sinGuardar = true;
+          });
+
+          contenedor.append(etiqueta, original, nuevo, quitar);
+
+          $("campos").append(contenedor);
+        });
+      }
+
+      // Cargar el modelo Word completo.
+
+      $("cargar").addEventListener("click", () => {
+        if (
+          sinGuardar &&
+          !confirm(
+            "Hay cambios sin guardar. ¿Cargar otro modelo y descartarlos?",
+          )
+        ) {
+          return;
+        }
+
+        ejecutar(async () => {
+          estado("Leyendo el Word completo…");
+
+          const elegido = $("modelo").value;
+
+          const respuesta = await api("/generar-vista-previa", {
+            modelo: elegido,
+            reemplazos: [],
+          });
+
+          const html = await respuesta.text();
+
+          modeloActual = elegido;
+          $("editor").innerHTML = html;
+
+          campos = sugerirCampos(html);
+          mostrarCampos();
+
+          borradorId = null;
+          cambiosManuales = false;
+          sinGuardar = false;
+          pendientes(false);
+
+          $("nombreArchivo").value = elegido.replace(/\.docx$/i, "");
+
+          estado(
+            "Modelo completo cargado. Reemplazá los datos y revisá el contrato.",
+          );
+        });
+      });
+
+      // Agregar un reemplazo personalizado.
+
+      $("agregar").addEventListener("click", () => {
+        const buscar = $("buscar").value;
+        const reemplazar = $("reemplazar").value;
+
+        if (!buscar.trim()) {
+          estado("Escribí el texto exacto que querés reemplazar.", true);
+          return;
+        }
+
+        if (campos.some((campo) => campo.buscar === buscar)) {
+          estado("Ese texto ya tiene un campo en la lista.", true);
+          return;
+        }
+
+        campos.push({
+          buscar,
+          reemplazar,
+          etiqueta: "Dato personalizado",
         });
 
-      // Evento al pedir el PDF
-      document.getElementById("btn-pdf").addEventListener("click", async () => {
-        const htmlEditado = myEditor.getData();
-        const nombreLocatario = document
-          .querySelector('input[name="locatario_nombre"]')
-          .value.replace(/ /g, "_");
-        const btn = document.getElementById("btn-pdf");
-        btn.innerText = "Generando PDF, por favor espera...";
+        mostrarCampos();
 
-        const res = await fetch("/api/contratos/generar-pdf", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            htmlEditado: htmlEditado,
-            nombreArchivo: `Contrato_${nombreLocatario}`,
-          }),
+        $("buscar").value = "";
+        $("reemplazar").value = "";
+
+        pendientes(true);
+        sinGuardar = true;
+      });
+
+      // Aplicar datos desde el modelo original.
+
+      $("aplicar").addEventListener("click", () => {
+        if (
+          cambiosManuales &&
+          !confirm(
+            "Aplicar los datos vuelve a generar el borrador desde el Word y reemplaza tus correcciones manuales. ¿Continuar?",
+          )
+        ) {
+          return;
+        }
+
+        ejecutar(async () => {
+          const respuesta = await api("/generar-vista-previa", {
+            modelo: modeloActual,
+            reemplazos: campos,
+          });
+
+          $("editor").innerHTML = await respuesta.text();
+
+          cambiosManuales = false;
+          pendientes(false);
+          sinGuardar = true;
+
+          estado(
+            "Datos aplicados. Podés corregir cualquier párrafo directamente en el editor.",
+          );
+        });
+      });
+
+      // Edición manual y formato.
+
+      $("editor").addEventListener("input", () => {
+        cambiosManuales = true;
+        sinGuardar = true;
+      });
+
+      $("editor").addEventListener("paste", (evento) => {
+        evento.preventDefault();
+
+        document.execCommand(
+          "insertText",
+          false,
+          evento.clipboardData.getData("text/plain"),
+        );
+      });
+
+      document.querySelectorAll("[data-formato]").forEach((boton) => {
+        boton.addEventListener("mousedown", (evento) => {
+          evento.preventDefault();
         });
 
-        const resultado = await res.json();
-        alert(resultado.mensaje);
-        btn.innerText = "2. Guardar y Exportar a PDF";
+        boton.addEventListener("click", () => {
+          if (!modeloActual) return;
+
+          $("editor").focus();
+
+          document.execCommand(boton.dataset.formato, false, null);
+
+          cambiosManuales = true;
+          sinGuardar = true;
+        });
+      });
+
+      $("nombreArchivo").addEventListener("input", () => {
+        sinGuardar = true;
+      });
+
+      // Guardar y recuperar borradores en este navegador.
+
+      function leerBorradores() {
+        return JSON.parse(localStorage.getItem(claveBorradores) || "[]");
+      }
+
+      function listarBorradores() {
+        $("borradores").replaceChildren(new Option("Elegí un borrador…", ""));
+
+        for (const borrador of leerBorradores()) {
+          const fecha = new Date(borrador.fecha).toLocaleString("es-AR");
+
+          $("borradores").add(
+            new Option(borrador.nombre + " · " + fecha, borrador.id),
+          );
+        }
+      }
+
+      $("guardar").addEventListener("click", () => {
+        ejecutar(async () => {
+          const lista = leerBorradores();
+          const id = borradorId || crypto.randomUUID();
+
+          const datos = {
+            id,
+            modelo: modeloActual,
+            nombre: $("nombreArchivo").value || "Contrato",
+            html: $("editor").innerHTML,
+            campos,
+            cambiosManuales,
+            datosPendientes,
+            fecha: new Date().toISOString(),
+          };
+
+          const indice = lista.findIndex((borrador) => borrador.id === id);
+
+          if (indice >= 0) {
+            lista[indice] = datos;
+          } else {
+            lista.unshift(datos);
+          }
+
+          localStorage.setItem(claveBorradores, JSON.stringify(lista));
+
+          borradorId = id;
+          sinGuardar = false;
+
+          listarBorradores();
+          $("borradores").value = id;
+
+          estado("Borrador guardado en este navegador con tus correcciones.");
+        });
+      });
+
+      $("borradores").addEventListener("change", controles);
+      $("modelo").addEventListener("change", controles);
+
+      $("abrir").addEventListener("click", () => {
+        if (
+          sinGuardar &&
+          !confirm(
+            "Hay cambios sin guardar. ¿Abrir el borrador y descartarlos?",
+          )
+        ) {
+          return;
+        }
+
+        ejecutar(async () => {
+          const borrador = leerBorradores().find(
+            (item) => item.id === $("borradores").value,
+          );
+
+          if (!borrador) {
+            throw new Error("No se encontró ese borrador.");
+          }
+
+          modeloActual = borrador.modelo;
+
+          $("modelo").value = borrador.modelo;
+          $("nombreArchivo").value = borrador.nombre;
+          $("editor").innerHTML = borrador.html;
+
+          campos = borrador.campos;
+          mostrarCampos();
+
+          borradorId = borrador.id;
+          cambiosManuales = borrador.cambiosManuales;
+          pendientes(!!borrador.datosPendientes);
+          sinGuardar = false;
+
+          estado("Borrador recuperado con su texto editado.");
+        });
+      });
+
+      // Vista previa del PDF con páginas.
+
+      $("verPdf").addEventListener("click", () => {
+        ejecutar(async () => {
+          estado("Preparando la vista del PDF…");
+
+          const respuesta = await api("/vista-pdf", {
+            htmlEditado: $("editor").innerHTML,
+          });
+
+          if (pdfUrl) {
+            URL.revokeObjectURL(pdfUrl);
+          }
+
+          pdfUrl = URL.createObjectURL(await respuesta.blob());
+
+          $("pdfFrame").src = pdfUrl;
+          $("dialogoPdf").showModal();
+
+          estado("Vista del PDF lista. Cerrala para seguir editando.");
+        });
+      });
+
+      $("cerrarPdf").addEventListener("click", () => {
+        $("dialogoPdf").close();
+      });
+
+      $("dialogoPdf").addEventListener("close", () => {
+        $("pdfFrame").removeAttribute("src");
+
+        if (pdfUrl) {
+          URL.revokeObjectURL(pdfUrl);
+        }
+
+        pdfUrl = null;
+      });
+
+      // Generar y descargar el PDF final.
+
+      $("descargar").addEventListener("click", () => {
+        ejecutar(async () => {
+          estado("Generando el PDF final…");
+
+          const nombre = $("nombreArchivo").value || "Contrato";
+
+          const respuestaGeneracion = await api("/generar-pdf", {
+            htmlEditado: $("editor").innerHTML,
+            nombreArchivo: nombre,
+          });
+
+          const resultado = await respuestaGeneracion.json();
+
+          if (!resultado.url?.startsWith("/api/contratos/descargar-pdf/")) {
+            throw new Error(
+              "El servidor no devolvió la dirección de descarga.",
+            );
+          }
+
+          const respuesta = await fetch(resultado.url);
+
+          if (!respuesta.ok) {
+            throw new Error("El PDF se generó, pero no se pudo descargar.");
+          }
+
+          const url = URL.createObjectURL(await respuesta.blob());
+
+          const nombreSeguro =
+            nombre.replace(/[^a-zA-Z0-9_-]/g, "_").slice(0, 90) || "Contrato";
+
+          const enlace = document.createElement("a");
+          enlace.href = url;
+          enlace.download = nombreSeguro + ".pdf";
+
+          document.body.append(enlace);
+          enlace.click();
+          enlace.remove();
+
+          setTimeout(() => {
+            URL.revokeObjectURL(url);
+          }, 30000);
+
+          estado("PDF final descargado con el texto actual del editor.");
+        });
+      });
+
+      // Avisar si se intenta salir con cambios sin guardar.
+
+      window.addEventListener("beforeunload", (evento) => {
+        if (sinGuardar) {
+          evento.preventDefault();
+          evento.returnValue = "";
+        }
+      });
+
+      // Inicializar la página.
+
+      ejecutar(async () => {
+        const respuesta = await api("/modelos");
+        const modelos = await respuesta.json();
+
+        for (const modelo of modelos) {
+          $("modelo").add(new Option(modelo.nombre, modelo.archivo));
+        }
+
+        try {
+          listarBorradores();
+        } catch {
+          estado("No se pudo leer el guardado de este navegador.", true);
+          return;
+        }
+
+        estado(
+          modelos.length
+            ? "Elegí un modelo y presioná Cargar modelo completo."
+            : "No hay modelos. Copiá tus Word en la carpeta plantillas y recargá esta página.",
+        );
       });
     </script>
   </body>

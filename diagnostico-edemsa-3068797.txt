@@ -1,0 +1,30 @@
+NIC: 3068797
+URL: https://oficinavirtual.edemsa.com/iniciar-sesion/nic
+
+=== TEXTO VISIBLE ===
+Oficina Virtual
+
+Gestiona tu servicio eléctrico en línea
+
+Consultar NIC
+Ingresar
+o
+
+Accede rápido a tus facturas y pagos con el número de suministro.
+
+Número de NIC
+​
+CONSULTAR
+
+¿Todavía no te registraste? Crear cuenta
+
+Términos y condiciones
+
+Atención al cliente
+
+Nuestro equipo de atención al cliente brinda respuestas ágiles y un acompañamiento cercano, ofreciendo soluciones eficientes en cada consulta y necesidad.
+
+=== PETICIONES ===
+204 /cdn-cgi/rum
+200 /cdn-cgi/challenge-platform/h/b/jsd/oneshot/d0d7f3571048/0.16101215578692152:1793628626:1Omh-_aiWoLQQdZ98o4NQxRQPKccc3NCRhKbCznf-RI/a544128f3fc65040
+401 /api/edemsa/virtual-office/auth/info-user

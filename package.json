@@ -5,7 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "node --test tests/contratos.test.js"
   },
   "dependencies": {
     "axios": "^1.20.0",
@@ -16,10 +17,15 @@
     "express": "^5.2.1",
     "handlebars": "^4.7.9",
     "html-to-docx": "^1.8.0",
+    "mammoth": "^1.13.0",
     "multer": "^2.4.0",
     "p-limit": "^7.3.2",
     "pdfkit": "^0.20.2",
     "playwright": "^1.63.0",
-    "puppeteer": "^25.12.0"
+    "puppeteer": "^25.12.0",
+    "sanitize-html": "^2.18.0"
+  },
+  "engines": {
+    "node": ">=22.12.0"
   }
 }

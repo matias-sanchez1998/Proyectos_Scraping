@@ -12,7 +12,8 @@ import { leerExcel, guardarExcel } from "./src/core/excel.js";
 import ExcelJS from "exceljs";
 import htmlToDocx from "html-to-docx";
 import rutasContratos from "./src/contratos.js"; //import Docxtemplater from "docxtemplater";
-
+import formularioContratos from "./src/formularioContratos.js";
+import gestionContratos from "./src/gestionContratos.js";
 function mostrarConsumoRAM() {
   const memoria = process.memoryUsage();
   const formatoMB = (bytes) => (bytes / 1024 / 1024).toFixed(2) + " MB";
@@ -94,10 +95,11 @@ app.post("/api/borrar-cache", express.json(), (req, res) => {
 });
 // Servir los archivos estáticos de la web
 app.use(express.static(path.join(__dirname, "public")));
-app.use(express.json());
+app.use(express.json({ limit: "3mb" }));
 app.use("/api/contratos", rutasContratos);
+app.use("/api/formulario-contratos", formularioContratos);
 app.use(express.static("public"));
-
+app.use("/api/gestion-contratos", gestionContratos);
 // Ruta principal que recibe el formulario de la web
 // ============================================================================
 // API: EJECUCIÓN DE SCRAPERS
